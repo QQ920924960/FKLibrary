@@ -1,7 +1,9 @@
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @implementation UIView(Log)
+
 + (NSString *)searchAllSubviews:(UIView *)superview
 {
     NSMutableString *xml = [NSMutableString string];
@@ -71,4 +73,5 @@
     
     return str;
 }
+
 @end
