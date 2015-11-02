@@ -1,11 +1,10 @@
 //
 //  UIImage+Category_FK.h
-//  05-屏幕截图
+//  FKLibraryExample
 //
-//  Created by QQ920924960 on 15-11-1.
-//  Copyright (c) 2015年 itcast. All rights reserved.
+//  Created by frank on 15-11-1.
+//  Copyright © 2015年 zmosa. All rights reserved.
 //
-
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Category_FK)
@@ -39,5 +38,10 @@
  *  @return 裁剪后的新图片
  */
 + (instancetype)circleImageWithName:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
+/**
+ *  根据图片名返回一张能够自由拉伸的图片
+ */
++ (UIImage *)resizedImage:(NSString *)name;
 
 @end

@@ -1,9 +1,9 @@
 //
 //  UIImage+Category_FK.m
-//  05-屏幕截图
+//  FKLibraryExample
 //
-//  Created by QQ920924960 on 15-11-1.
-//  Copyright (c) 2015年 itcast. All rights reserved.
+//  Created by frank on 15-11-1.
+//  Copyright © 2015年 zmosa. All rights reserved.
 //
 
 #import "UIImage+Category_FK.h"
@@ -94,6 +94,12 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
++ (UIImage *)resizedImage:(NSString *)name
+{
+    UIImage *image = [UIImage imageNamed:name];
+    return [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
 }
 
 @end

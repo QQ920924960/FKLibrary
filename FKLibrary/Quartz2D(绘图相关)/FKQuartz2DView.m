@@ -1,9 +1,9 @@
 //
 //  FKQuartz2DView.m
-//  05-屏幕截图
+//  FKLibraryExample
 //
-//  Created by QQ920924960 on 15-11-1.
-//  Copyright (c) 2015年 itcast. All rights reserved.
+//  Created by frank on 15-11-1.
+//  Copyright © 2015年 zmosa. All rights reserved.
 //
 
 #import "FKQuartz2DView.h"
@@ -212,7 +212,7 @@ void drawEyes(CGContextRef ctx, CGRect rect)
     CGContextStrokePath(ctx);
     
     // 2.最外圈的镜框
-    [FKRGBColor(61, 62, 66, 1) set];
+    [FKRGBAColor(61, 62, 66, 1) set];
     CGFloat kuangRadius = kRadius_FK * 0.4;
     CGFloat kuangY = startY;
     CGFloat kuangX = rect.size.width * 0.5 - kuangRadius;
@@ -285,7 +285,7 @@ void drawBody(CGContextRef ctx, CGRect rect)
     CGContextClosePath(ctx);
     
     // 设置颜色
-    [FKRGBColor(252, 218, 0, 1) set];
+    [FKRGBAColor(252, 218, 0, 1) set];
     
     // 利用填充方式画出之前的路径
     CGContextFillPath(ctx);
