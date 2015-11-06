@@ -1,8 +1,8 @@
 //
-//  Macro.h
-//  05-屏幕截图
+//  FKConst.m
+//  FKLibraryExample
 //
-//  Created by frank on 15-11-1.
+//  Created by frank on 15/11/6.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 

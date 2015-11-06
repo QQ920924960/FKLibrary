@@ -10,7 +10,7 @@
 
 @implementation UIBarButtonItem (Category_FK)
 
-+ (UIBarButtonItem *)itemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action
++ (UIBarButtonItem *)FKItemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action
 {
     UIButton *button = [[UIButton alloc] init];
     [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];

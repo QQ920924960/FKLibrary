@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0149BFC11BEC77590099B055 /* FKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC01BEC77590099B055 /* FKConst.m */; settings = {ASSET_TAGS = (); }; };
+		0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC91BEC92BF0099B055 /* FKImageTools.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDA41BE6ECE500D47216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA31BE6ECE500D47216 /* main.m */; };
 		0195FDA71BE6ECE500D47216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA61BE6ECE500D47216 /* AppDelegate.m */; };
 		0195FDAA1BE6ECE500D47216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA91BE6ECE500D47216 /* ViewController.m */; };
@@ -20,7 +22,7 @@
 		0195FDEB1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDEE1BE6F8C200D47216 /* NSString+Category_FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDED1BE6F8C200D47216 /* NSString+Category_FK.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDF11BE6F91A00D47216 /* NSDate+Category_FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF01BE6F91A00D47216 /* NSDate+Category_FK.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDF31BE6F96900D47216 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF21BE6F96900D47216 /* Foundation+Log.m */; settings = {ASSET_TAGS = (); }; };
+		0195FDF31BE6F96900D47216 /* Foundation+Log_FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF21BE6F96900D47216 /* Foundation+Log_FK.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDF61BE6F9D400D47216 /* UIView+Category_FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF51BE6F9D400D47216 /* UIView+Category_FK.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0149BFBF1BEC74900099B055 /* FKLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLibrary.h; sourceTree = "<group>"; };
+		0149BFC01BEC77590099B055 /* FKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKConst.m; sourceTree = "<group>"; };
+		0149BFC21BEC77A50099B055 /* FKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKConst.h; sourceTree = "<group>"; };
+		0149BFC41BEC7E7B0099B055 /* FKSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKSingleton.h; sourceTree = "<group>"; };
+		0149BFC81BEC92BF0099B055 /* FKImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKImageTools.h; sourceTree = "<group>"; };
+		0149BFC91BEC92BF0099B055 /* FKImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKImageTools.m; sourceTree = "<group>"; };
 		0195FD9F1BE6ECE500D47216 /* FKLibraryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKLibraryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0195FDA31BE6ECE500D47216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0195FDA51BE6ECE500D47216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,17 +68,16 @@
 		0195FDC91BE6ECE600D47216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0195FDD91BE6EE7900D47216 /* UIImage+Category_FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category_FK.h"; sourceTree = "<group>"; };
 		0195FDDA1BE6EE7900D47216 /* UIImage+Category_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category_FK.m"; sourceTree = "<group>"; };
-		0195FDDF1BE6EE7900D47216 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		0195FDDF1BE6EE7900D47216 /* FKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMacro.h; sourceTree = "<group>"; };
 		0195FDE11BE6EE7900D47216 /* FKQuartz2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKQuartz2DView.h; sourceTree = "<group>"; };
 		0195FDE21BE6EE7900D47216 /* FKQuartz2DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKQuartz2DView.m; sourceTree = "<group>"; };
-		0195FDE71BE6EE9E00D47216 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		0195FDE91BE6F89B00D47216 /* UIBarButtonItem+Category_FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Category_FK.h"; sourceTree = "<group>"; };
 		0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Category_FK.m"; sourceTree = "<group>"; };
 		0195FDEC1BE6F8C200D47216 /* NSString+Category_FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category_FK.h"; sourceTree = "<group>"; };
 		0195FDED1BE6F8C200D47216 /* NSString+Category_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category_FK.m"; sourceTree = "<group>"; };
 		0195FDEF1BE6F91A00D47216 /* NSDate+Category_FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category_FK.h"; sourceTree = "<group>"; };
 		0195FDF01BE6F91A00D47216 /* NSDate+Category_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category_FK.m"; sourceTree = "<group>"; };
-		0195FDF21BE6F96900D47216 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		0195FDF21BE6F96900D47216 /* Foundation+Log_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log_FK.m"; sourceTree = "<group>"; };
 		0195FDF41BE6F9D400D47216 /* UIView+Category_FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category_FK.h"; sourceTree = "<group>"; };
 		0195FDF51BE6F9D400D47216 /* UIView+Category_FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category_FK.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0149BFC31BEC7E4E0099B055 /* Singleton(单例) */ = {
+			isa = PBXGroup;
+			children = (
+				0149BFC41BEC7E7B0099B055 /* FKSingleton.h */,
+			);
+			path = "Singleton(单例)";
+			sourceTree = "<group>";
+		};
 		0195FD961BE6ECE500D47216 = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +181,12 @@
 		0195FDD71BE6EE7900D47216 /* FKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0149BFC31BEC7E4E0099B055 /* Singleton(单例) */,
 				0195FDD81BE6EE7900D47216 /* Category_FK(分类) */,
 				0195FDDB1BE6EE7900D47216 /* Const(常量) */,
 				0195FDDE1BE6EE7900D47216 /* Macro(宏) */,
 				0195FDE01BE6EE7900D47216 /* Quartz2D(绘图相关) */,
+				0149BFBF1BEC74900099B055 /* FKLibrary.h */,
 			);
 			name = FKLibrary;
 			path = ../../FKLibrary;
@@ -188,7 +205,7 @@
 				0195FDF01BE6F91A00D47216 /* NSDate+Category_FK.m */,
 				0195FDF41BE6F9D400D47216 /* UIView+Category_FK.h */,
 				0195FDF51BE6F9D400D47216 /* UIView+Category_FK.m */,
-				0195FDF21BE6F96900D47216 /* Foundation+Log.m */,
+				0195FDF21BE6F96900D47216 /* Foundation+Log_FK.m */,
 			);
 			path = "Category_FK(分类)";
 			sourceTree = "<group>";
@@ -196,7 +213,8 @@
 		0195FDDB1BE6EE7900D47216 /* Const(常量) */ = {
 			isa = PBXGroup;
 			children = (
-				0195FDE71BE6EE9E00D47216 /* Const.h */,
+				0149BFC21BEC77A50099B055 /* FKConst.h */,
+				0149BFC01BEC77590099B055 /* FKConst.m */,
 			);
 			path = "Const(常量)";
 			sourceTree = "<group>";
@@ -204,7 +222,7 @@
 		0195FDDE1BE6EE7900D47216 /* Macro(宏) */ = {
 			isa = PBXGroup;
 			children = (
-				0195FDDF1BE6EE7900D47216 /* Macro.h */,
+				0195FDDF1BE6EE7900D47216 /* FKMacro.h */,
 			);
 			path = "Macro(宏)";
 			sourceTree = "<group>";
@@ -214,6 +232,8 @@
 			children = (
 				0195FDE11BE6EE7900D47216 /* FKQuartz2DView.h */,
 				0195FDE21BE6EE7900D47216 /* FKQuartz2DView.m */,
+				0149BFC81BEC92BF0099B055 /* FKImageTools.h */,
+				0149BFC91BEC92BF0099B055 /* FKImageTools.m */,
 			);
 			path = "Quartz2D(绘图相关)";
 			sourceTree = "<group>";
@@ -280,6 +300,7 @@
 		0195FD971BE6ECE500D47216 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FK;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = zmosa;
 				TargetAttributes = {
@@ -354,9 +375,11 @@
 				0195FDF61BE6F9D400D47216 /* UIView+Category_FK.m in Sources */,
 				0195FDE31BE6EE7900D47216 /* UIImage+Category_FK.m in Sources */,
 				0195FDA41BE6ECE500D47216 /* main.m in Sources */,
-				0195FDF31BE6F96900D47216 /* Foundation+Log.m in Sources */,
+				0195FDF31BE6F96900D47216 /* Foundation+Log_FK.m in Sources */,
+				0149BFC11BEC77590099B055 /* FKConst.m in Sources */,
 				0195FDEE1BE6F8C200D47216 /* NSString+Category_FK.m in Sources */,
 				0195FDEB1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m in Sources */,
+				0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */,
 				0195FDF11BE6F91A00D47216 /* NSDate+Category_FK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +604,7 @@
 				0195FDCE1BE6ECE600D47216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0195FDCF1BE6ECE600D47216 /* Build configuration list for PBXNativeTarget "FKLibraryExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +613,7 @@
 				0195FDD11BE6ECE600D47216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0195FDD21BE6ECE600D47216 /* Build configuration list for PBXNativeTarget "FKLibraryExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +622,7 @@
 				0195FDD41BE6ECE600D47216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

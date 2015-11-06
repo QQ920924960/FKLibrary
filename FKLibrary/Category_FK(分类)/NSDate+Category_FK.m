@@ -13,7 +13,7 @@
 /**
  *  是否为今天
  */
-- (BOOL)isToday
+- (BOOL)FKIsToday
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
@@ -32,13 +32,13 @@
 /**
  *  是否为昨天
  */
-- (BOOL)isYesterday
+- (BOOL)FKIsYesterday
 {
     // 2014-05-01
-    NSDate *nowDate = [[NSDate date] dateWithYMD];
+    NSDate *nowDate = [[NSDate date] FKDateWithYMD];
     
     // 2014-04-30
-    NSDate *selfDate = [self dateWithYMD];
+    NSDate *selfDate = [self FKDateWithYMD];
     
     // 获得nowDate和selfDate的差距
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -46,7 +46,7 @@
     return cmps.day == 1;
 }
 
-- (NSDate *)dateWithYMD
+- (NSDate *)FKDateWithYMD
 {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd";
@@ -57,7 +57,7 @@
 /**
  *  是否为今年
  */
-- (BOOL)isThisYear
+- (BOOL)FKIsThisYear
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitYear;
@@ -71,7 +71,7 @@
     return nowCmps.year == selfCmps.year;
 }
 
-- (NSDateComponents *)deltaWithNow
+- (NSDateComponents *)FKDeltaWithNow
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;

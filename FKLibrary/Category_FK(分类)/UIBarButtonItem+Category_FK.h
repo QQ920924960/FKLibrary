@@ -20,6 +20,6 @@
  *
  *  @return 自定义的UIBarButtonItem
  */
-+ (UIBarButtonItem *)itemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)FKItemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action;
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation NSString (Category_FK)
 
-+ (NSString *)emojiWithIntCode:(int)intCode {
++ (NSString *)FKEmojiWithIntCode:(int)intCode {
     int symbol = EmojiCodeToSymbol(intCode);
     NSString *string = [[NSString alloc] initWithBytes:&symbol length:sizeof(symbol) encoding:NSUTF8StringEncoding];
     if (string == nil) { // 新版Emoji
@@ -21,15 +21,15 @@
     return string;
 }
 
-+ (NSString *)emojiWithStringCode:(NSString *)stringCode
++ (NSString *)FKEmojiWithStringCode:(NSString *)stringCode
 {
     char *charCode = (char *)stringCode.UTF8String;
     int intCode = strtol(charCode, NULL, 16);
-    return [self emojiWithIntCode:intCode];
+    return [self FKEmojiWithIntCode:intCode];
 }
 
 // 判断是否是 emoji表情
-- (BOOL)isEmoji
+- (BOOL)FKIsEmoji
 {
     BOOL returnValue = NO;
     

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FKLibrary.h"
 
 @interface ViewController ()
 
@@ -18,9 +19,16 @@
     [super viewDidLoad];
     
     
-    UIView *test = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
-    test.backgroundColor = [UIColor redColor];
-    [self.view addSubview:test];
+    UIButton *textButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 300, 600)];
+    textButton.backgroundColor = [UIColor blackColor];
+    
+    
+//    UIImage *circleImage = [UIImage FKImageClipToCircle:@"profil_bg" borderWidth:3 borderColor:[UIColor redColor]];
+    UIImage *circleImage = [UIImage FKImageClipToCircle:[UIImage imageNamed:@"profil_bg"] inset:5];
+    [textButton setImage:circleImage forState:UIControlStateNormal];
+    
+    [self.view addSubview:textButton];
+    
     
 }
 

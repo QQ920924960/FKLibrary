@@ -7,7 +7,7 @@
 //
 
 #import "FKQuartz2DView.h"
-#import "Macro.h"
+#import "FKMacro.h"
 static CGFloat const kRadius_FK = 70;
 static CGFloat const kTopY_FK = 100;
 
