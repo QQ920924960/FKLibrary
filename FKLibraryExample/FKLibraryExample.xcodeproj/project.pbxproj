@@ -47,9 +47,9 @@
 		0149BFBF1BEC74900099B055 /* FKLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLibrary.h; sourceTree = "<group>"; };
 		0149BFC01BEC77590099B055 /* FKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKConst.m; sourceTree = "<group>"; };
 		0149BFC21BEC77A50099B055 /* FKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKConst.h; sourceTree = "<group>"; };
-		0149BFC41BEC7E7B0099B055 /* FKSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKSingleton.h; sourceTree = "<group>"; };
 		0149BFC81BEC92BF0099B055 /* FKImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKImageTools.h; sourceTree = "<group>"; };
 		0149BFC91BEC92BF0099B055 /* FKImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKImageTools.m; sourceTree = "<group>"; };
+		0149BFD21BECD2E20099B055 /* FKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSingleton.h; sourceTree = "<group>"; };
 		0195FD9F1BE6ECE500D47216 /* FKLibraryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKLibraryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0195FDA31BE6ECE500D47216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0195FDA51BE6ECE500D47216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,12 +107,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0149BFC31BEC7E4E0099B055 /* Singleton(单例) */ = {
+		0149BFCB1BECCBA90099B055 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
-				0149BFC41BEC7E7B0099B055 /* FKSingleton.h */,
+				0149BFD21BECD2E20099B055 /* FKSingleton.h */,
 			);
-			path = "Singleton(单例)";
+			path = "Tools(工具类)";
 			sourceTree = "<group>";
 		};
 		0195FD961BE6ECE500D47216 = {
@@ -181,7 +181,7 @@
 		0195FDD71BE6EE7900D47216 /* FKLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				0149BFC31BEC7E4E0099B055 /* Singleton(单例) */,
+				0149BFCB1BECCBA90099B055 /* Tools(工具类) */,
 				0195FDD81BE6EE7900D47216 /* Category_FK(分类) */,
 				0195FDDB1BE6EE7900D47216 /* Const(常量) */,
 				0195FDDE1BE6EE7900D47216 /* Macro(宏) */,
@@ -195,17 +195,17 @@
 		0195FDD81BE6EE7900D47216 /* Category_FK(分类) */ = {
 			isa = PBXGroup;
 			children = (
-				0195FDD91BE6EE7900D47216 /* UIImage+Category_FK.h */,
-				0195FDDA1BE6EE7900D47216 /* UIImage+Category_FK.m */,
-				0195FDE91BE6F89B00D47216 /* UIBarButtonItem+Category_FK.h */,
-				0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m */,
-				0195FDEC1BE6F8C200D47216 /* NSString+Category_FK.h */,
-				0195FDED1BE6F8C200D47216 /* NSString+Category_FK.m */,
+				0195FDF21BE6F96900D47216 /* Foundation+Log_FK.m */,
 				0195FDEF1BE6F91A00D47216 /* NSDate+Category_FK.h */,
 				0195FDF01BE6F91A00D47216 /* NSDate+Category_FK.m */,
+				0195FDEC1BE6F8C200D47216 /* NSString+Category_FK.h */,
+				0195FDED1BE6F8C200D47216 /* NSString+Category_FK.m */,
+				0195FDE91BE6F89B00D47216 /* UIBarButtonItem+Category_FK.h */,
+				0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+Category_FK.m */,
+				0195FDD91BE6EE7900D47216 /* UIImage+Category_FK.h */,
+				0195FDDA1BE6EE7900D47216 /* UIImage+Category_FK.m */,
 				0195FDF41BE6F9D400D47216 /* UIView+Category_FK.h */,
 				0195FDF51BE6F9D400D47216 /* UIView+Category_FK.m */,
-				0195FDF21BE6F96900D47216 /* Foundation+Log_FK.m */,
 			);
 			path = "Category_FK(分类)";
 			sourceTree = "<group>";

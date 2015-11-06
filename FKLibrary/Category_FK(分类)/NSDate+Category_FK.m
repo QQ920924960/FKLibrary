@@ -78,4 +78,45 @@
     return [calendar components:unit fromDate:self toDate:[NSDate date] options:0];
 }
 
+/**
+ *  格式化时间
+ */
++ (NSString *)FKDateFormatWithNumber:(NSNumber *)number
+{
+    
+    NSNumber *tempTime = number;
+    double doubleTempTime = [tempTime doubleValue]/1000;
+    NSTimeInterval timestamp = (NSTimeInterval)doubleTempTime;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timestamp];
+    
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    
+    // 判断是否为今年
+    if (date.FKIsThisYear) {
+        NSDateComponents *cmps = [date FKDeltaWithNow];
+        if (date.FKIsToday) { // 今天
+            if (cmps.hour >= 1) { // 至少是1小时前发的
+                NSLog(@"%@",cmps);
+                return [NSString stringWithFormat:@"%ld小时前", (long)cmps.hour];
+            } else if (cmps.minute >= 1) { // 1~59分钟之前发的
+                return [NSString stringWithFormat:@"%ld分钟前", (long)cmps.minute];
+            } else { // 1分钟内发的
+                return @"刚刚";
+            }
+        } else if (date.FKIsYesterday) { // 昨天
+            fmt.dateFormat = @"昨天 HH:mm";
+            return [fmt stringFromDate:date];
+        } else if (cmps.day < 30) { // 至少是前天
+            return [NSString stringWithFormat:@"%ld天前", (long)cmps.day];
+        } else { // 至少是一个月前
+            fmt.dateFormat = @"MM-dd HH:mm";
+            return [fmt stringFromDate:date];
+        }
+    } else { // 非今年
+        fmt.dateFormat = @"yyyy-MM-dd";
+        return [fmt stringFromDate:date];
+    }
+}
+
 @end

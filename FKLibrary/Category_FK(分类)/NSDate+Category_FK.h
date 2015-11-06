@@ -33,4 +33,8 @@
  */
 - (NSDateComponents *)FKDeltaWithNow;
 
+
+/** 格式化时间 */
++ (NSString *)FKDateFormatWithNumber:(NSNumber *)number;
+
 @end
