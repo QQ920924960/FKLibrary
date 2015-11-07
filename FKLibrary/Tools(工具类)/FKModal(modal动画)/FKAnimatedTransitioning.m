@@ -29,7 +29,7 @@ static CGFloat const duration = 1.0;
 //        toView.frame.origin.x = toView.frame.size.width;
         [UIView animateWithDuration:duration animations:^{
             [self changeViewX:toView value:0];
-            toView.layer.transform = CATransform3DIdentity;
+//            toView.layer.transform = CATransform3DIdentity;
             // 为了使代码没有耦合性,就不采用下面的写法了【需要导入UIView的分类】
 //            toView.frame.origin.x = 0;
         } completion:^(BOOL finished) {

@@ -462,7 +462,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** blur模糊效果【Begin】 ******************/
 
--(UIImage*)FKGaussianBlurWithBias:(NSInteger)bias
+-(UIImage*)FKImageGaussianBlurWithBias:(NSInteger)bias
 {
     // Create an ARGB bitmap context【创建一个ARGB的位图上下文】
     const size_t width = (size_t)self.size.width;

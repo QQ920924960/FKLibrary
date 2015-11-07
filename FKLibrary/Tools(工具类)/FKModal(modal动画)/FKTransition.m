@@ -10,7 +10,27 @@
 #import "FKAnimatedTransitioning.h"
 #import "FKPresentationController.h"
 
+static id _instance = nil;
+
 @implementation FKTransition
+
++ (instancetype)sharedTransition
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
 
 #pragma mark - UIViewControllerTransitioningDelegate
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source

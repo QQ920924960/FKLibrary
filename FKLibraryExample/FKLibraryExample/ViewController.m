@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "FKLibrary.h"
+#import "FKTestClass/FKImageFilterVC.h"
+#import "FKTransition.h"
 
 @interface ViewController ()
 
@@ -27,11 +29,12 @@
 //    UIImage *testImage = [UIImage FKImageClipToCircle:[UIImage imageNamed:@"profil_bg"] inset:5];
 //    UIImage *testImage = [UIImage FKImageWithColor:[UIColor redColor] size:CGSizeMake(150, 150)];
 //    UIImage *testImage = [UIImage FKImageWithColor:[UIColor blueColor] view:testButton];
-    UIImage *testImage = [UIImage FKImageGenerateQRCode:@"kaishushu" width:200 height:200];
-    [testButton setImage:testImage forState:UIControlStateNormal];
+//    UIImage *testImage = [UIImage FKImageGenerateQRCode:@"kaishushu" width:200 height:200];
+//    [testButton setImage:testImage forState:UIControlStateNormal];
     
     [testButton FKViewCornerRadius:0 borderWidth:10 borderColor:[UIColor blueColor]];
     [testButton FKButtonSetTitle:nil titleColor:nil font:nil forState:UIControlStateNormal];
+    [testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 //    [testButton setTitle:@"dfssadffs" forState:UIControlStateNormal];
 //    [testButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 //    testButton.titleLabel.font = [UIFont systemFontOfSize:18];
@@ -44,6 +47,23 @@
     
     
 }
+
+- (void)testButtonClicked:(UIButton *)button
+{
+    FKImageFilterVC *filterVC = [[FKImageFilterVC alloc] init];
+    filterVC.modalPresentationStyle = UIModalPresentationCustom;
+    filterVC.transitioningDelegate = [FKTransition sharedTransition];
+    [self presentViewController:filterVC animated:YES completion:nil];
+}
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    FKImageFilterVC *filterVC = [[FKImageFilterVC alloc] init];
+//    filterVC.modalPresentationStyle = UIModalPresentationCustom;
+//    filterVC.transitioningDelegate = [FKTransition sharedTransition];
+//    [self presentViewController:filterVC animated:YES completion:nil];
+//    NSLog(@"---ViewController--touchesBegan---");
+//}
 
 /**
  *  获取iOS系统自带的滤镜名称并写入文件

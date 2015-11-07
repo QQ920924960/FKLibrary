@@ -170,7 +170,7 @@ typedef enum
  *
  *  @return 设置后的图片
  */
--(UIImage*)FKGaussianBlurWithBias:(NSInteger)bias;
+-(UIImage*)FKImageGaussianBlurWithBias:(NSInteger)bias;
 
 /****************** blur模糊效果【End】 ******************/
 
