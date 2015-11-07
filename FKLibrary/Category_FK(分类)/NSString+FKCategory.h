@@ -1,5 +1,5 @@
 //
-//  NSString+Category_FK.h
+//  NSString+FKCategory.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Category_FK)
+@interface NSString (FKCategory)
 
 /**
  *  获得经过md5签名后的字符串【直接调用getter方法】

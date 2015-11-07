@@ -1,0 +1,22 @@
+//
+//  UIWindow+FKCategory.h
+//  FKLibraryExample
+//
+//  Created by frank on 15/11/7.
+//  Copyright © 2015年 zmosa. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface UIWindow (FKCategory)
+
++ (instancetype)FKSharedWindow;
+- (instancetype)FKSharedWindow;
+
+
+
++ (instancetype)FKBaseWindow;
+
++ (void)FKDismissWindow;
+
+@end

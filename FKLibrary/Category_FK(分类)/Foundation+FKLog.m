@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@implementation UIView(Log)
+@implementation UIView(FKLog)
 
 + (NSString *)FKSearchAllSubviews:(UIView *)superview
 {
@@ -25,7 +25,7 @@
 }
 @end
 
-@implementation NSDictionary (Log)
+@implementation NSDictionary (FKLog)
 - (NSString *)FKDescriptionWithLocale:(id)locale
 {
     NSMutableString *str = [NSMutableString string];
@@ -50,7 +50,7 @@
 }
 @end
 
-@implementation NSArray (Log)
+@implementation NSArray (FKLog)
 - (NSString *)FKDescriptionWithLocale:(id)locale
 {
     NSMutableString *str = [NSMutableString string];

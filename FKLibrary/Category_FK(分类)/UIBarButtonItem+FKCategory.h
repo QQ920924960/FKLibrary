@@ -1,5 +1,5 @@
 //
-//  UIBarButtonItem+Category_FK.h
+//  UIBarButtonItem+FKCategory.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIBarButtonItem (Category_FK)
+@interface UIBarButtonItem (FKCategory)
 
 /**
  *  通过传入图片名设置按钮来自定义UIBarButtonItem

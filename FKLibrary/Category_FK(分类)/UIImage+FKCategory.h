@@ -1,5 +1,5 @@
 //
-//  UIImage+Category_FK.h
+//  UIImage+FKCategory.h
 //  FKLibraryExample
 //
 //  Created by frank on 15-11-1.
@@ -38,13 +38,23 @@ typedef enum
 } FKImageType;
 
 
-@interface UIImage (Category_FK)
+@interface UIImage (FKCategory)
 
 
 /**
  *  通过传入的尺寸创建纯色UIImage
  */
 + (instancetype)FKImageWithColor:(UIColor *)color size:(CGSize)size;
+
+/**
+ *  通过传入一个view和UIColor来创建纯色image【因为view是所有UI控件的父控件】
+ *
+ *  @param color 传入的颜色
+ *  @param view  传入的view【为了获取view的尺寸】
+ *
+ *  @return image
+ */
++ (instancetype)FKImageWithColor:(UIColor *)color view:(UIView *)view;
 
 /**
  *  屏幕截图
@@ -134,6 +144,20 @@ typedef enum
  *  @return 旋转后的图片
  */
 - (UIImage *)FKImageRotateByAngle:(CGFloat)angle;
+
+/**
+ *  生成二维码
+ *
+ *  @param code   传入的文字
+ *  @param width  宽度
+ *  @param height 高度
+ *
+ *  @return 生成的二维码
+ */
++ (UIImage *)FKImageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height;
+
+
+
 
 
 

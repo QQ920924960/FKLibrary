@@ -9,12 +9,19 @@
 #ifndef FKLibrary_h
 #define FKLibrary_h
 
-/******************* Category_FK(分类) *******************/
-#import "UIImage+Category_FK.h"
-#import "UIBarButtonItem+Category_FK.h"
-#import "NSString+Category_FK.h"
-#import "NSDate+Category_FK.h"
-#import "UIView+Category_FK.h"
+/******************* FKCategory(分类) *******************/
+#import "CALayer+FKCategory.h"
+#import "NSArray+FKCategory.h"
+#import "NSData+FKCategory.h"
+#import "NSDate+FKCategory.h"
+#import "NSString+FKCategory.h"
+#import "UIBarButtonItem+FKCategory.h"
+#import "UIButton+FKCategory.h"
+#import "UIColor+FKCategory.h"
+#import "UIDevice+FKCategory.h"
+#import "UIImage+FKCategory.h"
+#import "UIView+FKCategory.h"
+#import "UIWindow+FKCategory.h"
 
 
 /******************* FKConst(常量) *******************/

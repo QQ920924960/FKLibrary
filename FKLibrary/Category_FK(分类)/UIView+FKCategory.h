@@ -1,5 +1,5 @@
 //
-//  UIView+Category_FK.h
+//  UIView+FKCategory.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Category_FK)
+@interface UIView (FKCategory)
 
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
@@ -19,6 +19,6 @@
 @property (nonatomic, assign) CGSize size;
 
 
-
+- (void)FKViewCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)width borderColor:(UIColor *)borderColor;
 
 @end

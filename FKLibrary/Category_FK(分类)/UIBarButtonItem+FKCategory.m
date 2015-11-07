@@ -1,14 +1,14 @@
 //
-//  UIBarButtonItem+Category_FK.m
+//  UIBarButtonItem+FKCategory.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIBarButtonItem+Category_FK.h"
+#import "UIBarButtonItem+FKCategory.h"
 
-@implementation UIBarButtonItem (Category_FK)
+@implementation UIBarButtonItem (FKCategory)
 
 + (UIBarButtonItem *)FKItemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action
 {

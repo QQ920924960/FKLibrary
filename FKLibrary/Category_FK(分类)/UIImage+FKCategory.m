@@ -1,12 +1,12 @@
 //
-//  UIImage+Category_FK.m
+//  UIImage+FKCategory.m
 //  FKLibraryExample
 //
 //  Created by frank on 15-11-1.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIImage+Category_FK.h"
+#import "UIImage+FKCategory.h"
 #import <Accelerate/Accelerate.h>
 #import <ImageIO/ImageIO.h> // For CGImageDestination
 #import <MobileCoreServices/MobileCoreServices.h> // For the UTI types constants
@@ -91,14 +91,25 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     -1, -1, -1
 };
 
-@interface UIImage (Category_FK_private)
+@interface UIImage (FKCategory_private)
 -(CFStringRef)utiForType:(FKImageType)type;
 @end
 
-@implementation UIImage (Category_FK)
+@implementation UIImage (FKCategory)
 
 + (instancetype)FKImageWithColor:(UIColor *)color size:(CGSize)size
 {
+    UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
+    [color set];
+    UIRectFill(CGRectMake(0, 0, size.width, size.height));
+    UIImage *pureColorImage = (UIImage *)UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return pureColorImage;
+}
+
++ (instancetype)FKImageWithColor:(UIColor *)color view:(UIView *)view
+{
+    CGSize size = CGSizeMake(view.bounds.size.width, view.bounds.size.height);
     UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
     [color set];
     UIRectFill(CGRectMake(0, 0, size.width, size.height));
@@ -416,6 +427,37 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return newImage;
     
 }
+
++ (UIImage *)FKImageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height{
+    
+    // 生成二维码图片
+    CIImage *qrcodeImage;
+    // 将字符串采用utf-8编码生成NSData
+    NSData *data = [code dataUsingEncoding:NSUTF8StringEncoding];
+    // 添加滤镜
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    // 输入数据
+    [filter setValue:data forKey:@"inputMessage"];
+    // 输入校正水平
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    // 输出二维码
+    qrcodeImage = [filter outputImage];
+    
+    // 消除模糊【extent:返回图片的frame】
+    CGFloat scaleX = width / qrcodeImage.extent.size.width;
+    CGFloat scaleY = height / qrcodeImage.extent.size.height;
+    CIImage *transformedImage = [qrcodeImage imageByApplyingTransform:CGAffineTransformScale(CGAffineTransformIdentity, scaleX, scaleY)];
+    
+    return [UIImage imageWithCIImage:transformedImage];
+}
+
+
+
+
+
+
+
+
 
 
 /****************** blur模糊效果【Begin】 ******************/

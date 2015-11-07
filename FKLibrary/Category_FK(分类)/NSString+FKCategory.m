@@ -1,18 +1,19 @@
 //
-//  NSString+Category_FK.m
+//  NSString+FKCategory.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "NSString+Category_FK.h"
+#import "NSString+FKCategory.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
+
 #define EmojiCodeToSymbol(c) ((((0x808080F0 | (c & 0x3F000) >> 4) | (c & 0xFC0) << 10) | (c & 0x1C0000) << 18) | (c & 0x3F) << 24)
 
 
-@implementation NSString (Category_FK)
+@implementation NSString (FKCategory)
 
 
 

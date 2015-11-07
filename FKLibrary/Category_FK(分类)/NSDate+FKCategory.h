@@ -1,5 +1,5 @@
 //
-//  NSDate+Category_FK.h
+//  NSDate+FKCategory.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (Category_FK)
+@interface NSDate (FKCategory)
 
 /**
  *  是否为今天

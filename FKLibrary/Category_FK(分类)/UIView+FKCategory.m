@@ -1,14 +1,14 @@
 //
-//  UIView+Category_FK.m
+//  UIView+FKCategory.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIView+Category_FK.h"
+#import "UIView+FKCategory.h"
 
-@implementation UIView (Category_FK)
+@implementation UIView (FKCategory)
 
 - (void)setX:(CGFloat)x
 {
@@ -92,6 +92,19 @@
 - (CGSize)size
 {
     return self.frame.size;
+}
+
+- (void)FKViewCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
+{
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.borderColor = borderColor.CGColor;
+    self.layer.borderWidth = borderWidth;
+    // 图层栅格化的范围
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    // 是否应该栅格化
+    self.layer.shouldRasterize = YES;
+    self.clipsToBounds = YES;
 }
 
 @end
