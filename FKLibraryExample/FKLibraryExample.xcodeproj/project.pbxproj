@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0149BFC11BEC77590099B055 /* FKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC01BEC77590099B055 /* FKConst.m */; settings = {ASSET_TAGS = (); }; };
-		0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC91BEC92BF0099B055 /* FKImageTools.m */; settings = {ASSET_TAGS = (); }; };
-		016996D61BED846700ED079D /* NSArray+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996D51BED846700ED079D /* NSArray+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996D91BED86D100ED079D /* NSData+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996D81BED86D100ED079D /* NSData+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996DC1BED8BAE00ED079D /* UIColor+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996DB1BED8BAE00ED079D /* UIColor+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996E21BEDA0D300ED079D /* UIWindow+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E11BEDA0D300ED079D /* UIWindow+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996E51BEDB00700ED079D /* UIButton+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E41BEDB00700ED079D /* UIButton+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996E81BEDBD1D00ED079D /* UIDevice+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E71BEDBD1D00ED079D /* UIDevice+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996EB1BEDBE2B00ED079D /* CALayer+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996EA1BEDBE2B00ED079D /* CALayer+FK.m */; settings = {ASSET_TAGS = (); }; };
-		016996EE1BEDC3BE00ED079D /* FKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996ED1BEDC3BE00ED079D /* FKLocationManager.m */; settings = {ASSET_TAGS = (); }; };
-		016996F21BEDE5B400ED079D /* FKImageFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F11BEDE5B400ED079D /* FKImageFilterVC.m */; settings = {ASSET_TAGS = (); }; };
-		016996F51BEDE8E500ED079D /* FKNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F41BEDE8E500ED079D /* FKNavigationVC.m */; settings = {ASSET_TAGS = (); }; };
-		016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F81BEDF00A00ED079D /* FKAnimatedTransitioning.m */; settings = {ASSET_TAGS = (); }; };
-		016996FC1BEDF34D00ED079D /* FKPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FB1BEDF34D00ED079D /* FKPresentationController.m */; settings = {ASSET_TAGS = (); }; };
-		016996FF1BEDF37700ED079D /* FKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FE1BEDF37700ED079D /* FKTransition.m */; settings = {ASSET_TAGS = (); }; };
-		017CFFC81BEF462600DDFAF3 /* FKFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CFFC71BEF462600DDFAF3 /* FKFilterView.m */; settings = {ASSET_TAGS = (); }; };
+		0149BFC11BEC77590099B055 /* FKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC01BEC77590099B055 /* FKConst.m */; };
+		0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC91BEC92BF0099B055 /* FKImageTools.m */; };
+		016996D61BED846700ED079D /* NSArray+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996D51BED846700ED079D /* NSArray+FK.m */; };
+		016996D91BED86D100ED079D /* NSData+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996D81BED86D100ED079D /* NSData+FK.m */; };
+		016996DC1BED8BAE00ED079D /* UIColor+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996DB1BED8BAE00ED079D /* UIColor+FK.m */; };
+		016996E21BEDA0D300ED079D /* UIWindow+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E11BEDA0D300ED079D /* UIWindow+FK.m */; };
+		016996E51BEDB00700ED079D /* UIButton+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E41BEDB00700ED079D /* UIButton+FK.m */; };
+		016996E81BEDBD1D00ED079D /* UIDevice+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996E71BEDBD1D00ED079D /* UIDevice+FK.m */; };
+		016996EB1BEDBE2B00ED079D /* CALayer+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996EA1BEDBE2B00ED079D /* CALayer+FK.m */; };
+		016996EE1BEDC3BE00ED079D /* FKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996ED1BEDC3BE00ED079D /* FKLocationManager.m */; };
+		016996F21BEDE5B400ED079D /* FKImageFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F11BEDE5B400ED079D /* FKImageFilterVC.m */; };
+		016996F51BEDE8E500ED079D /* FKNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F41BEDE8E500ED079D /* FKNavigationVC.m */; };
+		016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F81BEDF00A00ED079D /* FKAnimatedTransitioning.m */; };
+		016996FC1BEDF34D00ED079D /* FKPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FB1BEDF34D00ED079D /* FKPresentationController.m */; };
+		016996FF1BEDF37700ED079D /* FKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FE1BEDF37700ED079D /* FKTransition.m */; };
+		017CFFC81BEF462600DDFAF3 /* FKFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CFFC71BEF462600DDFAF3 /* FKFilterView.m */; };
 		0195FDA41BE6ECE500D47216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA31BE6ECE500D47216 /* main.m */; };
 		0195FDA71BE6ECE500D47216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA61BE6ECE500D47216 /* AppDelegate.m */; };
 		0195FDAA1BE6ECE500D47216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA91BE6ECE500D47216 /* ViewController.m */; };
@@ -31,13 +31,14 @@
 		0195FDB21BE6ECE600D47216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0195FDB01BE6ECE500D47216 /* LaunchScreen.storyboard */; };
 		0195FDBD1BE6ECE600D47216 /* FKLibraryExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDBC1BE6ECE600D47216 /* FKLibraryExampleTests.m */; };
 		0195FDC81BE6ECE600D47216 /* FKLibraryExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDC71BE6ECE600D47216 /* FKLibraryExampleUITests.m */; };
-		0195FDE31BE6EE7900D47216 /* UIImage+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDDA1BE6EE7900D47216 /* UIImage+FK.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDE61BE6EE7900D47216 /* FKQuartz2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDE21BE6EE7900D47216 /* FKQuartz2DView.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDEB1BE6F89B00D47216 /* UIBarButtonItem+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+FK.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDEE1BE6F8C200D47216 /* NSString+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDED1BE6F8C200D47216 /* NSString+FK.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDF11BE6F91A00D47216 /* NSDate+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF01BE6F91A00D47216 /* NSDate+FK.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDF31BE6F96900D47216 /* Foundation+FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF21BE6F96900D47216 /* Foundation+FKLog.m */; settings = {ASSET_TAGS = (); }; };
-		0195FDF61BE6F9D400D47216 /* UIView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF51BE6F9D400D47216 /* UIView+FK.m */; settings = {ASSET_TAGS = (); }; };
+		0195FDE31BE6EE7900D47216 /* UIImage+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDDA1BE6EE7900D47216 /* UIImage+FK.m */; };
+		0195FDE61BE6EE7900D47216 /* FKQuartz2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDE21BE6EE7900D47216 /* FKQuartz2DView.m */; };
+		0195FDEB1BE6F89B00D47216 /* UIBarButtonItem+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDEA1BE6F89B00D47216 /* UIBarButtonItem+FK.m */; };
+		0195FDEE1BE6F8C200D47216 /* NSString+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDED1BE6F8C200D47216 /* NSString+FK.m */; };
+		0195FDF11BE6F91A00D47216 /* NSDate+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF01BE6F91A00D47216 /* NSDate+FK.m */; };
+		0195FDF31BE6F96900D47216 /* Foundation+FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF21BE6F96900D47216 /* Foundation+FKLog.m */; };
+		0195FDF61BE6F9D400D47216 /* UIView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDF51BE6F9D400D47216 /* UIView+FK.m */; };
+		1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		0195FDF21BE6F96900D47216 /* Foundation+FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+FKLog.m"; sourceTree = "<group>"; };
 		0195FDF41BE6F9D400D47216 /* UIView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FK.h"; sourceTree = "<group>"; };
 		0195FDF51BE6F9D400D47216 /* UIView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FK.m"; sourceTree = "<group>"; };
+		1B87DF1B1BEFA089008C8347 /* NSObject+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FK.h"; sourceTree = "<group>"; };
+		1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FK.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,7 @@
 		0195FDD81BE6EE7900D47216 /* Category_FK(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				1B87DF1A1BEFA073008C8347 /* Foundation */,
 				016996E91BEDBE2B00ED079D /* CALayer+FK.h */,
 				016996EA1BEDBE2B00ED079D /* CALayer+FK.m */,
 				0195FDF21BE6F96900D47216 /* Foundation+FKLog.m */,
@@ -322,6 +326,15 @@
 				0149BFC91BEC92BF0099B055 /* FKImageTools.m */,
 			);
 			path = "Quartz2D(绘图相关)";
+			sourceTree = "<group>";
+		};
+		1B87DF1A1BEFA073008C8347 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				1B87DF1B1BEFA089008C8347 /* NSObject+FK.h */,
+				1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +478,7 @@
 				016996D61BED846700ED079D /* NSArray+FK.m in Sources */,
 				016996E51BEDB00700ED079D /* UIButton+FK.m in Sources */,
 				0195FDF61BE6F9D400D47216 /* UIView+FK.m in Sources */,
+				1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */,
 				0195FDE31BE6EE7900D47216 /* UIImage+FK.m in Sources */,
 				016996FF1BEDF37700ED079D /* FKTransition.m in Sources */,
 				016996E81BEDBD1D00ED079D /* UIDevice+FK.m in Sources */,
