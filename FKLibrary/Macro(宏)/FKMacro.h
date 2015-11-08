@@ -9,6 +9,8 @@
 #ifndef _5______Macro_h
 #define _5______Macro_h
 
+/***************** begin *****************/
+
 #ifdef DEBUG // 调试状态, 打开LOG功能
 #define FKLog(...) NSLog(__VA_ARGS__)
 #else // 发布状态, 关闭LOG功能
@@ -33,5 +35,10 @@
 // 屏幕高度
 #define FKScreenH [UIScreen mainScreen].bounds.size.height
 
+/** 沙盒路径 */
+#define FKFilePath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
+
+/***************** end *****************/
 
 #endif

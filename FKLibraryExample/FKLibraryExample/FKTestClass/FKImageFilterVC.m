@@ -8,37 +8,40 @@
 
 #import "FKImageFilterVC.h"
 #import "FKLibrary.h"
+#import "FKFilterView.h"
 
 @interface FKImageFilterVC ()
-@property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) FKFilterView *filterView;
 @property (nonatomic, weak) UISlider *slider;
 @property (nonatomic, strong) UIImage *image;
 @end
 
 @implementation FKImageFilterVC
 
+- (UIImage *)image
+{
+    if (!_image) {
+        _image = [UIImage imageNamed:@"profil_bg"];
+    }
+    return _image;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImage *image = [UIImage imageNamed:@"profil_bg"];
-    self.image = image;
-    
-    
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.frame = CGRectMake(20, 20, FKScreenW - 40, 400);
-    imageView.backgroundColor = [UIColor yellowColor];
-    imageView.image = self.image;
-    [self.view addSubview:imageView];
-    self.imageView = imageView;
-    [self.imageView setNeedsDisplay];
+    FKFilterView *filterView = [[FKFilterView alloc] init];
+    filterView.frame = CGRectMake(20, 20, FKScreenW - 40, 400);
+    filterView.image = self.image;
+    [self.view addSubview:filterView];
+    self.filterView = filterView;
     
     UISlider *slider = [[UISlider alloc] init];
     [slider setMinimumValue:0];
     [slider setMaximumValue:100];
     slider.userInteractionEnabled = YES;
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-    slider.frame = CGRectMake(20, CGRectGetMaxY(self.imageView.frame) + 20, FKScreenW - 40, 20);
+    slider.frame = CGRectMake(20, CGRectGetMaxY(self.filterView.frame) + 20, FKScreenW - 40, 20);
 
     [self.view addSubview:slider];
     self.slider = slider;
@@ -52,11 +55,19 @@
     } else {
         self.slider.value -= 1;
     }
-    NSLog(@"--%f--", self.slider.value);
-    UIImage *newImage = [self.image fk_imageGaussianBlurWithBias:self.slider.value];
-    self.imageView.image = newImage;
-    NSLog(@"--%@--", self.imageView.image);
-    NSLog(@"--sliderValueChanged--");
+    self.filterView.image = [self.image fk_imageGaussianBlurWithBias:(NSInteger)self.slider.value * 300];
+    
+    NSData *imageData = UIImagePNGRepresentation(self.filterView.image);
+    
+    if ((NSInteger)self.slider.value >= 90) {
+        NSString *imageFilePath = FKFilePath;
+        [imageData writeToFile:imageFilePath atomically:YES];
+        NSLog(@"--writeToFile--");
+    }
+    
+    
+//    NSLog(@"--self.slider.value-%f--",self.slider.value);
+//    NSLog(@"--%@--", self.filterView.image);
 }
 
 

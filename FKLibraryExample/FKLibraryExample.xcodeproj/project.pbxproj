@@ -22,6 +22,7 @@
 		016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996F81BEDF00A00ED079D /* FKAnimatedTransitioning.m */; settings = {ASSET_TAGS = (); }; };
 		016996FC1BEDF34D00ED079D /* FKPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FB1BEDF34D00ED079D /* FKPresentationController.m */; settings = {ASSET_TAGS = (); }; };
 		016996FF1BEDF37700ED079D /* FKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FE1BEDF37700ED079D /* FKTransition.m */; settings = {ASSET_TAGS = (); }; };
+		017CFFC81BEF462600DDFAF3 /* FKFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CFFC71BEF462600DDFAF3 /* FKFilterView.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDA41BE6ECE500D47216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA31BE6ECE500D47216 /* main.m */; };
 		0195FDA71BE6ECE500D47216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA61BE6ECE500D47216 /* AppDelegate.m */; };
 		0195FDAA1BE6ECE500D47216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA91BE6ECE500D47216 /* ViewController.m */; };
@@ -89,6 +90,8 @@
 		016996FB1BEDF34D00ED079D /* FKPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPresentationController.m; sourceTree = "<group>"; };
 		016996FD1BEDF37700ED079D /* FKTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKTransition.h; sourceTree = "<group>"; };
 		016996FE1BEDF37700ED079D /* FKTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTransition.m; sourceTree = "<group>"; };
+		017CFFC61BEF462600DDFAF3 /* FKFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFilterView.h; sourceTree = "<group>"; };
+		017CFFC71BEF462600DDFAF3 /* FKFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFilterView.m; sourceTree = "<group>"; };
 		0195FD9F1BE6ECE500D47216 /* FKLibraryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKLibraryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0195FDA31BE6ECE500D47216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0195FDA51BE6ECE500D47216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 			children = (
 				016996F01BEDE5B400ED079D /* FKImageFilterVC.h */,
 				016996F11BEDE5B400ED079D /* FKImageFilterVC.m */,
+				017CFFC61BEF462600DDFAF3 /* FKFilterView.h */,
+				017CFFC71BEF462600DDFAF3 /* FKFilterView.m */,
 				016996F31BEDE8E500ED079D /* FKNavigationVC.h */,
 				016996F41BEDE8E500ED079D /* FKNavigationVC.m */,
 			);
@@ -473,6 +478,7 @@
 				016996D91BED86D100ED079D /* NSData+FK.m in Sources */,
 				0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */,
 				016996DC1BED8BAE00ED079D /* UIColor+FK.m in Sources */,
+				017CFFC81BEF462600DDFAF3 /* FKFilterView.m in Sources */,
 				0195FDF11BE6F91A00D47216 /* NSDate+FK.m in Sources */,
 				016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */,
 			);
