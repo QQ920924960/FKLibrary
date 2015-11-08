@@ -1,5 +1,5 @@
 //
-//  CALayer+FKCategory.h
+//  CALayer+FK.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 @class UIColor;
 
-@interface CALayer (FKCategory)
+@interface CALayer (FK)
 
 /**
  *  设置圆角半径和边框
@@ -18,14 +18,14 @@
  *  @param borderWidth  边框宽度
  *  @param brderColor   边框颜色
  */
-- (void)FKLayerSetCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)brderColor;
+- (void)fk_layerSetCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)brderColor;
 
 /**
  *  绘制圆角
  *
  *  @param cornerRadius 圆角弧度值
  */
-- (void)FKLayerSetCornerRadius:(CGFloat)cornerRadius;
+- (void)fk_layerSetCornerRadius:(CGFloat)cornerRadius;
 
 /**
  *  绘制边框
@@ -33,7 +33,7 @@
  *  @param borderWidth 边框厚度
  *  @param brderColor  边框颜色
  */
-- (void)FKLayerSetBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+- (void)fk_layerSetBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
 
 /**
  *  绘制阴影
@@ -43,6 +43,6 @@
  *
  *  CGSizeMake(offset, offset)
  */
-- (void)FKLayerSetShadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)offset;
+- (void)fk_layerSetShadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)offset;
 
 @end

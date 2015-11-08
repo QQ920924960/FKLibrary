@@ -1,100 +1,100 @@
 //
-//  UIView+FKCategory.m
+//  UIView+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIView+FKCategory.h"
+#import "UIView+FK.h"
 
-@implementation UIView (FKCategory)
+@implementation UIView (FK)
 
-- (void)setX:(CGFloat)x
+- (void)setFk_x:(CGFloat)fk_x
 {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = fk_x;
     self.frame = frame;
 }
 
-- (CGFloat)x
+- (CGFloat)fk_x
 {
     return self.frame.origin.x;
 }
 
-- (void)setY:(CGFloat)y
+- (void)setFk_y:(CGFloat)fk_y
 {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = fk_y;
     self.frame = frame;
 }
 
-- (CGFloat)y
+- (CGFloat)fk_y
 {
     return self.frame.origin.y;
 }
 
-- (void)setCenterX:(CGFloat)centerX
+- (void)setFk_centerX:(CGFloat)fk_centerX
 {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = fk_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerX
+- (CGFloat)fk_centerX
 {
     return self.center.x;
 }
 
-- (void)setCenterY:(CGFloat)centerY
+- (void)setFk_centerY:(CGFloat)fk_centerY
 {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = fk_centerY;
     self.center = center;
 }
 
-- (CGFloat)centerY
+- (CGFloat)fk_centerY
 {
     return self.center.y;
 }
 
-- (void)setWidth:(CGFloat)width
+- (void)setFk_width:(CGFloat)fk_width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = fk_width;
     self.frame = frame;
 }
 
-- (CGFloat)width
+- (CGFloat)fk_width
 {
     return self.frame.size.width;
 }
 
-- (void)setHeight:(CGFloat)height
+- (void)setFk_height:(CGFloat)fk_height
 {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = fk_height;
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)fk_height
 {
     return self.frame.size.height;
 }
 
-- (void)setSize:(CGSize)size
+- (void)setFk_size:(CGSize)fk_size
 {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = fk_size;
     self.frame = frame;
 }
 
-- (CGSize)size
+- (CGSize)fk_size
 {
     return self.frame.size;
 }
 
-- (void)FKViewCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
+- (void)fk_viewCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
 {
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = cornerRadius;

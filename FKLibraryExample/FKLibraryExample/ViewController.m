@@ -32,8 +32,8 @@
 //    UIImage *testImage = [UIImage FKImageGenerateQRCode:@"kaishushu" width:200 height:200];
 //    [testButton setImage:testImage forState:UIControlStateNormal];
     
-    [testButton FKViewCornerRadius:0 borderWidth:10 borderColor:[UIColor blueColor]];
-    [testButton FKButtonSetTitle:nil titleColor:nil font:nil forState:UIControlStateNormal];
+    [testButton fk_viewCornerRadius:0 borderWidth:10 borderColor:[UIColor blueColor]];
+    [testButton fk_buttonSetTitle:nil titleColor:nil font:nil forState:UIControlStateNormal];
     [testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 //    [testButton setTitle:@"dfssadffs" forState:UIControlStateNormal];
 //    [testButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

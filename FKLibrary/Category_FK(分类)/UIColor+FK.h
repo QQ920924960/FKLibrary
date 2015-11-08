@@ -1,5 +1,5 @@
 //
-//  UIColor+FKCategory.h
+//  UIColor+FK.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (FKCategory)
+@interface UIColor (FK)
 
 /**
  *  通过传入一个16进制的颜色值来返回一个颜色
@@ -17,7 +17,7 @@
  *
  *  @return 返回颜色
  */
-+ (UIColor *)FKColorWithHex:(NSInteger)rgbHexValue;
++ (UIColor *)fk_colorWithHex:(NSInteger)rgbHexValue;
 
 /**
  *  通过传入一个16进制的颜色值来返回一个带alpha通道的颜色
@@ -27,6 +27,6 @@
  *
  *  @return 返回的颜色
  */
-+ (UIColor *)FKColorWithHex:(NSInteger)rgbHexValue alpha:(CGFloat)alpha;
++ (UIColor *)fk_colorWithHex:(NSInteger)rgbHexValue alpha:(CGFloat)alpha;
 
 @end

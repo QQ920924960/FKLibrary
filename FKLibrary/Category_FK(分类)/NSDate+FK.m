@@ -1,19 +1,19 @@
 //
-//  NSDate+FKCategory.m
+//  NSDate+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "NSDate+FKCategory.h"
+#import "NSDate+FK.h"
 
-@implementation NSDate (FKCategory)
+@implementation NSDate (FK)
 
 /**
  *  是否为今天
  */
-- (BOOL)FKIsToday
+- (BOOL)fk_isToday
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitDay | NSCalendarUnitMonth |  NSCalendarUnitYear;
@@ -32,13 +32,13 @@
 /**
  *  是否为昨天
  */
-- (BOOL)FKIsYesterday
+- (BOOL)fk_isYesterday
 {
     // 2014-05-01
-    NSDate *nowDate = [[NSDate date] FKDateWithYMD];
+    NSDate *nowDate = [[NSDate date] fk_dateWithYMD];
     
     // 2014-04-30
-    NSDate *selfDate = [self FKDateWithYMD];
+    NSDate *selfDate = [self fk_dateWithYMD];
     
     // 获得nowDate和selfDate的差距
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -46,7 +46,7 @@
     return cmps.day == 1;
 }
 
-- (NSDate *)FKDateWithYMD
+- (NSDate *)fk_dateWithYMD
 {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd";
@@ -57,7 +57,7 @@
 /**
  *  是否为今年
  */
-- (BOOL)FKIsThisYear
+- (BOOL)fk_isThisYear
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitYear;
@@ -71,7 +71,7 @@
     return nowCmps.year == selfCmps.year;
 }
 
-- (NSDateComponents *)FKDeltaWithNow
+- (NSDateComponents *)fk_deltaWithNow
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
@@ -81,9 +81,8 @@
 /**
  *  格式化时间
  */
-+ (NSString *)FKDateFormatWithNumber:(NSNumber *)number
++ (NSString *)fk_dateFormatWithNumber:(NSNumber *)number
 {
-    
     NSNumber *tempTime = number;
     double doubleTempTime = [tempTime doubleValue]/1000;
     NSTimeInterval timestamp = (NSTimeInterval)doubleTempTime;
@@ -93,9 +92,9 @@
     fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
     
     // 判断是否为今年
-    if (date.FKIsThisYear) {
-        NSDateComponents *cmps = [date FKDeltaWithNow];
-        if (date.FKIsToday) { // 今天
+    if (date.fk_isThisYear) {
+        NSDateComponents *cmps = [date fk_deltaWithNow];
+        if (date.fk_isToday) { // 今天
             if (cmps.hour >= 1) { // 至少是1小时前发的
                 NSLog(@"%@",cmps);
                 return [NSString stringWithFormat:@"%ld小时前", (long)cmps.hour];
@@ -104,7 +103,7 @@
             } else { // 1分钟内发的
                 return @"刚刚";
             }
-        } else if (date.FKIsYesterday) { // 昨天
+        } else if (date.fk_isYesterday) { // 昨天
             fmt.dateFormat = @"昨天 HH:mm";
             return [fmt stringFromDate:date];
         } else if (cmps.day < 30) { // 至少是前天

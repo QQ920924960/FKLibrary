@@ -1,5 +1,5 @@
 //
-//  NSDate+FKCategory.h
+//  NSDate+FK.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
@@ -8,33 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (FKCategory)
+@interface NSDate (FK)
 
 /**
  *  是否为今天
  */
-- (BOOL)FKIsToday;
+- (BOOL)fk_isToday;
 /**
  *  是否为昨天
  */
-- (BOOL)FKIsYesterday;
+- (BOOL)fk_isYesterday;
 /**
  *  是否为今年
  */
-- (BOOL)FKIsThisYear;
+- (BOOL)fk_isThisYear;
 
 /**
  *  返回一个只有年月日的时间
  */
-- (NSDate *)FKDateWithYMD;
+- (NSDate *)fk_dateWithYMD;
 
 /**
  *  获得与当前时间的差距
  */
-- (NSDateComponents *)FKDeltaWithNow;
+- (NSDateComponents *)fk_deltaWithNow;
 
 
 /** 格式化时间 */
-+ (NSString *)FKDateFormatWithNumber:(NSNumber *)number;
++ (NSString *)fk_dateFormatWithNumber:(NSNumber *)number;
 
 @end

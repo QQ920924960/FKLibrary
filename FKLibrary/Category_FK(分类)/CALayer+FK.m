@@ -1,17 +1,17 @@
 //
-//  CALayer+FKCategory.m
+//  CALayer+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "CALayer+FKCategory.h"
+#import "CALayer+FK.h"
 #import <UIKit/UIKit.h>
 
-@implementation CALayer (FKCategory)
+@implementation CALayer (FK)
 
-- (void)FKLayerSetCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)brderColor
+- (void)fk_layerSetCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)brderColor
 {
     [self setCornerRadius:cornerRadius];
     [self setBorderWidth:borderWidth];
@@ -19,19 +19,19 @@
     [self setBorderColor:brderColor.CGColor];
 }
 
-- (void)FKLayerSetCornerRadius:(CGFloat)cornerRadius
+- (void)fk_layerSetCornerRadius:(CGFloat)cornerRadius
 {
     self.cornerRadius = cornerRadius;
     self.masksToBounds = YES;
 }
 
-- (void)FKLayerSetBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
+- (void)fk_layerSetBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
 {
     self.borderWidth = borderWidth;
     self.borderColor = borderColor.CGColor;
 }
 
-- (void)FKLayerSetShadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)offset
+- (void)fk_layerSetShadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)offset
 {
     self.shadowColor = shadowColor.CGColor;
     self.shadowOffset = offset;

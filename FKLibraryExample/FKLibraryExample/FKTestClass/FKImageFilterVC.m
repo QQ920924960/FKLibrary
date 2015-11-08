@@ -53,8 +53,9 @@
         self.slider.value -= 1;
     }
     NSLog(@"--%f--", self.slider.value);
-    self.image = [self.image FKImageGaussianBlurWithBias:self.slider.value];
-    self.imageView.image = self.image;
+    UIImage *newImage = [self.image fk_imageGaussianBlurWithBias:self.slider.value];
+    self.imageView.image = newImage;
+    NSLog(@"--%@--", self.imageView.image);
     NSLog(@"--sliderValueChanged--");
 }
 

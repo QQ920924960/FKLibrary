@@ -1,18 +1,18 @@
 //
-//  UIWindow+FKCategory.m
+//  UIWindow+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIWindow+FKCategory.h"
+#import "UIWindow+FK.h"
 
-@implementation UIWindow (FKCategory)
+@implementation UIWindow (FK)
 
 static UIWindow *window;
 
-+ (instancetype)FKSharedWindow
++ (instancetype)fk_sharedWindow
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -22,18 +22,18 @@ static UIWindow *window;
     return window;
 }
 
-- (instancetype)FKSharedWindow{
+- (instancetype)fk_sharedWindow{
     if (!window) {
         window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
     return window;
 }
 
-+ (instancetype)FKBaseWindow {
-    return [[[self class] alloc] FKSharedWindow];
++ (instancetype)fk_baseWindow {
+    return [[[self class] alloc] fk_sharedWindow];
 }
 
-+ (void)FKDismissWindow {
++ (void)fk_dismissWindow {
     [UIView animateWithDuration:0.3f animations:^{
         window.alpha = 0.0f;
     } completion:^(BOOL finished) {
@@ -46,7 +46,7 @@ static UIWindow *window;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [[self class] FKDismissWindow];
+    [[self class] fk_dismissWindow];
 }
 
 

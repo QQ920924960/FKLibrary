@@ -1,5 +1,5 @@
 //
-//  UIImage+FKCategory.h
+//  UIImage+FK.h
 //  FKLibraryExample
 //
 //  Created by frank on 15-11-1.
@@ -38,13 +38,13 @@ typedef enum
 } FKImageType;
 
 
-@interface UIImage (FKCategory)
+@interface UIImage (FK)
 
 
 /**
  *  通过传入的尺寸创建纯色UIImage
  */
-+ (instancetype)FKImageWithColor:(UIColor *)color size:(CGSize)size;
++ (instancetype)fk_imageWithColor:(UIColor *)color size:(CGSize)size;
 
 /**
  *  通过传入一个view和UIColor来创建纯色image【因为view是所有UI控件的父控件】
@@ -54,7 +54,7 @@ typedef enum
  *
  *  @return image
  */
-+ (instancetype)FKImageWithColor:(UIColor *)color view:(UIView *)view;
++ (instancetype)fk_imageWithColor:(UIColor *)color view:(UIView *)view;
 
 /**
  *  屏幕截图
@@ -63,7 +63,7 @@ typedef enum
  *
  *  @return 返回的图片
  */
-+ (instancetype)FKImageCaptureWithView:(UIView *)view;
++ (instancetype)fk_imageCaptureWithView:(UIView *)view;
 
 /**
  *  打水印
@@ -73,7 +73,7 @@ typedef enum
  *
  *  @return 打好水印后的图片
  */
-+ (instancetype)FKImageWatermarkWithBg:(NSString *)bg watermark:(NSString *)watermark;
++ (instancetype)fk_imageWatermarkWithBg:(NSString *)bg watermark:(NSString *)watermark;
 
 /**
  *  图片圆形裁剪
@@ -84,7 +84,7 @@ typedef enum
  *
  *  @return 裁剪后的新图片
  */
-+ (instancetype)FKImageClipToCircle:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
++ (instancetype)fk_imageClipToCircle:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
 
 /**
  *  剪切为圆形图片
@@ -94,7 +94,7 @@ typedef enum
  *
  *  @return 返回圆形图片
  */
-+ (instancetype)FKImageClipToCircle:(UIImage*)image inset:(CGFloat)inset;
++ (instancetype)fk_imageClipToCircle:(UIImage*)image inset:(CGFloat)inset;
 
 /**
  *  根据图片名返回一张能够自由拉伸的图片
@@ -105,7 +105,7 @@ typedef enum
  *
  *  @return 返回的图片
  */
-+ (UIImage *)FKImageResized:(NSString *)name horizontal:(CGFloat)horizontal vertical:(CGFloat)vertical;
++ (UIImage *)fk_imageResized:(NSString *)name horizontal:(CGFloat)horizontal vertical:(CGFloat)vertical;
 
 /**
  *  图片矩形裁剪
@@ -114,7 +114,7 @@ typedef enum
  *
  *  @return 裁剪后的图片
  */
-- (UIImage *)FKImageInRect:(CGRect)rect;
+- (UIImage *)fk_imageInRect:(CGRect)rect;
 
 /**
  *  返回一张按比例缩放的图片
@@ -123,9 +123,9 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
-- (UIImage *)FKImageByScaleToSize:(CGSize)size;
-- (UIImage *)FKImageByScaleProportionallyMinSize:(CGSize)minSize;
-- (UIImage *)FKImageByScalingProportionallyToSize:(CGSize)targetSize;
+- (UIImage *)fk_imageByScaleToSize:(CGSize)size;
+- (UIImage *)fk_imageByScaleProportionallyMinSize:(CGSize)minSize;
+- (UIImage *)fk_imageByScalingProportionallyToSize:(CGSize)targetSize;
 
 /**
  *  返回一张通过弧度旋转后的图片
@@ -134,7 +134,7 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
-- (UIImage *)FKImageRotateByRadian:(CGFloat)radian;
+- (UIImage *)fk_imageRotateByRadian:(CGFloat)radian;
 
 /**
  *  返回一张通过角度旋转后的图片
@@ -143,7 +143,7 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
-- (UIImage *)FKImageRotateByAngle:(CGFloat)angle;
+- (UIImage *)fk_imageRotateByAngle:(CGFloat)angle;
 
 /**
  *  生成二维码
@@ -154,7 +154,7 @@ typedef enum
  *
  *  @return 生成的二维码
  */
-+ (UIImage *)FKImageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height;
++ (UIImage *)fk_imageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height;
 
 
 
@@ -170,7 +170,7 @@ typedef enum
  *
  *  @return 设置后的图片
  */
--(UIImage*)FKImageGaussianBlurWithBias:(NSInteger)bias;
+-(UIImage*)fk_imageGaussianBlurWithBias:(NSInteger)bias;
 
 /****************** blur模糊效果【End】 ******************/
 
@@ -181,12 +181,12 @@ typedef enum
 /**
  *  自动增强
  */
--(UIImage*)FKImageAutoEnhance;
+-(UIImage*)fk_imageAutoEnhance;
 
 /**
  *  红眼修正
  */
--(UIImage*)FKImageRedEyeCorrection;
+-(UIImage*)fk_imageRedEyeCorrection;
 
 /****************** enhance增强效果【End】 ******************/
 
@@ -197,61 +197,61 @@ typedef enum
 /**
  *  亮度
  */
--(UIImage*)FKImageBrightenWithValue:(float)factor;
+-(UIImage*)fk_imageBrightenWithValue:(float)factor;
 
 /**
  *  对比度
  */
--(UIImage*)FKImageContrastAdjustmentWithValue:(float)value;
+-(UIImage*)fk_imageContrastAdjustmentWithValue:(float)value;
 
 /**
  *  边缘检测
  *
  *  @param bias 偏移量
  */
--(UIImage*)FKImageEdgeDetectionWithBias:(NSInteger)bias;
+-(UIImage*)fk_imageEdgeDetectionWithBias:(NSInteger)bias;
 
 /**
  *  浮雕效果
  *
  *  @param bias 偏移量
  */
--(UIImage*)FKImageEmbossWithBias:(NSInteger)bias;
+-(UIImage*)fk_imageEmbossWithBias:(NSInteger)bias;
 
 /**
  *  伽马校正
  */
--(UIImage*)FKImageGammaCorrectionWithValue:(float)value;
+-(UIImage*)fk_imageGammaCorrectionWithValue:(float)value;
 
 /**
  *  灰度
  */
--(UIImage*)FKImageGrayscale;
+-(UIImage*)fk_imageGrayscale;
 
 /**
  *  反转
  */
--(UIImage*)FKImageInvert;
+-(UIImage*)fk_imageInvert;
 
 /**
  *  不透明度
  */
--(UIImage*)FKImageOpacity:(float)value;
+-(UIImage*)fk_imageOpacity:(float)value;
 
 /**
  *  色片
  */
--(UIImage*)FKImageSepia;
+-(UIImage*)fk_imageSepia;
 
 /**
  *  锐化
  */
--(UIImage*)FKImagesSarpenWithBias:(NSInteger)bias;
+-(UIImage*)fk_imageSarpenWithBias:(NSInteger)bias;
 
 /**
  *  模糊【锐化的反义词】
  */
--(UIImage*)FKImageUnsharpenWithBias:(NSInteger)bias;
+-(UIImage*)fk_imageUnsharpenWithBias:(NSInteger)bias;
 
 /****************** filter滤镜效果【End】 ******************/
 
@@ -264,7 +264,7 @@ typedef enum
  *
  *  @param mask 遮罩图片
  */
--(UIImage*)FKImageMaskWithImage:(UIImage*)mask;
+-(UIImage*)fk_imageMaskWithImage:(UIImage*)mask;
 
 /****************** mask遮罩效果【End】 ******************/
 
@@ -298,7 +298,7 @@ typedef enum
  *
  *  @return 裁剪后的图片
  */
--(UIImage*)FKImageCroppedToSize:(CGSize)newSize usingMode:(FKCroppedMode)croppedMode;
+-(UIImage*)fk_imageCroppedToSize:(CGSize)newSize usingMode:(FKCroppedMode)croppedMode;
 
 /**
  *  以左上角为坐标原点进行裁剪【FKCropModeTopLeft crop mode used】
@@ -307,14 +307,14 @@ typedef enum
  *
  *  @return 裁剪后的图片
  */
--(UIImage*)FKImageTopLeftCroppedToSize:(CGSize)newSize;
+-(UIImage*)fk_imageTopLeftCroppedToSize:(CGSize)newSize;
 
 /**
  *  图片缩放
  *
  *  @param scaleFactor 缩放比例
  */
--(UIImage*)FKImageScaleByFactor:(float)scaleFactor;
+-(UIImage*)fk_imageScaleByFactor:(float)scaleFactor;
 
 /**
  *  给定一个模式进行缩放
@@ -324,7 +324,7 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
--(UIImage*)FKImageScaleToSize:(CGSize)newSize usingMode:(FKResizeMode)resizeMode;
+-(UIImage*)fk_imageScaleToSize:(CGSize)newSize usingMode:(FKResizeMode)resizeMode;
 
 /**
  *  以缩放填充的模式进行拉伸【FKResizeModeScaleToFill resize mode used】
@@ -333,7 +333,7 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
--(UIImage*)FKImageScaleToSize:(CGSize)newSize;
+-(UIImage*)fk_imageScaleToSize:(CGSize)newSize;
 
 /**
  *  类似于scale to fill【Same as 'scale to fill' in IB.】
@@ -342,7 +342,7 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
--(UIImage*)FKImageScaleToFillSize:(CGSize)newSize;
+-(UIImage*)fk_imageScaleToFillSize:(CGSize)newSize;
 
 /**
  *  保持宽高比缩放,类似于aspect fit【Preserves aspect ratio. Same as 'aspect fit' in IB.】
@@ -351,7 +351,7 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
--(UIImage*)FKImageScaleToFitSize:(CGSize)newSize;
+-(UIImage*)fk_imageScaleToFitSize:(CGSize)newSize;
 
 /**
  *  保持宽高比进行填充缩放,类似于aspect fill【Preserves aspect ratio. Same as 'aspect fill' in IB.】
@@ -360,7 +360,7 @@ typedef enum
  *
  *  @return 缩放后的图片
  */
--(UIImage*)FKImageScaleToCoverSize:(CGSize)newSize;
+-(UIImage*)fk_imageScaleToCoverSize:(CGSize)newSize;
 
 /****************** Resizing图片调整:裁剪、缩放【End】 ******************/
 
@@ -375,7 +375,7 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
--(UIImage*)FKImageRotateInRadians:(float)radians;
+-(UIImage*)fk_imageRotateInRadians:(float)radians;
 
 /**
  *  给定一个角度进行旋转
@@ -384,7 +384,7 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
--(UIImage*)FKImageRotateInAngle:(float)angle;
+-(UIImage*)fk_imageRotateInAngle:(float)angle;
 
 /**
  *  给定一个弧度给图片的像素进行旋转
@@ -393,7 +393,7 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
--(UIImage*)FKImageRotateImagePixelsInRadians:(float)radians;
+-(UIImage*)fk_imageRotateImagePixelsInRadians:(float)radians;
 
 /**
  *  给定一个角度给图片的像素进行旋转
@@ -402,17 +402,17 @@ typedef enum
  *
  *  @return 旋转后的图片
  */
--(UIImage*)FKImageRotateImagePixelsInAngle:(float)angle;
+-(UIImage*)fk_imageRotateImagePixelsInAngle:(float)angle;
 
 /**
  *  垂直翻转
  */
--(UIImage*)FKImageVerticalFlip;
+-(UIImage*)fk_imageVerticalFlip;
 
 /**
  *  水平翻转
  */
--(UIImage*)FKImageHorizontalFlip;
+-(UIImage*)fk_imageHorizontalFlip;
 
 /****************** Rotate旋转效果【End】 ******************/
 
@@ -421,24 +421,24 @@ typedef enum
 
 /****************** saveing保存【Begin 这个好像没有什么卵用】 ******************/
 
--(BOOL)FKImageSaveToURL:(NSURL*)url uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor;
+-(BOOL)fk_imageSaveToURL:(NSURL*)url uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor;
 
--(BOOL)FKImageSaveToURL:(NSURL*)url type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor;
+-(BOOL)fk_imageSaveToURL:(NSURL*)url type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor;
 
--(BOOL)FKImageSaveToURL:(NSURL*)url;
+-(BOOL)fk_imageSaveToURL:(NSURL*)url;
 
--(BOOL)FKImageSaveToPath:(NSString*)path uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor;
+-(BOOL)fk_imageSaveToPath:(NSString*)path uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor;
 
--(BOOL)FKImageSaveToPath:(NSString*)path type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor;
+-(BOOL)fk_imageSaveToPath:(NSString*)path type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor;
 
--(BOOL)FKImageSaveToPath:(NSString*)path;
+-(BOOL)fk_imageSaveToPath:(NSString*)path;
 
 /**
  *  保存到相册中去
  */
--(BOOL)FKImageSaveToPhotosAlbum;
+-(BOOL)fk_imageSaveToPhotosAlbum;
 
-+(NSString*)FKImageExtensionForUTI:(CFStringRef)uti;
++(NSString*)fk_imageExtensionForUTI:(CFStringRef)uti;
 
 /****************** saveing保存【End】 ******************/
 

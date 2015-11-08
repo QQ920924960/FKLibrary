@@ -1,12 +1,12 @@
 //
-//  UIImage+FKCategory.m
+//  UIImage+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15-11-1.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIImage+FKCategory.h"
+#import "UIImage+FK.h"
 #import <Accelerate/Accelerate.h>
 #import <ImageIO/ImageIO.h> // For CGImageDestination
 #import <MobileCoreServices/MobileCoreServices.h> // For the UTI types constants
@@ -91,13 +91,13 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     -1, -1, -1
 };
 
-@interface UIImage (FKCategory_private)
--(CFStringRef)utiForType:(FKImageType)type;
+@interface UIImage (FK_private)
+-(CFStringRef)fk_utiForType:(FKImageType)type;
 @end
 
-@implementation UIImage (FKCategory)
+@implementation UIImage (FK)
 
-+ (instancetype)FKImageWithColor:(UIColor *)color size:(CGSize)size
++ (instancetype)fk_imageWithColor:(UIColor *)color size:(CGSize)size
 {
     UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
     [color set];
@@ -107,7 +107,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return pureColorImage;
 }
 
-+ (instancetype)FKImageWithColor:(UIColor *)color view:(UIView *)view
++ (instancetype)fk_imageWithColor:(UIColor *)color view:(UIView *)view
 {
     CGSize size = CGSizeMake(view.bounds.size.width, view.bounds.size.height);
     UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
@@ -118,7 +118,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return pureColorImage;
 }
 
-+ (instancetype)FKImageCaptureWithView:(UIView *)view
++ (instancetype)fk_imageCaptureWithView:(UIView *)view
 {
     // 1.开启上下文
     UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
@@ -135,7 +135,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return newImage;
 }
 
-+ (instancetype)FKImageWatermarkWithBg:(NSString *)bg watermark:(NSString *)watermark
++ (instancetype)fk_imageWatermarkWithBg:(NSString *)bg watermark:(NSString *)watermark
 {
     UIImage *bgImage = [UIImage imageNamed:bg];
     
@@ -164,7 +164,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return newImage;
 }
 
-+ (instancetype)FKImageClipToCircle:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
++ (instancetype)fk_imageClipToCircle:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor
 {
     // 1.加载原图
     UIImage *oldImage = [UIImage imageNamed:name];
@@ -204,7 +204,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return newImage;
 }
 
-+ (instancetype)FKImageClipToCircle:(UIImage*)image inset:(CGFloat)inset {
++ (instancetype)fk_imageClipToCircle:(UIImage*)image inset:(CGFloat)inset {
     // 开启上下文
     UIGraphicsBeginImageContext(image.size);
     // 取得上下文
@@ -232,13 +232,13 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return newimg;
 }
 
-+ (UIImage *)FKImageResized:(NSString *)name horizontal:(CGFloat)horizontal vertical:(CGFloat)vertical
++ (UIImage *)fk_imageResized:(NSString *)name horizontal:(CGFloat)horizontal vertical:(CGFloat)vertical
 {
     UIImage *image = [UIImage imageNamed:name];
     return [image stretchableImageWithLeftCapWidth:image.size.width * vertical topCapHeight:image.size.height * vertical];
 }
 
--(UIImage *)FKImageInRect:(CGRect)rect
+-(UIImage *)fk_imageInRect:(CGRect)rect
 {
     CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rect);
     UIImage* subImage = [UIImage imageWithCGImage: imageRef];
@@ -246,7 +246,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return subImage;
 }
 
-- (UIImage *)FKImageByScaleProportionallyMinSize:(CGSize)minSize {
+- (UIImage *)fk_imageByScaleProportionallyMinSize:(CGSize)minSize {
     
     UIImage *sourceImage = self;
     UIImage *newImage = nil;
@@ -303,7 +303,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 
-- (UIImage *)FKImageByScalingProportionallyToSize:(CGSize)targetSize {
+- (UIImage *)fk_imageByScalingProportionallyToSize:(CGSize)targetSize {
     
     UIImage *sourceImage = self;
     UIImage *newImage = nil;
@@ -362,7 +362,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 
-- (UIImage *)FKImageByScaleToSize:(CGSize)size {
+- (UIImage *)fk_imageByScaleToSize:(CGSize)size {
     
     UIImage *sourceImage = self;
     UIImage *newImage = nil;
@@ -393,12 +393,12 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 
-- (UIImage *)FKImageRotateByRadian:(CGFloat)radian
+- (UIImage *)fk_imageRotateByRadian:(CGFloat)radian
 {
-    return [self FKImageRotateByAngle:RadianToAngle(radian)];
+    return [self fk_imageRotateByAngle:RadianToAngle(radian)];
 }
 
-- (UIImage *)FKImageRotateByAngle:(CGFloat)angle
+- (UIImage *)fk_imageRotateByAngle:(CGFloat)angle
 {
     // calculate the size of the rotated view's containing box for our drawing space
     UIView *rotatedViewBox = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.size.width, self.size.height)];
@@ -428,7 +428,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     
 }
 
-+ (UIImage *)FKImageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height{
++ (UIImage *)fk_imageGenerateQRCode:(NSString *)code width:(CGFloat)width height:(CGFloat)height{
     
     // 生成二维码图片
     CIImage *qrcodeImage;
@@ -462,7 +462,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** blur模糊效果【Begin】 ******************/
 
--(UIImage*)FKImageGaussianBlurWithBias:(NSInteger)bias
+-(UIImage*)fk_imageGaussianBlurWithBias:(NSInteger)bias
 {
     // Create an ARGB bitmap context【创建一个ARGB的位图上下文】
     const size_t width = (size_t)self.size.width;
@@ -507,7 +507,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** enhance增强效果【Begin】 ******************/
 
--(UIImage*)FKImageAutoEnhance
+-(UIImage*)fk_imageAutoEnhance
 {
     /// No Core Image, return original image【如果不是核心图像，则放回原始图片】
     if (![CIImage class]) return self;
@@ -529,7 +529,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return final;
 }
 
--(UIImage*)FKImageRedEyeCorrection
+-(UIImage*)fk_imageRedEyeCorrection
 {
     /// No Core Image, return original image
     if (![CIImage class])
@@ -559,7 +559,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 /****************** filter滤镜效果【Begin】 ******************/
 
 // Value should be in the range (-255, 255)
--(UIImage*)FKImageBrightenWithValue:(float)value
+-(UIImage*)fk_imageBrightenWithValue:(float)value
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -613,7 +613,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 /// (-255, 255)
--(UIImage*)FKImageContrastAdjustmentWithValue:(float)value
+-(UIImage*)fk_imageContrastAdjustmentWithValue:(float)value
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -678,7 +678,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return contrasted;
 }
 
--(UIImage*)FKImageEdgeDetectionWithBias:(NSInteger)bias
+-(UIImage*)fk_imageEdgeDetectionWithBias:(NSInteger)bias
 {
 #pragma unused(bias)
     /// Create an ARGB bitmap context
@@ -767,7 +767,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     //}
 }
 
--(UIImage*)FKImageEmbossWithBias:(NSInteger)bias
+-(UIImage*)fk_imageEmbossWithBias:(NSInteger)bias
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -809,7 +809,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 /// (0.01, 8)
--(UIImage*)FKImageGammaCorrectionWithValue:(float)value
+-(UIImage*)fk_imageGammaCorrectionWithValue:(float)value
 {
     const size_t width = (size_t)self.size.width;
     const size_t height = (size_t)self.size.height;
@@ -881,7 +881,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return gamma;
 }
 
--(UIImage*)FKImageGrayscale
+-(UIImage*)fk_imageGrayscale
 {
     /* const UInt8 luminance = (red * 0.2126) + (green * 0.7152) + (blue * 0.0722); // Good luminance value */
     /// Create a gray bitmap context
@@ -923,7 +923,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return grayscaled;
 }
 
--(UIImage*)FKImageInvert
+-(UIImage*)fk_imageInvert
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -983,7 +983,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return inverted;
 }
 
--(UIImage*)FKImageOpacity:(float)value
+-(UIImage*)fk_imageOpacity:(float)value
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -1007,7 +1007,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return transparent;
 }
 
--(UIImage*)FKImageSepia
+-(UIImage*)fk_imageSepia
 {
     if ([CIImage class])
     {
@@ -1098,7 +1098,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     }
 }
 
--(UIImage*)FKImagesSarpenWithBias:(NSInteger)bias
+-(UIImage*)fk_imageSarpenWithBias:(NSInteger)bias
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -1139,7 +1139,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return sharpened;
 }
 
--(UIImage*)FKImageUnsharpenWithBias:(NSInteger)bias
+-(UIImage*)fk_imageUnsharpenWithBias:(NSInteger)bias
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)self.size.width;
@@ -1186,7 +1186,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** mask遮罩效果【Begin】 ******************/
 
--(UIImage*)FKImageMaskWithImage:(UIImage*)maskImage
+-(UIImage*)fk_imageMaskWithImage:(UIImage*)maskImage
 {
     /// Create a bitmap context with valid alpha
     const size_t originalWidth = (size_t)(self.size.width * self.scale);
@@ -1267,7 +1267,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** Resizing图片调整:裁剪、缩放【Begin】 ******************/
 
--(UIImage*)FKImageCroppedToSize:(CGSize)newSize usingMode:(FKCroppedMode)croppedMode
+-(UIImage*)fk_imageCroppedToSize:(CGSize)newSize usingMode:(FKCroppedMode)croppedMode
 {
     const CGSize size = self.size;
     CGFloat x, y;
@@ -1337,37 +1337,37 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 /* Convenience method to crop the image from the top left corner */
--(UIImage*)FKImageTopLeftCroppedToSize:(CGSize)newSize
+-(UIImage*)fk_imageTopLeftCroppedToSize:(CGSize)newSize
 {
-    return [self FKImageCroppedToSize:newSize usingMode:FKCroppedModeTopLeft];
+    return [self fk_imageCroppedToSize:newSize usingMode:FKCroppedModeTopLeft];
 }
 
--(UIImage*)FKImageScaleByFactor:(float)scaleFactor
+-(UIImage*)fk_imageScaleByFactor:(float)scaleFactor
 {
     CGSize scaledSize = CGSizeMake(self.size.width * scaleFactor, self.size.height * scaleFactor);
-    return [self FKImageScaleToFillSize:scaledSize];
+    return [self fk_imageScaleToFillSize:scaledSize];
 }
 
--(UIImage*)FKImageScaleToSize:(CGSize)newSize usingMode:(FKResizeMode)resizeMode
+-(UIImage*)fk_imageScaleToSize:(CGSize)newSize usingMode:(FKResizeMode)resizeMode
 {
     switch (resizeMode)
     {
         case FKResizeModeAspectFit:
-            return [self FKImageScaleToFitSize:newSize];
+            return [self fk_imageScaleToFitSize:newSize];
         case FKResizeModeAspectFill:
-            return [self FKImageScaleToCoverSize:newSize];
+            return [self fk_imageScaleToCoverSize:newSize];
         default:
-            return [self FKImageScaleToFillSize:newSize];
+            return [self fk_imageScaleToFillSize:newSize];
     }
 }
 
 /* Convenience method to scale the image using the FKResizeModeScaleToFill mode */
--(UIImage*)FKImageScaleToSize:(CGSize)newSize
+-(UIImage*)fk_imageScaleToSize:(CGSize)newSize
 {
-    return [self FKImageScaleToFillSize:newSize];
+    return [self fk_imageScaleToFillSize:newSize];
 }
 
--(UIImage*)FKImageScaleToFillSize:(CGSize)newSize
+-(UIImage*)fk_imageScaleToFillSize:(CGSize)newSize
 {
     size_t destWidth = (size_t)(newSize.width * self.scale);
     size_t destHeight = (size_t)(newSize.height * self.scale);
@@ -1408,7 +1408,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return scaled;
 }
 
--(UIImage*)FKImageScaleToFitSize:(CGSize)newSize
+-(UIImage*)fk_imageScaleToFitSize:(CGSize)newSize
 {
     /// Keep aspect ratio
     size_t destWidth, destHeight;
@@ -1432,10 +1432,10 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
         destHeight = (size_t)newSize.height;
         destWidth = (size_t)(self.size.width * newSize.height / self.size.height);
     }
-    return [self FKImageScaleToFillSize:CGSizeMake(destWidth, destHeight)];
+    return [self fk_imageScaleToFillSize:CGSizeMake(destWidth, destHeight)];
 }
 
--(UIImage*)FKImageScaleToCoverSize:(CGSize)newSize
+-(UIImage*)fk_imageScaleToCoverSize:(CGSize)newSize
 {
     size_t destWidth, destHeight;
     CGFloat widthRatio = newSize.width / self.size.width;
@@ -1451,7 +1451,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
         destWidth = (size_t)newSize.width;
         destHeight = (size_t)(self.size.height * newSize.width / self.size.width);
     }
-    return [self FKImageScaleToFillSize:CGSizeMake(destWidth, destHeight)];
+    return [self fk_imageScaleToFillSize:CGSizeMake(destWidth, destHeight)];
 }
 
 /****************** Resizing图片调整:裁剪、缩放【End】 ******************/
@@ -1461,7 +1461,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** Rotate旋转效果【Begin】 ******************/
 
--(UIImage*)FKImageRotateInRadians:(CGFloat)radians flipOverHorizontalAxis:(BOOL)doHorizontalFlip verticalAxis:(BOOL)doVerticalFlip
+-(UIImage*)fk_imageRotateInRadians:(CGFloat)radians flipOverHorizontalAxis:(BOOL)doHorizontalFlip verticalAxis:(BOOL)doVerticalFlip
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)CGImageGetWidth(self.CGImage);
@@ -1499,27 +1499,27 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return resultImage;
 }
 
--(UIImage*)FKImageRotateInRadians:(float)radians
+-(UIImage*)fk_imageRotateInRadians:(float)radians
 {
-    return [self FKImageRotateInRadians:radians flipOverHorizontalAxis:NO verticalAxis:NO];
+    return [self fk_imageRotateInRadians:radians flipOverHorizontalAxis:NO verticalAxis:NO];
 }
 
--(UIImage*)FKImageRotateInAngle:(float)angle
+-(UIImage*)fk_imageRotateInAngle:(float)angle
 {
-    return [self FKImageRotateInRadians:(float)FK_DEGREES_TO_RADIANS(angle)];
+    return [self fk_imageRotateInRadians:(float)FK_DEGREES_TO_RADIANS(angle)];
 }
 
--(UIImage*)FKImageVerticalFlip
+-(UIImage*)fk_imageVerticalFlip
 {
-    return [self FKImageRotateInRadians:0. flipOverHorizontalAxis:NO verticalAxis:YES];
+    return [self fk_imageRotateInRadians:0. flipOverHorizontalAxis:NO verticalAxis:YES];
 }
 
--(UIImage*)FKImageHorizontalFlip
+-(UIImage*)fk_imageHorizontalFlip
 {
-    return [self FKImageRotateInRadians:0. flipOverHorizontalAxis:YES verticalAxis:NO];
+    return [self fk_imageRotateInRadians:0. flipOverHorizontalAxis:YES verticalAxis:NO];
 }
 
--(UIImage*)FKImageRotateImagePixelsInRadians:(float)radians
+-(UIImage*)fk_imageRotateImagePixelsInRadians:(float)radians
 {
     /// Create an ARGB bitmap context
     const size_t width = (size_t)(self.size.width * self.scale);
@@ -1555,9 +1555,9 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return rotated;
 }
 
--(UIImage*)FKImageRotateImagePixelsInAngle:(float)angle
+-(UIImage*)fk_imageRotateImagePixelsInAngle:(float)angle
 {
-    return [self FKImageRotateImagePixelsInRadians:(float)FK_DEGREES_TO_RADIANS(angle)];
+    return [self fk_imageRotateImagePixelsInRadians:(float)FK_DEGREES_TO_RADIANS(angle)];
 }
 
 /****************** Rotate旋转效果【End】 ******************/
@@ -1566,7 +1566,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 
 /****************** saveing保存【Begin 这个好像没有什么卵用】 ******************/
 
--(BOOL)FKImageSaveToURL:(NSURL*)url uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor
+-(BOOL)fk_imageSaveToURL:(NSURL*)url uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor
 {
     if (!url) return NO;
     
@@ -1599,44 +1599,44 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return success;
 }
 
--(BOOL)FKImageSaveToURL:(NSURL*)url type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor
+-(BOOL)fk_imageSaveToURL:(NSURL*)url type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor
 {
-    return [self FKImageSaveToURL:url uti:[self FKImageUtiForType:type] backgroundFillColor:fillColor];
+    return [self fk_imageSaveToURL:url uti:[self fk_imageUtiForType:type] backgroundFillColor:fillColor];
 }
 
--(BOOL)FKImageSaveToURL:(NSURL*)url
+-(BOOL)fk_imageSaveToURL:(NSURL*)url
 {
-    return [self FKImageSaveToURL:url uti:kUTTypePNG backgroundFillColor:nil];
+    return [self fk_imageSaveToURL:url uti:kUTTypePNG backgroundFillColor:nil];
 }
 
--(BOOL)FKImageSaveToPath:(NSString*)path uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor
-{
-    if (!path) return NO;
-    
-    NSURL* url = [[NSURL alloc] initFileURLWithPath:path];
-    const BOOL ret = [self FKImageSaveToURL:url uti:uti backgroundFillColor:fillColor];
-    return ret;
-}
-
--(BOOL)FKImageSaveToPath:(NSString*)path type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor
+-(BOOL)fk_imageSaveToPath:(NSString*)path uti:(CFStringRef)uti backgroundFillColor:(UIColor*)fillColor
 {
     if (!path) return NO;
     
     NSURL* url = [[NSURL alloc] initFileURLWithPath:path];
-    const BOOL ret = [self FKImageSaveToURL:url uti:[self utiForType:type] backgroundFillColor:fillColor];
+    const BOOL ret = [self fk_imageSaveToURL:url uti:uti backgroundFillColor:fillColor];
     return ret;
 }
 
--(BOOL)FKImageSaveToPath:(NSString*)path
+-(BOOL)fk_imageSaveToPath:(NSString*)path type:(FKImageType)type backgroundFillColor:(UIColor*)fillColor
 {
     if (!path) return NO;
     
     NSURL* url = [[NSURL alloc] initFileURLWithPath:path];
-    const BOOL ret = [self FKImageSaveToURL:url type:FKImageTypePNG backgroundFillColor:nil];
+    const BOOL ret = [self fk_imageSaveToURL:url uti:[self fk_utiForType:type] backgroundFillColor:fillColor];
     return ret;
 }
 
--(BOOL)FKImageSaveToPhotosAlbum
+-(BOOL)fk_imageSaveToPath:(NSString*)path
+{
+    if (!path) return NO;
+    
+    NSURL* url = [[NSURL alloc] initFileURLWithPath:path];
+    const BOOL ret = [self fk_imageSaveToURL:url type:FKImageTypePNG backgroundFillColor:nil];
+    return ret;
+}
+
+-(BOOL)fk_imageSaveToPhotosAlbum
 {
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     __block BOOL ret = YES;
@@ -1650,7 +1650,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
     return ret;
 }
 
-+(NSString*)FKImageExtensionForUTI:(CFStringRef)uti
++(NSString*)fk_imageExtensionForUTI:(CFStringRef)uti
 {
     if (!uti) return nil;
     
@@ -1664,7 +1664,7 @@ static int16_t __s_unsharpen_kernel_3x3[9] = {
 }
 
 #pragma mark - Private
--(CFStringRef)FKImageUtiForType:(FKImageType)type
+-(CFStringRef)fk_imageUtiForType:(FKImageType)type
 {
     CFStringRef uti = NULL;
     switch (type)

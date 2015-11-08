@@ -1,12 +1,12 @@
 //
-//  NSData+FKCategory.m
+//  NSData+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "NSData+FKCategory.h"
+#import "NSData+FK.h"
 
 static const char _base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 static const short _base64DecodingTable[256] = {
@@ -29,10 +29,10 @@ static const short _base64DecodingTable[256] = {
 };
 
 
-@implementation NSData (FKCategory)
+@implementation NSData (FK)
 
 // Adapted from http://www.cocoadev.com/index.pl?BaseSixtyFour
-- (NSString *)FKDataBase64Encoded {
+- (NSString *)fk_dataBase64Encoded {
     const uint8_t *input = self.bytes;
     NSInteger length = self.length;
     
@@ -58,7 +58,7 @@ static const short _base64DecodingTable[256] = {
 }
 
 // Adapted from http://www.cocoadev.com/index.pl?BaseSixtyFour
-+ (NSData *)FKDataWithBase64String:(NSString *)base64String {
++ (NSData *)fk_dataWithBase64String:(NSString *)base64String {
     const char *string = [base64String cStringUsingEncoding:NSASCIIStringEncoding];
     NSInteger inputLength = base64String.length;
     

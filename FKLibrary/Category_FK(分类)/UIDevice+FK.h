@@ -1,5 +1,5 @@
 //
-//  UIDevice+FKCategory.h
+//  UIDevice+FK.h
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
@@ -34,7 +34,7 @@ static NSString *const iPad4           = @"iPad 4 (A1458/A1459/A1460)";
 static NSString *const iPadAir         = @"iPad Air (A1474/A1475/A1476)";
 static NSString *const iPhoneSimulator = @"iPhone 模拟器";
 
-@interface UIDevice (FKCategory)
+@interface UIDevice (FK)
 
 @property (copy, nonatomic) NSString* uuidString;//手机序列号
 
@@ -51,7 +51,6 @@ static NSString *const iPhoneSimulator = @"iPhone 模拟器";
 @property (strong, nonatomic) NSDictionary *infoDictionary;
 
 @property (copy, nonatomic) NSString *appCurName;// 当前应用名称
-
 
 @property (copy, nonatomic) NSString *appCurVersion;// 当前应用软件版本  比如：1.0.1
 

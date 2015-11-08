@@ -1,16 +1,16 @@
 //
-//  UIBarButtonItem+FKCategory.m
+//  UIBarButtonItem+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIBarButtonItem+FKCategory.h"
+#import "UIBarButtonItem+FK.h"
 
-@implementation UIBarButtonItem (FKCategory)
+@implementation UIBarButtonItem (FK)
 
-+ (UIBarButtonItem *)FKItemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action
++ (UIBarButtonItem *)fk_itemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action
 {
     UIButton *button = [[UIButton alloc] init];
     [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];

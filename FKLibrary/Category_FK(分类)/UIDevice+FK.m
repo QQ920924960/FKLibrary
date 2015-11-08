@@ -1,14 +1,14 @@
 //
-//  UIDevice+FKCategory.m
+//  UIDevice+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/7.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "UIDevice+FKCategory.h"
+#import "UIDevice+FK.h"
 
-@implementation UIDevice (FKCategory)
+@implementation UIDevice (FK)
 
 + (instancetype)device {
     /*

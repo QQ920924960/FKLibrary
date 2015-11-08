@@ -22,7 +22,6 @@ static NSString *Longitude = @"Longitude";
 @interface FKLocationManager ()
 {
     CLLocationManager *_manager;
-    
 }
 @property (nonatomic, strong) LocationBlock locationBlock;
 @property (nonatomic, strong) NSStringBlock cityBlock;

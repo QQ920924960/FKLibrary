@@ -4,7 +4,7 @@
 
 @implementation UIView(FKLog)
 
-+ (NSString *)FKSearchAllSubviews:(UIView *)superview
++ (NSString *)fk_searchAllSubviews:(UIView *)superview
 {
     NSMutableString *xml = [NSMutableString string];
     
@@ -12,21 +12,21 @@
     class = [class stringByReplacingOccurrencesOfString:@"_" withString:@""];
     [xml appendFormat:@"<%@ frame=\"%@\">\n", class, NSStringFromCGRect(superview.frame)];
     for (UIView *childView in superview.subviews) {
-        NSString *subviewXml = [self FKSearchAllSubviews:childView];
+        NSString *subviewXml = [self fk_searchAllSubviews:childView];
         [xml appendString:subviewXml];
     }
     [xml appendFormat:@"</%@>\n", class];
     return xml;
 }
 
-- (NSString *)FKDescription
+- (NSString *)fk_Description
 {
-    return [UIView FKSearchAllSubviews:self];
+    return [UIView fk_searchAllSubviews:self];
 }
 @end
 
 @implementation NSDictionary (FKLog)
-- (NSString *)FKDescriptionWithLocale:(id)locale
+- (NSString *)fk_descriptionWithLocale:(id)locale
 {
     NSMutableString *str = [NSMutableString string];
     
@@ -51,7 +51,7 @@
 @end
 
 @implementation NSArray (FKLog)
-- (NSString *)FKDescriptionWithLocale:(id)locale
+- (NSString *)fk_descriptionWithLocale:(id)locale
 {
     NSMutableString *str = [NSMutableString string];
     

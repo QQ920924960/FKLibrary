@@ -1,100 +1,98 @@
 //
-//  NSString+FKCategory.m
+//  NSString+FK.m
 //  FKLibraryExample
 //
 //  Created by frank on 15/11/2.
 //  Copyright © 2015年 zmosa. All rights reserved.
 //
 
-#import "NSString+FKCategory.h"
+#import "NSString+FK.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
 
 #define EmojiCodeToSymbol(c) ((((0x808080F0 | (c & 0x3F000) >> 4) | (c & 0xFC0) << 10) | (c & 0x1C0000) << 18) | (c & 0x3F) << 24)
 
 
-@implementation NSString (FKCategory)
+@implementation NSString (FK)
 
-
-
-- (NSString *)FKStringMD5
+- (NSString *)fk_stringMD5
 {
     const char *string = self.UTF8String;
     int length = (int)strlen(string);
     unsigned char bytes[CC_MD5_DIGEST_LENGTH];
     CC_MD5(string, length, bytes);
-    return [self stringFromBytes:bytes length:CC_MD5_DIGEST_LENGTH];
+    return [self fk_stringFromBytes:bytes length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSString *)FKStringSHA1
+- (NSString *)fk_stringSHA1
 {
     const char *string = self.UTF8String;
     int length = (int)strlen(string);
     unsigned char bytes[CC_SHA1_DIGEST_LENGTH];
     CC_SHA1(string, length, bytes);
-    return [self stringFromBytes:bytes length:CC_SHA1_DIGEST_LENGTH];
+    return [self fk_stringFromBytes:bytes length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSString *)FKStringSHA256
+- (NSString *)fk_stringSHA256
 {
     const char *string = self.UTF8String;
     int length = (int)strlen(string);
     unsigned char bytes[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(string, length, bytes);
-    return [self stringFromBytes:bytes length:CC_SHA256_DIGEST_LENGTH];
+    return [self fk_stringFromBytes:bytes length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSString *)FKStringSHA512
+- (NSString *)fk_stringSHA512
 {
     const char *string = self.UTF8String;
     int length = (int)strlen(string);
     unsigned char bytes[CC_SHA512_DIGEST_LENGTH];
     CC_SHA512(string, length, bytes);
-    return [self stringFromBytes:bytes length:CC_SHA512_DIGEST_LENGTH];
+    return [self fk_stringFromBytes:bytes length:CC_SHA512_DIGEST_LENGTH];
 }
 
-- (NSString *)FKStringCCHmacSHA1WithKey:(NSString *)key
+- (NSString *)fk_stringCCHmacSHA1WithKey:(NSString *)key
 {
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableData *mutableData = [NSMutableData dataWithLength:CC_SHA1_DIGEST_LENGTH];
     CCHmac(kCCHmacAlgSHA1, keyData.bytes, keyData.length, messageData.bytes, messageData.length, mutableData.mutableBytes);
-    return [self stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
+    return [self fk_stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
 }
 
-- (NSString *)FKStringCCHmacSHA256WithKey:(NSString *)key
+- (NSString *)fk_stringCCHmacSHA256WithKey:(NSString *)key
 {
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableData *mutableData = [NSMutableData dataWithLength:CC_SHA256_DIGEST_LENGTH];
     CCHmac(kCCHmacAlgSHA256, keyData.bytes, keyData.length, messageData.bytes, messageData.length, mutableData.mutableBytes);
-    return [self stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
+    return [self fk_stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
 }
 
-- (NSString *)FKStringCCHmacSHA512WithKey:(NSString *)key
+- (NSString *)fk_stringCCHmacSHA512WithKey:(NSString *)key
 {
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData *messageData = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableData *mutableData = [NSMutableData dataWithLength:CC_SHA512_DIGEST_LENGTH];
     CCHmac(kCCHmacAlgSHA512, keyData.bytes, keyData.length, messageData.bytes, messageData.length, mutableData.mutableBytes);
-    return [self stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
+    return [self fk_stringFromBytes:(unsigned char *)mutableData.bytes length:mutableData.length];
 }
 
-- (NSString *)FKStringMD5Salt:(NSString *)text salt:(NSString *)salt
+- (NSString *)fk_stringMD5Salt:(NSString *)text salt:(NSString *)salt
 {
     // 撒盐：随机地往明文中插入任意字符串
     NSString *saltStr = [text stringByAppendingString:salt];
-    return [saltStr FKStringMD5];
+    return [saltStr fk_stringMD5];
 }
 
-- (NSString *)FKStringDoubleMD5:(NSString *)text
+- (NSString *)fk_stringDoubleMD5:(NSString *)text
 {
-    return [[text FKStringMD5] FKStringMD5];
+    return [[text fk_stringMD5] fk_stringMD5];
 }
 
-- (NSString *)FKStringMD5Reorder:(NSString *)text
+- (NSString *)fk_stringMD5Reorder:(NSString *)text
 {
-    NSString *pwd = [text FKStringMD5];
+    NSString *pwd = [text fk_stringMD5];
     
     // 加密后pwd == 3f853778a951fd2cdf34dfd16504c5d8
     NSString *prefix = [pwd substringFromIndex:2];
@@ -110,7 +108,7 @@
 
 #pragma mark - tools
 
-- (NSString *)stringFromBytes:(unsigned char *)bytes length:(NSInteger)length
+- (NSString *)fk_stringFromBytes:(unsigned char *)bytes length:(NSInteger)length
 {
     NSMutableString *mutableString = @"".mutableCopy;
     for (int i = 0; i < length; i++)
@@ -119,7 +117,7 @@
 }
 
 #pragma mark - about emoji
-+ (NSString *)FKEmojiWithIntCode:(int)intCode {
++ (NSString *)fk_emojiWithIntCode:(int)intCode {
     int symbol = EmojiCodeToSymbol(intCode);
     NSString *string = [[NSString alloc] initWithBytes:&symbol length:sizeof(symbol) encoding:NSUTF8StringEncoding];
     if (string == nil) { // 新版Emoji
@@ -128,15 +126,15 @@
     return string;
 }
 
-+ (NSString *)FKEmojiWithStringCode:(NSString *)stringCode
++ (NSString *)fk_emojiWithStringCode:(NSString *)stringCode
 {
     char *charCode = (char *)stringCode.UTF8String;
     int intCode = (int)strtol(charCode, NULL, 16);
-    return [self FKEmojiWithIntCode:intCode];
+    return [self fk_emojiWithIntCode:intCode];
 }
 
 // 判断是否是 emoji表情
-- (BOOL)FKIsEmoji
+- (BOOL)fk_isEmoji
 {
     BOOL returnValue = NO;
     
