@@ -55,12 +55,12 @@
     } else {
         self.slider.value -= 1;
     }
-    self.filterView.image = [self.image fk_imageGaussianBlurWithBias:(NSInteger)self.slider.value * 300];
+    self.filterView.picture = [self.image fk_imageGaussianBlurWithBias:(NSInteger)self.slider.value * 300];
     
-    NSData *imageData = UIImagePNGRepresentation(self.filterView.image);
+    NSData *imageData = UIImagePNGRepresentation(self.filterView.picture);
     
-    if ((NSInteger)self.slider.value >= 90) {
-        NSString *imageFilePath = FKFilePath;
+    if ((NSInteger)self.slider.value == 10) {
+        NSString *imageFilePath = [FKFilePath stringByAppendingString:@"test.png"];
         [imageData writeToFile:imageFilePath atomically:YES];
         NSLog(@"--writeToFile--");
     }

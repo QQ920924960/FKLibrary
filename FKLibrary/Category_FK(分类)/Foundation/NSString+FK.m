@@ -171,4 +171,12 @@
     return returnValue;
 }
 
++ (NSString *)fk_stringWithUUID
+{
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, uuid);
+    CFRelease(uuid);
+    return (__bridge_transfer NSString *)string;
+}
+
 @end

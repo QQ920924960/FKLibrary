@@ -84,5 +84,6 @@
 - (BOOL)fk_isEmoji;
 
 
++ (NSString *)fk_stringWithUUID;
 
 @end

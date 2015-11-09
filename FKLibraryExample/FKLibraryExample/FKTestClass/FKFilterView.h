@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FKFilterView : UIView
+@interface FKFilterView : UIImageView
 
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImage *picture;
 
 @end

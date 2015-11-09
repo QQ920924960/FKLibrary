@@ -10,15 +10,27 @@
 
 @implementation FKFilterView
 
-- (void)setImage:(UIImage *)image
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    _image = image;
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor blackColor];
+        self.contentMode = UIViewContentModeScaleAspectFit;
+//        self.image = self.picture;
+    }
+    return self;
+}
+
+- (void)setPicture:(UIImage *)picture
+{
+    _picture = picture;
+    self.image = picture;
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
 {
-    [self.image drawInRect:rect];
+    [self.picture drawInRect:rect];
 }
 
 @end
