@@ -101,7 +101,7 @@
     // 乱序后 result == 853778a951fd2cdf34dfd16504c5d83f
     NSString *result = [prefix stringByAppendingString:subfix];
     
-    NSLog(@"\ntext=%@\npwd=%@\nresult=%@", text, pwd, result);
+//    NSLog(@"\ntext=%@\npwd=%@\nresult=%@", text, pwd, result);
     
     return result;
 }

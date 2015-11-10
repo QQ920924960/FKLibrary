@@ -16,7 +16,7 @@
 /** 滑动条 */
 @property (nonatomic, weak) UISlider *slider;
 /** 底部的collectionView */
-@property (nonatomic, weak) UICollectionView *collectionView;
+@property (nonatomic, weak) UIScrollView *scrollView;
 /** 底部装着一排按钮的工具条 */
 @property (nonatomic, strong) FKFilterBottomBar *bottomBar;
 @end
@@ -29,17 +29,14 @@
     if (self) {
         // 因为Y值从底部算起,所以就按倒序的方式来一个个创建控件
         FKFilterBottomBar *bottomBar = [[FKFilterBottomBar alloc] init];
-        bottomBar.backgroundColor = [UIColor blueColor];
         [self addSubview:bottomBar];
         self.bottomBar = bottomBar;
         
-        UICollectionView *collectionView = [[UICollectionView alloc] init];
-        collectionView.backgroundColor = [UIColor redColor];
-        [self addSubview:collectionView];
-        self.collectionView = collectionView;
+        UIScrollView *scrollView = [[UIScrollView alloc] init];
+        [self addSubview:scrollView];
+        self.scrollView = scrollView;
         
         UISlider *slider = [[UISlider alloc] init];
-        slider.backgroundColor = [UIColor yellowColor];
         [self addSubview:slider];
         self.slider = slider;
     }
@@ -52,38 +49,38 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+}
+
+- (void)setBottomBarConstraint
+{
     // 底部工具条
+    self.bottomBar.backgroundColor = [UIColor blueColor];
     [self.bottomBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo([UIScreen mainScreen]);
-        make.bottom.equalTo([UIScreen mainScreen]);
-        make.width.equalTo([UIScreen mainScreen]);
+        make.left.equalTo(self.mas_left);
+        make.bottom.equalTo(self.mas_bottom);
+        make.width.equalTo(self.mas_width);
         make.height.equalTo(@40);
     }];
     
-    // 底部的collectionView
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo([UIScreen mainScreen]);
+    // 底部的scrollView
+    self.scrollView.backgroundColor = [UIColor redColor];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left);
         make.bottom.equalTo(self.bottomBar.mas_top);
-        make.width.equalTo([UIScreen mainScreen]);
+        make.width.equalTo(self.mas_width);
         make.height.equalTo(@50);
     }];
-  
-    // 滑动条
-    [self.slider mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo([UIScreen mainScreen]);
-        make.bottom.equalTo(self.collectionView.mas_top);
-        make.width.equalTo([UIScreen mainScreen]);
-        make.height.equalTo(@30);
-    }];
     
-    // 自己的约束
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo([UIScreen mainScreen]);
-        make.bottom.equalTo([UIScreen mainScreen]);
-        make.width.equalTo([UIScreen mainScreen]);
-        make.height.equalTo(self.slider.mas_top);
+    // 滑动条
+//    self.slider.backgroundColor = [UIColor yellowColor];
+    [self.slider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left).offset(20);
+        make.bottom.equalTo(self.scrollView.mas_top);
+        make.right.equalTo(self.mas_right).offset(-20);
     }];
+    [self sizeToFit];
 }
+
+
 
 @end

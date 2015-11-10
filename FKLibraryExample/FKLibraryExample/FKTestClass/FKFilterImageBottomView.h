@@ -10,4 +10,6 @@
 
 @interface FKFilterImageBottomView : UIView
 
+- (void)setBottomBarConstraint;
+
 @end

@@ -9,11 +9,14 @@
 #import "FKImageFilterVC.h"
 #import "FKLibrary.h"
 #import "FKFilterView.h"
+#import "FKFilterImageBottomView.h"
+#import "Masonry/Masonry.h"
 
 @interface FKImageFilterVC ()
 @property (nonatomic, weak) FKFilterView *filterView;
 @property (nonatomic, weak) UISlider *slider;
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) FKFilterImageBottomView *bottomView;
 @end
 
 @implementation FKImageFilterVC
@@ -45,6 +48,23 @@
 
     [self.view addSubview:slider];
     self.slider = slider;
+    
+    // 创建底部一整块view
+    FKFilterImageBottomView *bottomView = [[FKFilterImageBottomView alloc] init];
+    [self.view addSubview:bottomView];
+    self.bottomView = bottomView;
+    
+    [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.right.equalTo(self.view.mas_right);
+        make.height.equalTo(@120);
+    }];
+    [self.bottomView setBottomBarConstraint];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
 }
 
 

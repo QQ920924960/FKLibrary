@@ -38,6 +38,23 @@
 /** 沙盒路径 */
 #define FKFilePath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
+/**
+ Add this macro before each category implementation, so we don't have to use
+ -all_load or -force_load to load object files from static libraries that only
+ contain categories and no classes.
+ 【添加这个宏在每个类别的实现,所以我们不需要使用-all_load或-force_load加载对象文件,只有从静态库
+ 包含类别和没有类。】
+ More info: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ Example:
+ FKSYNTH_DUMMY_CLASS(NSString_FK)
+ */
+#ifndef FKSYNTH_DUMMY_CLASS
+#define FKSYNTH_DUMMY_CLASS(_name_) \
+@interface FKSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation FKSYNTH_DUMMY_CLASS_ ## _name_ @end
+#endif
+
 
 /***************** end *****************/
 

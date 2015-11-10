@@ -16,6 +16,12 @@
 		016996FC1BEDF34D00ED079D /* FKPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FB1BEDF34D00ED079D /* FKPresentationController.m */; };
 		016996FF1BEDF37700ED079D /* FKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996FE1BEDF37700ED079D /* FKTransition.m */; };
 		017CFFC81BEF462600DDFAF3 /* FKFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CFFC71BEF462600DDFAF3 /* FKFilterView.m */; };
+		018DA5421BF18D77009270F1 /* NSNotificationCenter+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA5411BF18D77009270F1 /* NSNotificationCenter+FK.m */; settings = {ASSET_TAGS = (); }; };
+		018DA5451BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA5441BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m */; settings = {ASSET_TAGS = (); }; };
+		018DA5481BF1910A009270F1 /* NSTimer+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA5471BF1910A009270F1 /* NSTimer+FK.m */; settings = {ASSET_TAGS = (); }; };
+		018DA54B1BF19186009270F1 /* NSBundle+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA54A1BF19186009270F1 /* NSBundle+FK.m */; settings = {ASSET_TAGS = (); }; };
+		018DA54E1BF1952A009270F1 /* UIGestureRecognizer+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA54D1BF1952A009270F1 /* UIGestureRecognizer+FK.m */; settings = {ASSET_TAGS = (); }; };
+		018DA5511BF196D7009270F1 /* UIControl+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 018DA5501BF196D7009270F1 /* UIControl+FK.m */; settings = {ASSET_TAGS = (); }; };
 		0195FDA41BE6ECE500D47216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA31BE6ECE500D47216 /* main.m */; };
 		0195FDA71BE6ECE500D47216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA61BE6ECE500D47216 /* AppDelegate.m */; };
 		0195FDAA1BE6ECE500D47216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195FDA91BE6ECE500D47216 /* ViewController.m */; };
@@ -92,6 +98,18 @@
 		016996FE1BEDF37700ED079D /* FKTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTransition.m; sourceTree = "<group>"; };
 		017CFFC61BEF462600DDFAF3 /* FKFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFilterView.h; sourceTree = "<group>"; };
 		017CFFC71BEF462600DDFAF3 /* FKFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFilterView.m; sourceTree = "<group>"; };
+		018DA5401BF18D77009270F1 /* NSNotificationCenter+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+FK.h"; sourceTree = "<group>"; };
+		018DA5411BF18D77009270F1 /* NSNotificationCenter+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+FK.m"; sourceTree = "<group>"; };
+		018DA5431BF18FF9009270F1 /* NSKeyedUnarchiver+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+FK.h"; sourceTree = "<group>"; };
+		018DA5441BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+FK.m"; sourceTree = "<group>"; };
+		018DA5461BF1910A009270F1 /* NSTimer+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+FK.h"; sourceTree = "<group>"; };
+		018DA5471BF1910A009270F1 /* NSTimer+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+FK.m"; sourceTree = "<group>"; };
+		018DA5491BF19186009270F1 /* NSBundle+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FK.h"; sourceTree = "<group>"; };
+		018DA54A1BF19186009270F1 /* NSBundle+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FK.m"; sourceTree = "<group>"; };
+		018DA54C1BF1952A009270F1 /* UIGestureRecognizer+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+FK.h"; sourceTree = "<group>"; };
+		018DA54D1BF1952A009270F1 /* UIGestureRecognizer+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+FK.m"; sourceTree = "<group>"; };
+		018DA54F1BF196D7009270F1 /* UIControl+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+FK.h"; sourceTree = "<group>"; };
+		018DA5501BF196D7009270F1 /* UIControl+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+FK.m"; sourceTree = "<group>"; };
 		0195FD9F1BE6ECE500D47216 /* FKLibraryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FKLibraryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0195FDA31BE6ECE500D47216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0195FDA51BE6ECE500D47216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -321,9 +339,9 @@
 		0195FDD81BE6EE7900D47216 /* Category_FK(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				1B87DF1A1BEFA073008C8347 /* Foundation */,
 				01F055841BF092C500740F6D /* QuartzCore */,
 				01F055831BF092AE00740F6D /* UIKit */,
-				1B87DF1A1BEFA073008C8347 /* Foundation */,
 			);
 			path = "Category_FK(分类)";
 			sourceTree = "<group>";
@@ -375,6 +393,10 @@
 				01F055A31BF0934300740F6D /* UIWindow+FK.m */,
 				01F055AE1BF0939900740F6D /* UIScreen+FK.h */,
 				01F055AF1BF0939900740F6D /* UIScreen+FK.m */,
+				018DA54C1BF1952A009270F1 /* UIGestureRecognizer+FK.h */,
+				018DA54D1BF1952A009270F1 /* UIGestureRecognizer+FK.m */,
+				018DA54F1BF196D7009270F1 /* UIControl+FK.h */,
+				018DA5501BF196D7009270F1 /* UIControl+FK.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -428,10 +450,18 @@
 				01F0558C1BF0932A00740F6D /* NSData+FK.m */,
 				01F0558D1BF0932A00740F6D /* NSDate+FK.h */,
 				01F0558E1BF0932A00740F6D /* NSDate+FK.m */,
-				01F0558F1BF0932A00740F6D /* NSString+FK.h */,
-				01F055901BF0932A00740F6D /* NSString+FK.m */,
 				1B87DF1B1BEFA089008C8347 /* NSObject+FK.h */,
 				1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */,
+				01F0558F1BF0932A00740F6D /* NSString+FK.h */,
+				01F055901BF0932A00740F6D /* NSString+FK.m */,
+				018DA5401BF18D77009270F1 /* NSNotificationCenter+FK.h */,
+				018DA5411BF18D77009270F1 /* NSNotificationCenter+FK.m */,
+				018DA5431BF18FF9009270F1 /* NSKeyedUnarchiver+FK.h */,
+				018DA5441BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m */,
+				018DA5461BF1910A009270F1 /* NSTimer+FK.h */,
+				018DA5471BF1910A009270F1 /* NSTimer+FK.m */,
+				018DA5491BF19186009270F1 /* NSBundle+FK.h */,
+				018DA54A1BF19186009270F1 /* NSBundle+FK.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -581,11 +611,15 @@
 				01F055871BF092E300740F6D /* CALayer+FK.m in Sources */,
 				01F055A71BF0934300740F6D /* UIDevice+FK.m in Sources */,
 				0195FDE61BE6EE7900D47216 /* FKQuartz2DView.m in Sources */,
+				018DA54E1BF1952A009270F1 /* UIGestureRecognizer+FK.m in Sources */,
+				018DA5481BF1910A009270F1 /* NSTimer+FK.m in Sources */,
 				016996F51BEDE8E500ED079D /* FKNavigationVC.m in Sources */,
 				01F055941BF0932A00740F6D /* NSDate+FK.m in Sources */,
 				01F055E11BF0D2A100740F6D /* MASCompositeConstraint.m in Sources */,
 				016996FC1BEDF34D00ED079D /* FKPresentationController.m in Sources */,
+				018DA54B1BF19186009270F1 /* NSBundle+FK.m in Sources */,
 				01F055911BF0932A00740F6D /* Foundation+FKLog.m in Sources */,
+				018DA5451BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m in Sources */,
 				01F055E41BF0D2A100740F6D /* MASLayoutConstraint.m in Sources */,
 				01F055E71BF0D2A100740F6D /* NSArray+MASAdditions.m in Sources */,
 				1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */,
@@ -607,6 +641,8 @@
 				01F055B01BF0939900740F6D /* UIScreen+FK.m in Sources */,
 				016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */,
 				01F055C51BF0BD3900740F6D /* FKFilterBottomBar.m in Sources */,
+				018DA5511BF196D7009270F1 /* UIControl+FK.m in Sources */,
+				018DA5421BF18D77009270F1 /* NSNotificationCenter+FK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
