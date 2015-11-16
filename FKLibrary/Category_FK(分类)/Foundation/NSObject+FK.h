@@ -12,46 +12,46 @@
 
 #pragma mark - Sending messages with variable parameters
 
-- (id)performSelectorWithArgs:(SEL)sel, ...;
+- (id)fk_performSelectorWithArgs:(SEL)sel, ...;
 
-- (void)performSelectorWithArgs:(SEL)sel afterDelay:(NSTimeInterval)delay, ...;
+- (void)fk_performSelectorWithArgs:(SEL)sel afterDelay:(NSTimeInterval)delay, ...;
 
-- (id)performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...;
+- (id)fk_performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...;
 
-- (id)performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thread waitUntilDone:(BOOL)wait, ...;
+- (id)fk_performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thread waitUntilDone:(BOOL)wait, ...;
 
-- (void)performSelectorWithArgsInBackground:(SEL)sel, ...;
+- (void)fk_performSelectorWithArgsInBackground:(SEL)sel, ...;
 
-- (void)performSelector:(SEL)sel afterDelay:(NSTimeInterval)delay;
+- (void)fk_performSelector:(SEL)sel afterDelay:(NSTimeInterval)delay;
 
 
 #pragma mark - Swap method (Swizzling)
 
-+ (BOOL)swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel;
++ (BOOL)fk_swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel;
 
-+ (BOOL)swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
++ (BOOL)fk_swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
 
 
 #pragma mark - Associate value
 
-- (void)setAssociateValue:(id)value withKey:(void *)key;
+- (void)fk_setAssociateValue:(id)value withKey:(void *)key;
 
-- (void)setAssociateWeakValue:(id)value withKey:(void *)key;
+- (void)fk_setAssociateWeakValue:(id)value withKey:(void *)key;
 
-- (id)getAssociatedValueForKey:(void *)key;
+- (id)fk_getAssociatedValueForKey:(void *)key;
 
-- (void)removeAssociatedValues;
+- (void)fk_removeAssociatedValues;
 
 
 #pragma mark - Others
 
-+ (NSString *)className;
++ (NSString *)fk_className;
 
-- (NSString *)className;
+- (NSString *)fk_className;
 
-- (id)deepCopy;
+- (id)fk_deepCopy;
 
-- (id)deepCopyWithArchiver:(Class)archiver unarchiver:(Class)unarchiver;
+- (id)fk_deepCopyWithArchiver:(Class)archiver unarchiver:(Class)unarchiver;
 
 
 @end

@@ -9,18 +9,14 @@
 #import <Foundation/Foundation.h>
 
 /**
- Provide some method for `NSNotificationCenter`
- to post notification in different thread.
+ *  提供一些可以在不同的线程发送“通知”的方法
  */
 @interface NSNotificationCenter (FK)
 
 /**
- Posts a given notification to the receiver on main thread.
- If current thread is main thread, the notification is posted synchronized;
- otherwise, is posted asynchronized.
- 
- @param notification  The notification to post.
- An exception is raised if notification is nil.
+ *  在主线程发送一个通知.
+ 如果当前线程是主线程的话,这个通知将被同步发送,如果不是的话,这个通知将被异步发送
+ 如果通知为nil会抛出一个异常
  */
 - (void)postNotificationOnMainThread:(NSNotification *)notification;
 

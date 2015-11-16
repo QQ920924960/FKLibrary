@@ -18,6 +18,8 @@
 // *  是否为昨天
 // */
 //- (BOOL)fk_isYesterday;
+
+
 /**
  *  是否为今年
  */
@@ -43,22 +45,37 @@
 /// @name Component Properties
 ///=============================================================================
 
+/** 获取某个NSDate的年份 */
 @property (nonatomic, readonly) NSInteger fk_year; ///< Year component
+/** 获取某个NSDate的月份 */
 @property (nonatomic, readonly) NSInteger fk_month; ///< Month component (1~12)
+/** 获取某个NSDate的日期 */
 @property (nonatomic, readonly) NSInteger fk_day; ///< Day component (1~31)
+/** 获取某个NSDate的小时 */
 @property (nonatomic, readonly) NSInteger fk_hour; ///< Hour component (0~23)
+/** 获取某个NSDate的分钟 */
 @property (nonatomic, readonly) NSInteger fk_minute; ///< Minute component (0~59)
+/** 获取某个NSDate的秒 */
 @property (nonatomic, readonly) NSInteger fk_second; ///< Second component (0~59)
+/** 获取某个NSDate的纳秒 */
 @property (nonatomic, readonly) NSInteger fk_nanosecond; ///< Nanosecond component
+/** 获取某个NSDate的星期 */
 @property (nonatomic, readonly) NSInteger fk_weekday; ///< Weekday component (1~7, first day is based on user setting)
+
 @property (nonatomic, readonly) NSInteger fk_weekdayOrdinal; ///< WeekdayOrdinal component
+/** 获取某个NSDate的是那个月的第几周 */
 @property (nonatomic, readonly) NSInteger fk_weekOfMonth; ///< WeekOfMonth component (1~5)
 @property (nonatomic, readonly) NSInteger fk_weekOfYear; ///< WeekOfYear component (1~53)
 @property (nonatomic, readonly) NSInteger fk_yearForWeekOfYear; ///< YearForWeekOfYear component
+/** 季度 */
 @property (nonatomic, readonly) NSInteger fk_quarter; ///< Quarter component
+/** 是不是闰月 */
 @property (nonatomic, readonly) BOOL fk_isLeapMonth; ///< Weather the month is leap month
-@property (nonatomic, readonly) BOOL fk_isLeapYear; ///< Weather the year is leap year【是否是闰年】
+/** 是不是闰年 */
+@property (nonatomic, readonly) BOOL fk_isLeapYear; ///< Weather the year is leap year
+/** 是不是今天 */
 @property (nonatomic, readonly) BOOL fk_isToday; ///< Weather date is today (based on current locale)
+/** 是不是昨天 */
 @property (nonatomic, readonly) BOOL fk_isYesterday; ///< Weather date is yesterday (based on current locale)
 
 #pragma mark - Date modify
@@ -68,7 +85,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of years.
- 
+ 【通过添加年数返回一个新的NSDate】
  @param years  Number of years to add.
  @return Date modified by the number of desired years.
  */
@@ -76,7 +93,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of months.
- 
+ 【通过添加月数返回一个新的NSDate】
  @param months  Number of months to add.
  @return Date modified by the number of desired months.
  */
@@ -84,7 +101,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of weeks.
- 
+ 【通过添加周数返回一个新的NSDate】
  @param weeks  Number of weeks to add.
  @return Date modified by the number of desired weeks.
  */
@@ -92,7 +109,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of days.
- 
+ 【通过添加天数返回一个新的NSDate】
  @param days  Number of days to add.
  @return Date modified by the number of desired days.
  */
@@ -100,7 +117,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of hours.
- 
+ 【通过添加小时数返回一个新的NSDate】
  @param hours  Number of hours to add.
  @return Date modified by the number of desired hours.
  */
@@ -108,7 +125,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of minutes.
- 
+ 【通过添加分钟数返回一个新的NSDate】
  @param minutes  Number of minutes to add.
  @return Date modified by the number of desired minutes.
  */
@@ -116,7 +133,7 @@
 
 /**
  Returns a date representing the receiver date shifted later by the provided number of seconds.
- 
+ 【通过添加秒数返回一个新的NSDate】
  @param seconds  Number of seconds to add.
  @return Date modified by the number of desired seconds.
  */

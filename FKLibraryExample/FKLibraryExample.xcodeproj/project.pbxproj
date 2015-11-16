@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01025E4D1BF2C68700A0E0C8 /* FKTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01025E4C1BF2C68700A0E0C8 /* FKTableViewVC.m */; settings = {ASSET_TAGS = (); }; };
+		01025E501BF2C6A100A0E0C8 /* FKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01025E4F1BF2C6A100A0E0C8 /* FKTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		01025E531BF2DB0500A0E0C8 /* FKPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01025E521BF2DB0500A0E0C8 /* FKPopView.m */; settings = {ASSET_TAGS = (); }; };
+		01025E591BF2EAA500A0E0C8 /* UIImageView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 01025E581BF2EAA500A0E0C8 /* UIImageView+FK.m */; settings = {ASSET_TAGS = (); }; };
 		0149BFC11BEC77590099B055 /* FKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC01BEC77590099B055 /* FKConst.m */; };
 		0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149BFC91BEC92BF0099B055 /* FKImageTools.m */; };
 		016996EE1BEDC3BE00ED079D /* FKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 016996ED1BEDC3BE00ED079D /* FKLocationManager.m */; };
@@ -78,6 +82,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01025E4B1BF2C68700A0E0C8 /* FKTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKTableViewVC.h; sourceTree = "<group>"; };
+		01025E4C1BF2C68700A0E0C8 /* FKTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTableViewVC.m; sourceTree = "<group>"; };
+		01025E4E1BF2C6A100A0E0C8 /* FKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKTableViewCell.h; sourceTree = "<group>"; };
+		01025E4F1BF2C6A100A0E0C8 /* FKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTableViewCell.m; sourceTree = "<group>"; };
+		01025E511BF2DB0500A0E0C8 /* FKPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPopView.h; sourceTree = "<group>"; };
+		01025E521BF2DB0500A0E0C8 /* FKPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPopView.m; sourceTree = "<group>"; };
+		01025E571BF2EAA500A0E0C8 /* UIImageView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FK.h"; sourceTree = "<group>"; };
+		01025E581BF2EAA500A0E0C8 /* UIImageView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FK.m"; sourceTree = "<group>"; };
 		0149BFBF1BEC74900099B055 /* FKLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKLibrary.h; sourceTree = "<group>"; };
 		0149BFC01BEC77590099B055 /* FKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKConst.m; sourceTree = "<group>"; };
 		0149BFC21BEC77A50099B055 /* FKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKConst.h; sourceTree = "<group>"; };
@@ -214,6 +226,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01025E4A1BF2C66800A0E0C8 /* FKPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				01025E4B1BF2C68700A0E0C8 /* FKTableViewVC.h */,
+				01025E4C1BF2C68700A0E0C8 /* FKTableViewVC.m */,
+				01025E4E1BF2C6A100A0E0C8 /* FKTableViewCell.h */,
+				01025E4F1BF2C6A100A0E0C8 /* FKTableViewCell.m */,
+				01025E511BF2DB0500A0E0C8 /* FKPopView.h */,
+				01025E521BF2DB0500A0E0C8 /* FKPopView.m */,
+			);
+			path = FKPopMenu;
+			sourceTree = "<group>";
+		};
 		0149BFCB1BECCBA90099B055 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +253,7 @@
 		016996EF1BEDE55100ED079D /* FKTestClass */ = {
 			isa = PBXGroup;
 			children = (
+				01025E4A1BF2C66800A0E0C8 /* FKPopMenu */,
 				01F055C91BF0D2A100740F6D /* Masonry */,
 				016996F01BEDE5B400ED079D /* FKImageFilterVC.h */,
 				016996F11BEDE5B400ED079D /* FKImageFilterVC.m */,
@@ -397,6 +423,8 @@
 				018DA54D1BF1952A009270F1 /* UIGestureRecognizer+FK.m */,
 				018DA54F1BF196D7009270F1 /* UIControl+FK.h */,
 				018DA5501BF196D7009270F1 /* UIControl+FK.m */,
+				01025E571BF2EAA500A0E0C8 /* UIImageView+FK.h */,
+				01025E581BF2EAA500A0E0C8 /* UIImageView+FK.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -597,6 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01025E501BF2C6A100A0E0C8 /* FKTableViewCell.m in Sources */,
 				01F055AA1BF0934300740F6D /* UIWindow+FK.m in Sources */,
 				01F055A41BF0934300740F6D /* UIBarButtonItem+FK.m in Sources */,
 				0195FDAA1BE6ECE500D47216 /* ViewController.m in Sources */,
@@ -611,6 +640,7 @@
 				01F055871BF092E300740F6D /* CALayer+FK.m in Sources */,
 				01F055A71BF0934300740F6D /* UIDevice+FK.m in Sources */,
 				0195FDE61BE6EE7900D47216 /* FKQuartz2DView.m in Sources */,
+				01025E4D1BF2C68700A0E0C8 /* FKTableViewVC.m in Sources */,
 				018DA54E1BF1952A009270F1 /* UIGestureRecognizer+FK.m in Sources */,
 				018DA5481BF1910A009270F1 /* NSTimer+FK.m in Sources */,
 				016996F51BEDE8E500ED079D /* FKNavigationVC.m in Sources */,
@@ -634,6 +664,7 @@
 				01F055A91BF0934300740F6D /* UIView+FK.m in Sources */,
 				01F055C21BF0BADB00740F6D /* FKFilterImageCell.m in Sources */,
 				0149BFCA1BEC92BF0099B055 /* FKImageTools.m in Sources */,
+				01025E591BF2EAA500A0E0C8 /* UIImageView+FK.m in Sources */,
 				01F055921BF0932A00740F6D /* NSArray+FK.m in Sources */,
 				01F055951BF0932A00740F6D /* NSString+FK.m in Sources */,
 				01F055A51BF0934300740F6D /* UIButton+FK.m in Sources */,
@@ -641,6 +672,7 @@
 				01F055B01BF0939900740F6D /* UIScreen+FK.m in Sources */,
 				016996F91BEDF00A00ED079D /* FKAnimatedTransitioning.m in Sources */,
 				01F055C51BF0BD3900740F6D /* FKFilterBottomBar.m in Sources */,
+				01025E531BF2DB0500A0E0C8 /* FKPopView.m in Sources */,
 				018DA5511BF196D7009270F1 /* UIControl+FK.m in Sources */,
 				018DA5421BF18D77009270F1 /* NSNotificationCenter+FK.m in Sources */,
 			);

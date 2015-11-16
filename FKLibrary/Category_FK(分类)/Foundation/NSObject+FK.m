@@ -25,33 +25,33 @@ va_start(args, _last_arg_); \
 [NSObject setInv:inv withSig:sig andArgs:args]; \
 va_end(args);
 
-- (id)performSelectorWithArgs:(SEL)sel, ...{
+- (id)fk_performSelectorWithArgs:(SEL)sel, ...{
     INIT_INV(sel, nil);
     [inv invoke];
     return [NSObject getReturnFromInv:inv withSig:sig];
 }
 
-- (void)performSelectorWithArgs:(SEL)sel afterDelay:(NSTimeInterval)delay, ...{
+- (void)fk_performSelectorWithArgs:(SEL)sel afterDelay:(NSTimeInterval)delay, ...{
     INIT_INV(delay, );
     [inv retainArguments];
     [inv performSelector:@selector(invoke) withObject:nil afterDelay:delay];
 }
 
-- (id)performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...{
+- (id)fk_performSelectorWithArgsOnMainThread:(SEL)sel waitUntilDone:(BOOL)wait, ...{
     INIT_INV(wait, nil);
     if (!wait) [inv retainArguments];
     [inv performSelectorOnMainThread:@selector(invoke) withObject:nil waitUntilDone:wait];
     return wait ? [NSObject getReturnFromInv:inv withSig:sig] : nil;
 }
 
-- (id)performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thr waitUntilDone:(BOOL)wait, ...{
+- (id)fk_performSelectorWithArgs:(SEL)sel onThread:(NSThread *)thr waitUntilDone:(BOOL)wait, ...{
     INIT_INV(wait, nil);
     if (!wait) [inv retainArguments];
     [inv performSelector:@selector(invoke) onThread:thr withObject:nil waitUntilDone:wait];
     return wait ? [NSObject getReturnFromInv:inv withSig:sig] : nil;
 }
 
-- (void)performSelectorWithArgsInBackground:(SEL)sel, ...{
+- (void)fk_performSelectorWithArgsInBackground:(SEL)sel, ...{
     INIT_INV(sel, );
     [inv retainArguments];
     [inv performSelectorInBackground:@selector(invoke) withObject:nil];
@@ -304,11 +304,11 @@ struct dummy arg = va_arg(args, struct dummy); \
     }
 }
 
-- (void)performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
+- (void)fk_performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
     [self performSelector:selector withObject:nil afterDelay:delay];
 }
 
-+ (BOOL)swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel {
++ (BOOL)fk_swizzleInstanceMethod:(SEL)originalSel with:(SEL)newSel {
     Method originalMethod = class_getInstanceMethod(self, originalSel);
     Method newMethod = class_getInstanceMethod(self, newSel);
     if (!originalMethod || !newMethod) return NO;
@@ -327,7 +327,7 @@ struct dummy arg = va_arg(args, struct dummy); \
     return YES;
 }
 
-+ (BOOL)swizzleClassMethod:(SEL)originalSel with:(SEL)newSel {
++ (BOOL)fk_swizzleClassMethod:(SEL)originalSel with:(SEL)newSel {
     Class class = object_getClass(self);
     Method originalMethod = class_getInstanceMethod(class, originalSel);
     Method newMethod = class_getInstanceMethod(class, newSel);
@@ -336,31 +336,31 @@ struct dummy arg = va_arg(args, struct dummy); \
     return YES;
 }
 
-- (void)setAssociateValue:(id)value withKey:(void *)key {
+- (void)fk_setAssociateValue:(id)value withKey:(void *)key {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setAssociateWeakValue:(id)value withKey:(void *)key {
+- (void)fk_setAssociateWeakValue:(id)value withKey:(void *)key {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (void)removeAssociatedValues {
+- (void)fk_removeAssociatedValues {
     objc_removeAssociatedObjects(self);
 }
 
-- (id)getAssociatedValueForKey:(void *)key {
+- (id)fk_getAssociatedValueForKey:(void *)key {
     return objc_getAssociatedObject(self, key);
 }
 
-+ (NSString *)className {
++ (NSString *)fk_className {
     return NSStringFromClass(self);
 }
 
-- (NSString *)className {
+- (NSString *)fk_className {
     return [NSString stringWithUTF8String:class_getName([self class])];
 }
 
-- (id)deepCopy {
+- (id)fk_deepCopy {
     id obj = nil;
     @try {
         obj = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
@@ -371,7 +371,7 @@ struct dummy arg = va_arg(args, struct dummy); \
     return obj;
 }
 
-- (id)deepCopyWithArchiver:(Class)archiver unarchiver:(Class)unarchiver {
+- (id)fk_deepCopyWithArchiver:(Class)archiver unarchiver:(Class)unarchiver {
     id obj = nil;
     @try {
         obj = [unarchiver unarchiveObjectWithData:[archiver archivedDataWithRootObject:self]];

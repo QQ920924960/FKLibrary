@@ -31,7 +31,6 @@ static const short _base64DecodingTable[256] = {
 
 @implementation NSData (FK)
 
-// Adapted from http://www.cocoadev.com/index.pl?BaseSixtyFour
 - (NSString *)fk_dataBase64Encoded {
     const uint8_t *input = self.bytes;
     NSInteger length = self.length;
@@ -57,7 +56,6 @@ static const short _base64DecodingTable[256] = {
     return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 }
 
-// Adapted from http://www.cocoadev.com/index.pl?BaseSixtyFour
 + (NSData *)fk_dataWithBase64String:(NSString *)base64String {
     const char *string = [base64String cStringUsingEncoding:NSASCIIStringEncoding];
     NSInteger inputLength = base64String.length;
