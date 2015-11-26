@@ -39,6 +39,16 @@
 #define FKFilePath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 /**
+ *  @author frank.chan, 15-11-25 12:11:37
+ *
+ *  过期提醒
+ *
+ *  @param instead 需要给用户提醒的话
+ */
+#define FKDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+
+
+/**
  Add this macro before each category implementation, so we don't have to use
  -all_load or -force_load to load object files from static libraries that only
  contain categories and no classes.
