@@ -38,9 +38,9 @@ static CGFloat const duration = 1.0;
     } else {
         [UIView animateWithDuration:duration animations:^{
             UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-            [self changeViewX:fromView value:-fromView.frame.size.width];
+            [self changeViewX:fromView value:fromView.frame.size.width];
             // 为了使代码没有耦合性,就不采用下面的写法了【需要导入UIView的分类】
-//            fromView.frame.origin.x = -fromView.frame.size.width;
+//            fromView.frame.origin.x = fromView.frame.size.width;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];
