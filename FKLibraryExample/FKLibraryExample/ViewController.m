@@ -33,7 +33,7 @@
 //    [testButton setImage:testImage forState:UIControlStateNormal];
     
     [testButton fk_viewCornerRadius:0 borderWidth:10 borderColor:[UIColor blueColor]];
-    [testButton fk_buttonSetTitle:nil titleColor:nil font:nil forState:UIControlStateNormal];
+//    [testButton fk_buttonSetTitle:nil titleColor:nil font:nil forState:UIControlStateNormal];
     [testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 //    [testButton setTitle:@"dfssadffs" forState:UIControlStateNormal];
 //    [testButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -42,7 +42,6 @@
     
     // 获取iOS系统自带的滤镜名称并写入文件
 //    [self imageFilterWriteToFile];
-    
     
     
     

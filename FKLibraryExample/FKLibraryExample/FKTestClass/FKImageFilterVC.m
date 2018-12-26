@@ -34,7 +34,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     FKFilterView *filterView = [[FKFilterView alloc] init];
-    filterView.frame = CGRectMake(20, 20, FKScreenW - 40, 400);
+    filterView.frame = CGRectMake(20, 20, fkScreenW - 40, 400);
     filterView.image = self.image;
     [self.view addSubview:filterView];
     self.filterView = filterView;
@@ -44,7 +44,7 @@
     [slider setMaximumValue:100];
     slider.userInteractionEnabled = YES;
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-    slider.frame = CGRectMake(20, CGRectGetMaxY(self.filterView.frame) + 20, FKScreenW - 40, 20);
+    slider.frame = CGRectMake(20, CGRectGetMaxY(self.filterView.frame) + 20, fkScreenW - 40, 20);
 
     [self.view addSubview:slider];
     self.slider = slider;
@@ -65,8 +65,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
 }
-
 
 - (void)sliderValueChanged:(UISlider *)slider
 {
@@ -75,16 +75,14 @@
     } else {
         self.slider.value -= 1;
     }
-    self.filterView.picture = [self.image fk_imageGaussianBlurWithBias:(NSInteger)self.slider.value * 300];
     
     NSData *imageData = UIImagePNGRepresentation(self.filterView.picture);
     
     if ((NSInteger)self.slider.value == 10) {
-        NSString *imageFilePath = [FKFilePath stringByAppendingString:@"test.png"];
+        NSString *imageFilePath = [fkFilePath stringByAppendingString:@"test.png"];
         [imageData writeToFile:imageFilePath atomically:YES];
         NSLog(@"--writeToFile--");
     }
-    
     
 //    NSLog(@"--self.slider.value-%f--",self.slider.value);
 //    NSLog(@"--%@--", self.filterView.image);
@@ -96,8 +94,8 @@
 //    [self.slider beginTrackingWithTouch:touches withEvent:event];
 }
 
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     NSLog(@"--didReceiveMemoryWarning--");
 }

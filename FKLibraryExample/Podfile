@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FKLibraryExample' do
+    
+    pod 'AFNetworking'
+    pod 'SVProgressHUD'
+    pod 'SDWebImage'
+    pod 'MJExtension'
+    pod 'MJRefresh'
+    pod 'Masonry'
+    pod 'TZImagePickerController'
+
+  target 'FKLibraryExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FKLibraryExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -24,8 +24,8 @@ static CGFloat const showImageCount = 7;
     self = [super initWithFrame:frame];
     if (self) {
         UIButton *imageBtn = [[UIButton alloc] init];
-        CGFloat imageBTnW = (FKScreenW - (showImageCount + 1) * imageBoreder) / showImageCount;
-        imageBtn.backgroundColor = FKRandomColor;
+        CGFloat imageBTnW = (fkScreenW - (showImageCount + 1) * imageBoreder) / showImageCount;
+        imageBtn.backgroundColor = fkRandomColor;
         imageBtn.frame = CGRectMake(0, 0, imageBTnW, imageBTnW);
         [self.contentView addSubview:imageBtn];
         self.imageBtn = imageBtn;
