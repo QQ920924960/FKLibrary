@@ -19,6 +19,7 @@
         
         // 添加安全策略
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+//        _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
 //        // 设置请求类型
 //        _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
 //        // 设置回复类型
