@@ -44,6 +44,8 @@
 
 /******************* 其它 *******************/
 #import "FKCacheTool.h"
+#import "FKHttpTool.h"
+#import "FKLoginTool.h"
 
 /******************* xxxxxxxxxx *******************/
 /******************* xxxxxxxxxx *******************/
