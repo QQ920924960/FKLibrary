@@ -26,4 +26,17 @@
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
++ (UIBarButtonItem *)fk_itemWithTarget:(id)target action:(SEL)action text:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font
+{
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitleColor:textColor forState:UIControlStateNormal];
+    button.titleLabel.font = font;
+    CGSize Btnsize = [button sizeThatFits:CGSizeMake(fkScreenW, fkScreenH)];
+    button.fk_size = CGSizeMake(Btnsize.width + 10, Btnsize.height + 5);
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+
 @end

@@ -22,4 +22,6 @@
  */
 + (UIBarButtonItem *)fk_itemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action;
 
++ (UIBarButtonItem *)fk_itemWithTarget:(id)target action:(SEL)action text:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font;
+
 @end

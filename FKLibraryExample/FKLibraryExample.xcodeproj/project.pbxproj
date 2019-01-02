@@ -94,6 +94,7 @@
 		52724F6F21D34B2C00E0A9B0 /* FKResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52724F6E21D34B2C00E0A9B0 /* FKResources.xcassets */; };
 		52724F7521D3517000E0A9B0 /* FKTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724F7121D3517000E0A9B0 /* FKTabBarVC.m */; };
 		52724F7621D3517000E0A9B0 /* FKNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724F7421D3517000E0A9B0 /* FKNavVC.m */; };
+		52A3966021DC806C00F1E361 /* FKDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3965F21DC806C00F1E361 /* FKDatePicker.m */; };
 		7EA6207C199A342DA967DB68 /* libPods-FKLibraryExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EC023EB306CD5FB6A54CF9 /* libPods-FKLibraryExample.a */; };
 		BED991C191FB8C5DF8E5DDA4 /* libPods-FKLibraryExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B622DF3D3F5C7B34F10F8DD /* libPods-FKLibraryExampleUITests.a */; };
 /* End PBXBuildFile section */
@@ -291,6 +292,8 @@
 		52724F7321D3517000E0A9B0 /* FKNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNavVC.h; sourceTree = "<group>"; };
 		52724F7421D3517000E0A9B0 /* FKNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNavVC.m; sourceTree = "<group>"; };
 		52724F7721D3532F00E0A9B0 /* FKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSingleton.h; sourceTree = "<group>"; };
+		52A3965E21DC806C00F1E361 /* FKDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDatePicker.h; sourceTree = "<group>"; };
+		52A3965F21DC806C00F1E361 /* FKDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKDatePicker.m; sourceTree = "<group>"; };
 		66A550B8D27D755D77BC4182 /* Pods-FKLibraryExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKLibraryExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKLibraryExample/Pods-FKLibraryExample.release.xcconfig"; sourceTree = "<group>"; };
 		7B622DF3D3F5C7B34F10F8DD /* libPods-FKLibraryExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF8AABC95E1794B7DFA1E9 /* libPods-FKLibraryExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,6 +347,7 @@
 		0149BFCB1BECCBA90099B055 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				52A3965D21DC806C00F1E361 /* 日期选择器 */,
 				52724F3521D32E0100E0A9B0 /* Network */,
 				52724F2021D32D6C00E0A9B0 /* CommonTool */,
 				52724EE921D32AF100E0A9B0 /* 选择支付方式 */,
@@ -752,6 +756,15 @@
 			path = "图片选择器";
 			sourceTree = "<group>";
 		};
+		52A3965D21DC806C00F1E361 /* 日期选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				52A3965E21DC806C00F1E361 /* FKDatePicker.h */,
+				52A3965F21DC806C00F1E361 /* FKDatePicker.m */,
+			);
+			path = "日期选择器";
+			sourceTree = "<group>";
+		};
 		A502428BEE9095D4F9D82534 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,6 +1016,7 @@
 				52724F6B21D34AFB00E0A9B0 /* FKAddImageView.m in Sources */,
 				52724F3021D32D6C00E0A9B0 /* FKMapTool.m in Sources */,
 				52724F4121D32E0100E0A9B0 /* FKBaseResult.m in Sources */,
+				52A3966021DC806C00F1E361 /* FKDatePicker.m in Sources */,
 				016996EE1BEDC3BE00ED079D /* FKLocationManager.m in Sources */,
 				52724F3121D32D6C00E0A9B0 /* FKImageTool.m in Sources */,
 				01F055871BF092E300740F6D /* CALayer+FK.m in Sources */,
