@@ -1,9 +1,9 @@
 //
 //  UILabel+FK.h
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/8/15.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -30,5 +30,11 @@
 
 + (instancetype)fk_labelWithFrame:(CGRect)frame font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)textAlignment text:(NSString *)text;
 
+
+// 设置中划线
+- (void)fk_addMiddleLine:(UIColor *)lineColor;
+
+// 设置下划线
+- (void)fk_addUnderLine:(UIColor *)lineColor;
 
 @end

@@ -1,17 +1,17 @@
 //
 //  UITableView+FK.h
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/8/17.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface UITableView (FK)
 
-- (void)hg_tableViewCheckEmptyDataWithDataCount:(NSUInteger)dataCount;
+- (void)fk_tableViewCheckEmptyDataWithDataCount:(NSUInteger)dataCount;
 
-- (void)hg_tableViewCheckEmptyDataWithDataCount:(NSUInteger)dataCount emptyView:(UIView *)emptyView;
+- (void)fk_tableViewCheckEmptyDataWithDataCount:(NSUInteger)dataCount emptyView:(UIView *)emptyView;
 
 @end

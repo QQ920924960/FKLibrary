@@ -12,13 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FKPayMethodCell : FKTableCell
 
-@property (nonatomic)UILabel *nameLabel;
-@property (nonatomic)UIImageView * payImageView;
-@property (nonatomic)NSString *defaultSelect;
-@property (nonatomic)UILabel *paymentLab;
-@property (nonatomic)UIImageView *selectedImageView;
-
-@property (nonatomic)NSString *moneyStr;//金额数
+@property (nonatomic, strong) id model;
 
 @end
 

@@ -32,8 +32,8 @@
     [self.contentView addSubview:titleLabel];
     self.titleLabel = titleLabel;
     
-    UIImageView *checkView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"flowers_pay_check_normal"]];
-    checkView.highlightedImage = [UIImage imageNamed:@"flowers_pay_check_selected"];
+    UIImageView *checkView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fk_choose_uncheck"]];
+    checkView.highlightedImage = [UIImage imageNamed:@"fk_choose_checked"];
     [self.contentView addSubview:checkView];
     self.checkView = checkView;
     
@@ -60,6 +60,8 @@
 
 - (void)setModel:(id)model
 {
+    _model = model;
+    
     if ([model isKindOfClass:[NSDictionary class]]) {
         NSDictionary *dict = model;
         self.iconView.image = [UIImage imageNamed:dict[@"icon"]];

@@ -1,9 +1,9 @@
 //
 //  FKPlaceholderTextView.h
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/9/13.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

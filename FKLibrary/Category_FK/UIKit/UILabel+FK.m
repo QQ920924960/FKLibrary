@@ -1,9 +1,9 @@
 //
 //  UILabel+FK.m
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/8/15.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import "UILabel+FK.h"
@@ -83,6 +83,27 @@
     return label;
 }
 
+#pragma mark -富文本
+
+// 设置中划线
+- (void)fk_addMiddleLine:(UIColor *)lineColor
+{
+    if (self.text.length > 0) {
+        NSDictionary *attrs = @{NSStrikethroughStyleAttributeName: @(NSUnderlineStyleSingle),
+                                NSBaselineOffsetAttributeName : @(NSUnderlineStyleSingle)};
+        self.attributedText = [[NSMutableAttributedString alloc] initWithString:self.text attributes:attrs];
+    }
+}
+
+// 设置下划线
+- (void)fk_addUnderLine:(UIColor *)lineColor
+{
+    if (self.text.length > 0) {
+        NSDictionary *attrs = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle],
+                                NSUnderlineStyleAttributeName:lineColor};
+        self.attributedText = [[NSMutableAttributedString alloc] initWithString:self.text attributes:attrs];
+    }
+}
 
 
 @end

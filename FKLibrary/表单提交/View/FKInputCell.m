@@ -33,7 +33,7 @@
     valueField.delegate = self;
     [valueField addTarget:self action:@selector(valueFieldEndEditing:) forControlEvents:UIControlEventEditingDidEnd];
     
-    UIButton *getCodeBtn = [UIButton fk_btnWithTarget:self action:@selector(getCodeBtnClicked:) font:fk_adjustFont(14) normalTitle:@"获取动态验证码" normalTitleColor:fkMainColor];
+    UIButton *getCodeBtn = [UIButton fk_btnWithTarget:self action:@selector(getCodeBtnClicked:) font:fk_adjustFont(14) normalTitle:@"获取动态验证码" normalTitleColor:fkMainColor selectedTitle:nil selectedTitleColor:nil normalImg:nil selectedImg:nil bgImg:nil selectedBgImg:nil];
     [self.contentView addSubview:getCodeBtn];
     self.getCodeBtn = getCodeBtn;
     getCodeBtn.hidden = true;

@@ -1,9 +1,9 @@
 //
 //  UIButton+FK.h
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/8/15.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -28,10 +28,6 @@
 
 
 + (instancetype)fk_btnWithTarget:(id)target action:(SEL)action img:(UIImage *)img;
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action img:(UIImage *)img selectedImg:(UIImage *)selectedImg;
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor;
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor bgImg:(UIImage *)bgImg;
-
 
 /** 参数最多的一个 */
 + (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor selectedTitle:(NSString *)selectedTitle selectedTitleColor:(UIColor *)selectedTitleColor normalImg:(UIImage *)normalImg selectedImg:(UIImage *)selectedImg bgImg:(UIImage *)bgImg selectedBgImg:(UIImage *)selectedBgImg;

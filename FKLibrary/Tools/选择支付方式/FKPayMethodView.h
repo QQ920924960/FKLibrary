@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FKPayMethodView : UIView
 
-@property (nonatomic, copy) void(^selectePayMethodBlock)(NSString *payMethodName);
+@property (nonatomic, copy) NSString *amount;
+
+//@property (nonatomic, copy) void(^selectePayMethodBlock)(NSString *payMethodName);
+@property (nonatomic, copy) void(^selectePayMethodBlock)(NSString *payType);
 - (void)show;
 
 @end

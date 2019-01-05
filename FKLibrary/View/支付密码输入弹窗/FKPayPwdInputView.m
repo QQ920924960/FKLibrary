@@ -1,9 +1,9 @@
 //
 //  FKPayPwdInputView.m
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/9/17.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import "FKPayPwdInputView.h"
@@ -51,7 +51,7 @@
     self.container = container;
     container.backgroundColor = [UIColor whiteColor];
     
-    UIButton *closeBtn = [UIButton fk_btnWithTarget:self action:@selector(closeBtnClicked) img:[UIImage imageNamed:@"dissmiss"] selectedImg:nil];
+    UIButton *closeBtn = [UIButton fk_btnWithTarget:self action:@selector(closeBtnClicked) img:[UIImage imageNamed:@"dissmiss"]];
     [container addSubview:closeBtn];
     [closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(44, 44));

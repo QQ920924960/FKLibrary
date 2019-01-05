@@ -1,9 +1,9 @@
 //
 //  UIButton+FK.m
-//  HHShopping
+//  FKLibraryExample
 //
 //  Created by frank on 2018/8/15.
-//  Copyright © 2018年 嘉瑞科技有限公司 - 凯叔叔. All rights reserved.
+//  Copyright © 2018年 zmosa - frank. All rights reserved.
 //
 
 #import "UIButton+FK.h"
@@ -83,7 +83,7 @@
 
 + (instancetype)fk_btnWithFrame:(CGRect)frame font:(UIFont *)font
 {
-    UIButton *btn = [[UIButton alloc] initWithFrame:frame];
+    UIButton *btn = [[self alloc] initWithFrame:frame];
     btn.titleLabel.font = font;
     btn.frame = frame;
     return btn;
@@ -100,31 +100,13 @@
 /** 以下为分割线 */
 + (instancetype)fk_btnWithTarget:(id)target action:(SEL)action img:(UIImage *)img
 {
-    UIButton *btn = [UIButton fk_btnWithTarget:target action:action font:nil normalTitle:nil normalTitleColor:nil selectedTitle:nil selectedTitleColor:nil normalImg:img selectedImg:nil bgImg:nil selectedBgImg:nil];
-    return btn;
-}
-
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action img:(UIImage *)img selectedImg:(UIImage *)selectedImg
-{
-    UIButton *btn = [UIButton fk_btnWithTarget:target action:action font:nil normalTitle:nil normalTitleColor:nil selectedTitle:nil selectedTitleColor:nil normalImg:img selectedImg:selectedImg bgImg:nil selectedBgImg:nil];
-    return btn;
-}
-
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor
-{
-    UIButton *btn = [UIButton fk_btnWithTarget:target action:action font:font normalTitle:normalTitle normalTitleColor:normalTitleColor selectedTitle:nil selectedTitleColor:nil normalImg:nil selectedImg:nil bgImg:nil selectedBgImg:nil];
-    return btn;
-}
-
-+ (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor bgImg:(UIImage *)bgImg
-{
-    UIButton *btn = [UIButton fk_btnWithTarget:target action:action font:font normalTitle:normalTitle normalTitleColor:normalTitleColor selectedTitle:nil selectedTitleColor:nil normalImg:nil selectedImg:nil bgImg:bgImg selectedBgImg:nil];
+    UIButton *btn = [self fk_btnWithTarget:target action:action font:nil normalTitle:nil normalTitleColor:nil selectedTitle:nil selectedTitleColor:nil normalImg:img selectedImg:nil bgImg:nil selectedBgImg:nil];
     return btn;
 }
 
 + (instancetype)fk_btnWithTarget:(id)target action:(SEL)action font:(UIFont *)font normalTitle:(NSString *)normalTitle normalTitleColor:(UIColor *)normalTitleColor selectedTitle:(NSString *)selectedTitle selectedTitleColor:(UIColor *)selectedTitleColor normalImg:(UIImage *)normalImg selectedImg:(UIImage *)selectedImg bgImg:(UIImage *)bgImg selectedBgImg:(UIImage *)selectedBgImg
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn = [self buttonWithType:UIButtonTypeCustom];
     if (action) [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     if (font) btn.titleLabel.font = font;
     if (normalTitle) [btn setTitle:normalTitle forState:UIControlStateNormal];
@@ -140,3 +122,4 @@
 
 
 @end
+
