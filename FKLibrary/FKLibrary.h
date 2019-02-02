@@ -26,6 +26,7 @@
 #import "UIViewController+FK.h"
 #import "UIViewController+PopHandler.h"
 #import "UITableView+FK.h"
+#import "UICollectionView+FK.h"
 
 
 

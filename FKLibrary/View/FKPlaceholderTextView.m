@@ -24,6 +24,13 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [self setupSubviews];
+}
+
 - (void)setupSubviews
 {
     self.font = [UIFont systemFontOfSize:14];

@@ -51,6 +51,7 @@
 		01F055C81BF0C47200740F6D /* FKFilterImageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F055C71BF0C47200740F6D /* FKFilterImageBottomView.m */; };
 		1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */; };
 		3D4E204BF104A8A25D865765 /* libPods-FKLibraryExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FF8AABC95E1794B7DFA1E9 /* libPods-FKLibraryExampleTests.a */; };
+		5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */; };
 		52724EEE21D32AF100E0A9B0 /* FKPayMethodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */; };
 		52724EEF21D32AF100E0A9B0 /* FKPayMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEB21D32AF100E0A9B0 /* FKPayMethodCell.m */; };
 		52724EF821D32C4000E0A9B0 /* FKPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EF321D32C3F00E0A9B0 /* FKPlaceholderTextView.m */; };
@@ -209,6 +210,8 @@
 		1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FK.m"; sourceTree = "<group>"; };
 		310BF51B609433AF015D171E /* Pods-FKLibraryExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKLibraryExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKLibraryExampleTests/Pods-FKLibraryExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		34EC023EB306CD5FB6A54CF9 /* libPods-FKLibraryExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FK.m"; sourceTree = "<group>"; };
+		5246CDD321F9B50700A806F5 /* UICollectionView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FK.h"; sourceTree = "<group>"; };
 		52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayMethodView.m; sourceTree = "<group>"; };
 		52724EEB21D32AF100E0A9B0 /* FKPayMethodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayMethodCell.m; sourceTree = "<group>"; };
 		52724EEC21D32AF100E0A9B0 /* FKPayMethodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPayMethodView.h; sourceTree = "<group>"; };
@@ -530,6 +533,8 @@
 				01F055AF1BF0939900740F6D /* UIScreen+FK.m */,
 				52724F5221D333F000E0A9B0 /* UITableView+FK.h */,
 				52724F5321D333F000E0A9B0 /* UITableView+FK.m */,
+				5246CDD321F9B50700A806F5 /* UICollectionView+FK.h */,
+				5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */,
 				01F055A01BF0934300740F6D /* UIView+FK.h */,
 				01F055A11BF0934300740F6D /* UIView+FK.m */,
 				52724F5621D3340000E0A9B0 /* UIViewController+FK.h */,
@@ -1042,6 +1047,7 @@
 				01F055871BF092E300740F6D /* CALayer+FK.m in Sources */,
 				01F055A71BF0934300740F6D /* UIDevice+FK.m in Sources */,
 				52724F6C21D34AFB00E0A9B0 /* FKSelectPhotoView.m in Sources */,
+				5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */,
 				52724F6021D3349500E0A9B0 /* FKWhiteVC.m in Sources */,
 				52724F2E21D32D6C00E0A9B0 /* FKLocationTool.m in Sources */,
 				52724F6D21D34AFB00E0A9B0 /* FKSelectPhotoCell.m in Sources */,

@@ -107,7 +107,9 @@
 
 /** 判断某个字符串是不是整型数值 */
 - (BOOL)fk_isPureInt;
-/** 判断某个字符串是不是浮点型数值 */
+/** 是不是浮点数 */
+- (BOOL)fk_isFloat;
+/** 判断某个字符串是不是纯浮点型数值 */
 - (BOOL)fk_isPureFloat;
 /** 是不是纯字母 **/
 - (BOOL)fk_isPureLetter;

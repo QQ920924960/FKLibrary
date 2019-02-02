@@ -271,11 +271,16 @@
     return [scan scanInt:&val] && [scan isAtEnd];
 }
 
-- (BOOL)fk_isPureFloat
+- (BOOL)fk_isFloat
 {
     NSScanner* scan = [NSScanner scannerWithString:self];
     float val;
     return [scan scanFloat:&val] && [scan isAtEnd];
+}
+
+- (BOOL)fk_isPureFloat
+{
+    return [self fk_isFloat] && ![self fk_isPureInt];
 }
 
 - (BOOL)fk_isPureLetter

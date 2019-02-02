@@ -15,7 +15,7 @@
 
 -(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message confirm:(void(^)(void))confirm;
 
--(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message confirmTitle:(NSString *)confirmTitle confirm:(void(^)(void))confirm;
+-(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle cancel:(void(^)(void))cancel confirm:(void(^)(void))confirm;
 
 -(void)fk_alertWithItems:(NSArray *)items confirm:(void (^)(NSString *title))confirm;
 

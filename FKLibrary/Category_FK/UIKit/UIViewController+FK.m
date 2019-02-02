@@ -12,16 +12,16 @@
 
 -(void)fk_alertWithTitle:(NSString *)title confirm:(void(^)(void))confirm
 {
-    [self fk_alertWithTitle:title message:nil confirmTitle:@"确定" confirm:confirm];
+    [self fk_alertWithTitle:title message:nil cancelTitle:nil confirmTitle:@"确定" cancel:nil confirm:confirm];
 }
 
 #pragma mark -Alert弹窗
 -(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message confirm:(void(^)(void))confirm
 {
-    [self fk_alertWithTitle:title message:message confirmTitle:@"确定" confirm:confirm];
+    [self fk_alertWithTitle:title message:message cancelTitle:nil confirmTitle:@"确定" cancel:nil confirm:confirm];
 }
 
--(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message confirmTitle:(NSString *)confirmTitle confirm:(void(^)(void))confirm
+-(void)fk_alertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle cancel:(void(^)(void))cancel confirm:(void(^)(void))confirm
 {
     UIAlertController *alert = [UIAlertController  alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *confirmAction=[UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -29,7 +29,12 @@
             confirm();
         }
     }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelTitle ? : @"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        if (cancel) {
+            cancel();
+        }
+    }];
     
     [alert addAction:cancelAction];
     [alert addAction:confirmAction];
