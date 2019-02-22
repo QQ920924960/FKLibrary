@@ -104,6 +104,8 @@
 
 /** 是否是正确的银行卡号 **/
 - (BOOL)fk_isRightBankCard;
+/** 是否是正确的价格数字：精确到2位小数 */
+- (BOOL)fk_isRightPrice;
 
 /** 判断某个字符串是不是整型数值 */
 - (BOOL)fk_isPureInt;

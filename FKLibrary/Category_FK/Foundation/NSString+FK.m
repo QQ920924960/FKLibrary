@@ -264,6 +264,21 @@
     return [predicate evaluateWithObject:self];
 }
 
+- (BOOL)fk_isRightPrice
+{
+    if ([self fk_isFloat]) {
+        NSArray *array = [self componentsSeparatedByString:@"."];
+        if (array.count == 2) {
+            // 小数点后面的位数
+            NSString *last = array.lastObject;
+            return (last.length < 3);
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+
 - (BOOL)fk_isPureInt
 {
     NSScanner* scan = [NSScanner scannerWithString:self];

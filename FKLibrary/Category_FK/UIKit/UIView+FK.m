@@ -113,10 +113,6 @@
     self.layer.cornerRadius = cornerRadius;
     self.layer.borderColor = borderColor.CGColor;
     self.layer.borderWidth = borderWidth;
-    // 图层栅格化的范围
-    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    // 是否应该栅格化
-    self.layer.shouldRasterize = YES;
     self.clipsToBounds = YES;
 }
 
