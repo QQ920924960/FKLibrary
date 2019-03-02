@@ -7,6 +7,7 @@
 //
 
 #import "FKImageTool.h"
+#import <TZImagePickerController.h>
 
 
 @implementation FKImageTool
@@ -42,28 +43,74 @@ FKSingletonM
 - (void)openCameraBy
 {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        // 已经开启授权，可继续
-        UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
-        imagePC.sourceType = UIImagePickerControllerSourceTypeCamera;
-        //            imagePC.allowsEditing = YES;
-        imagePC.delegate = self;
-        UIWindow *window = [UIApplication sharedApplication].delegate.window;
-        [window.rootViewController presentViewController:imagePC animated:YES completion:nil];
+        
+        AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        if ((authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)) {
+            NSDictionary *infoDict = [TZCommonTools tz_getInfoDictionary];
+            // 无权限 做一个友好的提示
+            NSString *appName = [infoDict valueForKey:@"CFBundleDisplayName"];
+            if (!appName) appName = [infoDict valueForKey:@"CFBundleName"];
+            
+            NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"Please allow %@ to access your camera in \"Settings -> Privacy -> Camera\""],appName];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSBundle tz_localizedStringForKey:@"Can not use camera"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"Cancel"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"Setting"], nil];
+            [alert show];
+        } else if (authStatus == AVAuthorizationStatusNotDetermined) {
+            // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                if (granted) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // 已经开启授权，可继续
+                        UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
+                        imagePC.sourceType = UIImagePickerControllerSourceTypeCamera;
+                        imagePC.allowsEditing = YES;
+                        imagePC.delegate = self;
+                        UIWindow *window = [UIApplication sharedApplication].delegate.window;
+                        [window.rootViewController presentViewController:imagePC animated:YES completion:nil];
+                    });
+                }
+            }];
+        } else {
+            // 已经开启授权，可继续
+            UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
+            imagePC.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imagePC.allowsEditing = YES;
+            imagePC.delegate = self;
+            UIWindow *window = [UIApplication sharedApplication].delegate.window;
+            [window.rootViewController presentViewController:imagePC animated:YES completion:nil];
+        }
+        
+        //        // 已经开启授权，可继续
+        //        UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
+        //        imagePC.sourceType = UIImagePickerControllerSourceTypeCamera;
+        //        imagePC.allowsEditing = YES;
+        //        imagePC.delegate = self;
+        //        UIWindow *window = [UIApplication sharedApplication].delegate.window;
+        //        [window.rootViewController presentViewController:imagePC animated:YES completion:nil];
+        
     } else {
         [SVProgressHUD showErrorWithStatus:@"无法调用相机"];
     }
 }
 
+
+
 // 图片库中查找图片
 - (void)openPhotosBy
 {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
-        imagePC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        imagePC.delegate = self;
-        imagePC.allowsEditing = YES;
+        TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:nil];
+        imagePickerVc.allowCrop = true;
+        CGFloat Y = (fkScreenH - fkScreenW) * 0.5;
+        imagePickerVc.cropRect = CGRectMake(0, Y, fkScreenW, fkScreenW);
+        [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+            if (photos.count > 0) {
+                if (self.getImageBlock) {
+                    self.getImageBlock(photos.firstObject);
+                }
+            }
+        }];
         UIWindow *window = [UIApplication sharedApplication].delegate.window;
-        [window.rootViewController presentViewController:imagePC animated:YES completion:nil];
+        [window.rootViewController presentViewController:imagePickerVc animated:YES completion:nil];
     } else {
         [SVProgressHUD showErrorWithStatus:@"暂无相册资源"];
     }
@@ -83,6 +130,11 @@ FKSingletonM
     if (self.getImageBlock) {
         self.getImageBlock(image);
     }
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 
