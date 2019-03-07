@@ -10,6 +10,8 @@
 
 @interface FKTableCell : UITableViewCell
 
+@property (nonatomic, strong) id data;
+
 + (instancetype)cellWith:(UITableView *)tableView;
 + (instancetype)cellWith:(UITableView *)tableView className:(NSString *)className;
 - (void)setupSubviews;
