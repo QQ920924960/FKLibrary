@@ -1,0 +1,209 @@
+{\rtf1\ansi\ansicpg936\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red170\green13\blue145;\red0\green0\blue0;
+\red92\green38\blue153;\red28\green0\blue207;\red0\green116\blue0;\red46\green13\blue110;\red100\green56\blue32;
+\red63\green110\blue116;\red38\green71\blue75;\red196\green26\blue22;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c39100\c22000\c12500;
+\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \cb2 \
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf3 static\cf4  \cf5 \cb2 CGFloat\cf4 \cb2  \cf3 const\cf4  offsetValue = \cf6 88\cf4 ;\
+\
+
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3 @property\cf4  (\cf3 nonatomic\cf4 , \cf3 weak\cf4 ) \cf5 \cb2 UIView\cf4 \cb2  *navBar;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3 @property\cf4  (\cf3 nonatomic\cf4 , \cf3 weak\cf4 ) \cf5 \cb2 UIButton\cf4 \cb2  *backBtn;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3 @property\cf4  (\cf3 nonatomic\cf4 , \cf3 weak\cf4 ) \cf5 \cb2 UILabel\cf4 \cb2  *titleLabel;\
+\
+
+\f0\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \cb2 \
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf4     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf7 // 
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5\'b5\'bc\'ba\'bd\'c0\'b8
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 UIView\cf4 \cb2  *navBar = [[\cf5 \cb2 UIView\cf4 \cb2  \cf8 \cb2 alloc\cf4 \cb2 ] \cf8 \cb2 initWithFrame\cf4 \cb2 :\cf8 \cb2 CGRectMake\cf4 \cb2 (\cf6 0\cf4 , \cf6 0\cf4 , \cf9 \cb2 fkScreenW\cf4 \cb2 , \cf9 \cb2 fkStatusBarH\cf4 \cb2  + \cf9 \cb2 fkNavBarH\cf4 \cb2 )];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [\cf3 self\cf4 .\cf5 \cb2 view\cf4 \cb2  \cf8 \cb2 addSubview\cf4 \cb2 :navBar];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf3 self\cf4 .\cf10 \cb2 navBar\cf4 \cb2  = navBar;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     navBar.\cf5 \cb2 backgroundColor\cf4 \cb2  = \cf9 \cb2 fkColorAlpha\cf4 \cb2 (\cf6 255\cf4 , \cf6 255\cf4 , \cf6 255\cf4 , \cf6 0\cf4 );
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 UIView\cf4 \cb2  *navContainer = [[\cf5 \cb2 UIView\cf4 \cb2  \cf8 \cb2 alloc\cf4 \cb2 ] \cf8 \cb2 initWithFrame\cf4 \cb2 :\cf8 \cb2 CGRectMake\cf4 \cb2 (\cf6 0\cf4 , \cf9 \cb2 fkStatusBarH\cf4 \cb2 , \cf9 \cb2 fkScreenW\cf4 \cb2 , \cf9 \cb2 fkNavBarH\cf4 \cb2 )];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [navBar \cf8 \cb2 addSubview\cf4 \cb2 :navContainer];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 UIButton\cf4 \cb2  *backBtn = [\cf5 \cb2 UIButton\cf4 \cb2  \cf11 \cb2 fk_btnWithTarget\cf4 \cb2 :\cf3 self\cf4  \cf11 \cb2 action\cf4 \cb2 :\cf3 @selector\cf4 (back) \cf11 \cb2 img\cf4 \cb2 :[\cf5 \cb2 UIImage\cf4 \cb2  \cf8 \cb2 imageNamed\cf4 \cb2 :\cf12 @"back_arrow_white"\cf4 ]];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [navContainer \cf8 \cb2 addSubview\cf4 \cb2 :backBtn];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf3 self\cf4 .\cf10 \cb2 backBtn\cf4 \cb2  = backBtn;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     backBtn.\cf5 \cb2 backgroundColor\cf4 \cb2  = \cf9 \cb2 fkColorAlpha\cf4 \cb2 (\cf6 0\cf4 , \cf6 0\cf4 , \cf6 0\cf4 , \cf6 0.5\cf4 );
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [backBtn \cf11 \cb2 fk_viewCornerRadius\cf4 \cb2 :\cf6 14\cf4  \cf11 \cb2 borderWidth\cf4 \cb2 :\cf6 0\cf4  \cf11 \cb2 borderColor\cf4 \cb2 :\cf3 nil\cf4 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 CGFloat\cf4 \cb2  backBtnWH = \cf6 28\cf4 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 CGFloat\cf4 \cb2  backBtnY = (\cf9 \cb2 fkNavBarH\cf4 \cb2  - backBtnWH) * \cf6 0.5\cf4 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     backBtn.\cf5 \cb2 frame\cf4 \cb2  = \cf8 \cb2 CGRectMake\cf4 \cb2 (\cf6 12\cf4 , backBtnY, backBtnWH, backBtnWH);
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 UILabel\cf4 \cb2  *titleLabel = [\cf5 \cb2 UILabel\cf4 \cb2  \cf11 \cb2 fk_labelWithFont\cf4 \cb2 :[\cf5 \cb2 UIFont\cf4 \cb2  \cf8 \cb2 systemFontOfSize\cf4 \cb2 :\cf6 16\cf4 ] \cf11 \cb2 textColor\cf4 \cb2 :\cf9 \cb2 fkColor333333\cf4 \cb2  \cf11 \cb2 textAlignment\cf4 \cb2 :\cf8 \cb2 NSTextAlignmentCenter\cf4 \cb2  \cf11 \cb2 text\cf4 \cb2 :\cf3 self\cf4 .\cf5 \cb2 title\cf4 \cb2 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [navContainer \cf8 \cb2 addSubview\cf4 \cb2 :titleLabel];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf3 self\cf4 .\cf10 \cb2 titleLabel\cf4 \cb2  = titleLabel;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     titleLabel.\cf5 \cb2 alpha\cf4 \cb2  = \cf6 0\cf4 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     [titleLabel \cf8 \cb2 mas_makeConstraints\cf4 \cb2 :^(\cf5 \cb2 MASConstraintMaker\cf4 \cb2  *make) \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         make.\cf5 \cb2 center\cf4 \cb2 .\cf8 \cb2 equalTo\cf4 \cb2 (navContainer);
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \}];\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf4 - (\cf3 void\cf4 )back
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4 \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf9 \cb2 fkPopVC\cf4 \cb2 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4 \}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf9 \cb2 #pragma mark - UIScrollViewDelegate
+\f0\fs24 \cf0 \cb2 \
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf4 - (\cf3 void\cf4 )scrollViewDidScroll:(\cf5 \cb2 UIScrollView\cf4 \cb2  *)scrollView
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4 \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf5 \cb2 CGFloat\cf4 \cb2  offsetY = scrollView.\cf5 \cb2 contentOffset\cf4 \cb2 .\cf5 \cb2 y\cf4 \cb2 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \cf3 if\cf4  (offsetY >= \cf6 0\cf4  && offsetY < \cf10 \cb2 offsetValue\cf4 \cb2 ) \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf5 \cb2 CGFloat\cf4 \cb2  ratio = offsetY / \cf10 \cb2 offsetValue\cf4 \cb2 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 navBar\cf4 \cb2 .\cf5 \cb2 backgroundColor\cf4 \cb2  = \cf9 \cb2 fkColorAlpha\cf4 \cb2 (\cf6 255\cf4 , \cf6 255\cf4 , \cf6 255\cf4 , ratio);
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 titleLabel\cf4 \cb2 .\cf5 \cb2 alpha\cf4 \cb2  = ratio;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         [\cf3 self\cf4 .\cf10 \cb2 backBtn\cf4 \cb2  \cf8 \cb2 setImage\cf4 \cb2 :[\cf5 \cb2 UIImage\cf4 \cb2  \cf8 \cb2 imageNamed\cf4 \cb2 :\cf12 @"back_arrow_white"\cf4 ] \cf8 \cb2 forState\cf4 \cb2 :\cf8 \cb2 UIControlStateNormal\cf4 \cb2 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 backBtn\cf4 \cb2 .\cf5 \cb2 backgroundColor\cf4 \cb2  = \cf9 \cb2 fkColorAlpha\cf4 \cb2 (\cf6 0\cf4 , \cf6 0\cf4 , \cf6 0\cf4 , \cf6 0.5\cf4 );
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \} \cf3 else\cf4  \cf3 if\cf4  (offsetY > \cf10 \cb2 offsetValue\cf4 \cb2 ) \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 navBar\cf4 \cb2 .\cf5 \cb2 backgroundColor\cf4 \cb2  = \cf9 \cb2 fkColorAlpha\cf4 \cb2 (\cf6 255\cf4 , \cf6 255\cf4 , \cf6 255\cf4 , \cf6 1\cf4 );
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 titleLabel\cf4 \cb2 .\cf5 \cb2 alpha\cf4 \cb2  = \cf6 1\cf4 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         [\cf3 self\cf4 .\cf10 \cb2 backBtn\cf4 \cb2  \cf8 \cb2 setImage\cf4 \cb2 :[\cf5 \cb2 UIImage\cf4 \cb2  \cf8 \cb2 imageNamed\cf4 \cb2 :\cf12 @"back_arrow_gray"\cf4 ] \cf8 \cb2 forState\cf4 \cb2 :\cf8 \cb2 UIControlStateNormal\cf4 \cb2 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         \cf3 self\cf4 .\cf10 \cb2 backBtn\cf4 \cb2 .\cf5 \cb2 backgroundColor\cf4 \cb2  = [\cf5 \cb2 UIColor\cf4 \cb2  \cf8 \cb2 whiteColor\cf4 \cb2 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \} \cf3 else\cf4  \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4         [scrollView \cf8 \cb2 setContentOffset\cf4 \cb2 :\cf8 \cb2 CGPointMake\cf4 \cb2 (\cf6 0\cf4 , \cf6 0\cf4 )];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf7 //        self.navBar.backgroundColor = fkColorAlpha(255, 255, 255, 0);
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf7 //        self.titleLabel.alpha = 0;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf7 //        [self.backBtn setImage:[UIImage imageNamed:@"back_arrow_white"] forState:UIControlStateNormal];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf7 //        self.backBtn.backgroundColor = fkColorAlpha(0, 0, 0, 0.5);
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4     \}
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf4 \}}

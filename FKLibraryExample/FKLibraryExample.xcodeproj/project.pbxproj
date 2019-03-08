@@ -51,6 +51,8 @@
 		01F055C81BF0C47200740F6D /* FKFilterImageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F055C71BF0C47200740F6D /* FKFilterImageBottomView.m */; };
 		1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */; };
 		3D4E204BF104A8A25D865765 /* libPods-FKLibraryExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FF8AABC95E1794B7DFA1E9 /* libPods-FKLibraryExampleTests.a */; };
+		5210414D22321D7B00F25D0B /* 分页数据写法.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5210414B22321D7B00F25D0B /* 分页数据写法.rtf */; };
+		5210414E22321D7B00F25D0B /* 自定义导航栏.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */; };
 		5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */; };
 		52724EEE21D32AF100E0A9B0 /* FKPayMethodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */; };
 		52724EEF21D32AF100E0A9B0 /* FKPayMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEB21D32AF100E0A9B0 /* FKPayMethodCell.m */; };
@@ -210,6 +212,8 @@
 		1B87DF1C1BEFA089008C8347 /* NSObject+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FK.m"; sourceTree = "<group>"; };
 		310BF51B609433AF015D171E /* Pods-FKLibraryExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKLibraryExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FKLibraryExampleTests/Pods-FKLibraryExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		34EC023EB306CD5FB6A54CF9 /* libPods-FKLibraryExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5210414B22321D7B00F25D0B /* 分页数据写法.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "分页数据写法.rtf"; sourceTree = "<group>"; };
+		5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "自定义导航栏.rtf"; sourceTree = "<group>"; };
 		5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FK.m"; sourceTree = "<group>"; };
 		5246CDD321F9B50700A806F5 /* UICollectionView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FK.h"; sourceTree = "<group>"; };
 		52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayMethodView.m; sourceTree = "<group>"; };
@@ -473,6 +477,7 @@
 		0195FDD71BE6EE7900D47216 /* FKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				5210414A22321D6700F25D0B /* Documents */,
 				52724F6E21D34B2C00E0A9B0 /* FKResources.xcassets */,
 				52724F0321D32C9A00E0A9B0 /* 表单提交 */,
 				52724EF121D32C3600E0A9B0 /* View */,
@@ -590,6 +595,15 @@
 				7B622DF3D3F5C7B34F10F8DD /* libPods-FKLibraryExampleUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5210414A22321D6700F25D0B /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				5210414B22321D7B00F25D0B /* 分页数据写法.rtf */,
+				5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */,
+			);
+			path = Documents;
 			sourceTree = "<group>";
 		};
 		52724EE921D32AF100E0A9B0 /* 选择支付方式 */ = {
@@ -911,7 +925,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52724F3421D32D6C00E0A9B0 /* FKWeakTimer使用说明.md in Resources */,
+				5210414D22321D7B00F25D0B /* 分页数据写法.rtf in Resources */,
 				0195FDB21BE6ECE600D47216 /* LaunchScreen.storyboard in Resources */,
+				5210414E22321D7B00F25D0B /* 自定义导航栏.rtf in Resources */,
 				52724F6F21D34B2C00E0A9B0 /* FKResources.xcassets in Resources */,
 				0195FDAF1BE6ECE500D47216 /* Assets.xcassets in Resources */,
 				0195FDAD1BE6ECE500D47216 /* Main.storyboard in Resources */,
