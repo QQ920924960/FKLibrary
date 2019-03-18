@@ -47,6 +47,7 @@
 #define fkColorEEEEEE fkColor(238, 238, 238)
 #define fkColor808080 fkColor(128, 128, 128)
 #define fkMainColor fkColor(74, 76, 91) // 主题色【蓝黑色】
+#define fkPriceRed fkColor(251, 117, 110) // 价格的颜色
 
 #define fkFont9 [UIFont systemFontOfSize:9.f]
 #define fkFont10 [UIFont systemFontOfSize:10.f]
@@ -71,6 +72,13 @@
 #define fkBold18 [UIFont boldSystemFontOfSize:18]
 #define fkBold20 [UIFont boldSystemFontOfSize:20]
 #define fkBold24 [UIFont boldSystemFontOfSize:24]
+
+#define kPlaceholder_1x1 [UIImage imageNamed:@"placeholder_1x1"]
+#define kPlaceholder_2x1 [UIImage imageNamed:@"placeholder_2x1"]
+#define kPlaceholder_3x1 [UIImage imageNamed:@"placeholder_3x1"]
+#define kPlaceholder_5x2 [UIImage imageNamed:@"placeholder_5x2"]
+#define kPlaceholder_15x4 [UIImage imageNamed:@"placeholder_15x4"]
+#define kDefaultAvatar [UIImage imageNamed:@"default_avatar"]
 
 /** 字体适配 */
 static inline UIFont * fk_adjustFont(CGFloat fontSize) {

@@ -53,6 +53,13 @@
 		3D4E204BF104A8A25D865765 /* libPods-FKLibraryExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FF8AABC95E1794B7DFA1E9 /* libPods-FKLibraryExampleTests.a */; };
 		5210414D22321D7B00F25D0B /* 分页数据写法.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5210414B22321D7B00F25D0B /* 分页数据写法.rtf */; };
 		5210414E22321D7B00F25D0B /* 自定义导航栏.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */; };
+		521042C62238E61100F25D0B /* FKCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 521042C52238E61100F25D0B /* FKCollectionCell.m */; };
+		521042D32238FD5500F25D0B /* cell创建子控件模板.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 521042D22238FD5500F25D0B /* cell创建子控件模板.rtf */; };
+		5210430C223A43DF00F25D0B /* 头部固定的scrollView嵌套写法.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5210430B223A43DF00F25D0B /* 头部固定的scrollView嵌套写法.rtf */; };
+		521B3924223F88C900408211 /* FKNestedChildTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3920223F88C900408211 /* FKNestedChildTableVC.m */; };
+		521B3925223F88C900408211 /* FKPenetrateTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3921223F88C900408211 /* FKPenetrateTouchTableView.m */; };
+		521B3926223F88C900408211 /* FKNestedSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3922223F88C900408211 /* FKNestedSuperVC.m */; };
+		521B3927223F88C900408211 /* FKNestedChildCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3923223F88C900408211 /* FKNestedChildCollectionVC.m */; };
 		5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */; };
 		52724EEE21D32AF100E0A9B0 /* FKPayMethodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */; };
 		52724EEF21D32AF100E0A9B0 /* FKPayMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEB21D32AF100E0A9B0 /* FKPayMethodCell.m */; };
@@ -100,6 +107,7 @@
 		528D846921E0521400BFA897 /* FKAlignmentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 528D846721E0521400BFA897 /* FKAlignmentLayout.m */; };
 		52A3966721DC8AE100F1E361 /* FKDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3966621DC8AE100F1E361 /* FKDatePicker.m */; };
 		52A396AC21DD9F3600F1E361 /* FKCustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A396AB21DD9F3600F1E361 /* FKCustomBtn.m */; };
+		52F3E0E9223CC2E400695422 /* 各种控件的创建模板.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 52F3E0E8223CC2E400695422 /* 各种控件的创建模板.rtf */; };
 		7EA6207C199A342DA967DB68 /* libPods-FKLibraryExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EC023EB306CD5FB6A54CF9 /* libPods-FKLibraryExample.a */; };
 		BED991C191FB8C5DF8E5DDA4 /* libPods-FKLibraryExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B622DF3D3F5C7B34F10F8DD /* libPods-FKLibraryExampleUITests.a */; };
 /* End PBXBuildFile section */
@@ -214,6 +222,18 @@
 		34EC023EB306CD5FB6A54CF9 /* libPods-FKLibraryExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5210414B22321D7B00F25D0B /* 分页数据写法.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "分页数据写法.rtf"; sourceTree = "<group>"; };
 		5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "自定义导航栏.rtf"; sourceTree = "<group>"; };
+		521042C42238E61100F25D0B /* FKCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCollectionCell.h; sourceTree = "<group>"; };
+		521042C52238E61100F25D0B /* FKCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKCollectionCell.m; sourceTree = "<group>"; };
+		521042D22238FD5500F25D0B /* cell创建子控件模板.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "cell创建子控件模板.rtf"; sourceTree = "<group>"; };
+		5210430B223A43DF00F25D0B /* 头部固定的scrollView嵌套写法.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "头部固定的scrollView嵌套写法.rtf"; sourceTree = "<group>"; };
+		521B391C223F88C900408211 /* FKPenetrateTouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPenetrateTouchTableView.h; sourceTree = "<group>"; };
+		521B391D223F88C900408211 /* FKNestedChildTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNestedChildTableVC.h; sourceTree = "<group>"; };
+		521B391E223F88C900408211 /* FKNestedChildCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNestedChildCollectionVC.h; sourceTree = "<group>"; };
+		521B391F223F88C900408211 /* FKNestedSuperVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNestedSuperVC.h; sourceTree = "<group>"; };
+		521B3920223F88C900408211 /* FKNestedChildTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNestedChildTableVC.m; sourceTree = "<group>"; };
+		521B3921223F88C900408211 /* FKPenetrateTouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPenetrateTouchTableView.m; sourceTree = "<group>"; };
+		521B3922223F88C900408211 /* FKNestedSuperVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNestedSuperVC.m; sourceTree = "<group>"; };
+		521B3923223F88C900408211 /* FKNestedChildCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNestedChildCollectionVC.m; sourceTree = "<group>"; };
 		5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FK.m"; sourceTree = "<group>"; };
 		5246CDD321F9B50700A806F5 /* UICollectionView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FK.h"; sourceTree = "<group>"; };
 		52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayMethodView.m; sourceTree = "<group>"; };
@@ -307,6 +327,7 @@
 		52A3966621DC8AE100F1E361 /* FKDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKDatePicker.m; sourceTree = "<group>"; };
 		52A396AA21DD9F3500F1E361 /* FKCustomBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCustomBtn.h; sourceTree = "<group>"; };
 		52A396AB21DD9F3600F1E361 /* FKCustomBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKCustomBtn.m; sourceTree = "<group>"; };
+		52F3E0E8223CC2E400695422 /* 各种控件的创建模板.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "各种控件的创建模板.rtf"; sourceTree = "<group>"; };
 		66A550B8D27D755D77BC4182 /* Pods-FKLibraryExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FKLibraryExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FKLibraryExample/Pods-FKLibraryExample.release.xcconfig"; sourceTree = "<group>"; };
 		7B622DF3D3F5C7B34F10F8DD /* libPods-FKLibraryExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF8AABC95E1794B7DFA1E9 /* libPods-FKLibraryExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FKLibraryExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -602,8 +623,26 @@
 			children = (
 				5210414B22321D7B00F25D0B /* 分页数据写法.rtf */,
 				5210414C22321D7B00F25D0B /* 自定义导航栏.rtf */,
+				521042D22238FD5500F25D0B /* cell创建子控件模板.rtf */,
+				5210430B223A43DF00F25D0B /* 头部固定的scrollView嵌套写法.rtf */,
+				52F3E0E8223CC2E400695422 /* 各种控件的创建模板.rtf */,
 			);
 			path = Documents;
+			sourceTree = "<group>";
+		};
+		521B391B223F88C900408211 /* 嵌套滚动封装 */ = {
+			isa = PBXGroup;
+			children = (
+				521B391E223F88C900408211 /* FKNestedChildCollectionVC.h */,
+				521B3923223F88C900408211 /* FKNestedChildCollectionVC.m */,
+				521B391D223F88C900408211 /* FKNestedChildTableVC.h */,
+				521B3920223F88C900408211 /* FKNestedChildTableVC.m */,
+				521B391F223F88C900408211 /* FKNestedSuperVC.h */,
+				521B3922223F88C900408211 /* FKNestedSuperVC.m */,
+				521B391C223F88C900408211 /* FKPenetrateTouchTableView.h */,
+				521B3921223F88C900408211 /* FKPenetrateTouchTableView.m */,
+			);
+			path = "嵌套滚动封装";
 			sourceTree = "<group>";
 		};
 		52724EE921D32AF100E0A9B0 /* 选择支付方式 */ = {
@@ -620,6 +659,7 @@
 		52724EF021D32B9300E0A9B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				521B391B223F88C900408211 /* 嵌套滚动封装 */,
 				52724F7321D3517000E0A9B0 /* FKNavVC.h */,
 				52724F7421D3517000E0A9B0 /* FKNavVC.m */,
 				52724F7221D3517000E0A9B0 /* FKTabBarVC.h */,
@@ -648,6 +688,8 @@
 				52724EF521D32C4000E0A9B0 /* FKTableCell.m */,
 				52724EF621D32C4000E0A9B0 /* FKTableSectionView.h */,
 				52724EF721D32C4000E0A9B0 /* FKTableSectionView.m */,
+				521042C42238E61100F25D0B /* FKCollectionCell.h */,
+				521042C52238E61100F25D0B /* FKCollectionCell.m */,
 				52A396AA21DD9F3500F1E361 /* FKCustomBtn.h */,
 				52A396AB21DD9F3600F1E361 /* FKCustomBtn.m */,
 			);
@@ -926,11 +968,14 @@
 			files = (
 				52724F3421D32D6C00E0A9B0 /* FKWeakTimer使用说明.md in Resources */,
 				5210414D22321D7B00F25D0B /* 分页数据写法.rtf in Resources */,
+				52F3E0E9223CC2E400695422 /* 各种控件的创建模板.rtf in Resources */,
 				0195FDB21BE6ECE600D47216 /* LaunchScreen.storyboard in Resources */,
+				521042D32238FD5500F25D0B /* cell创建子控件模板.rtf in Resources */,
 				5210414E22321D7B00F25D0B /* 自定义导航栏.rtf in Resources */,
 				52724F6F21D34B2C00E0A9B0 /* FKResources.xcassets in Resources */,
 				0195FDAF1BE6ECE500D47216 /* Assets.xcassets in Resources */,
 				0195FDAD1BE6ECE500D47216 /* Main.storyboard in Resources */,
+				5210430C223A43DF00F25D0B /* 头部固定的scrollView嵌套写法.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,6 +1106,7 @@
 				016996EE1BEDC3BE00ED079D /* FKLocationManager.m in Sources */,
 				52724F3121D32D6C00E0A9B0 /* FKImageTool.m in Sources */,
 				01F055871BF092E300740F6D /* CALayer+FK.m in Sources */,
+				521B3927223F88C900408211 /* FKNestedChildCollectionVC.m in Sources */,
 				01F055A71BF0934300740F6D /* UIDevice+FK.m in Sources */,
 				52724F6C21D34AFB00E0A9B0 /* FKSelectPhotoView.m in Sources */,
 				5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */,
@@ -1095,11 +1141,15 @@
 				52724F0121D32C6900E0A9B0 /* FKPicturePopView.m in Sources */,
 				52724F0221D32C6900E0A9B0 /* FKPayPwdInputView.m in Sources */,
 				52A396AC21DD9F3600F1E361 /* FKCustomBtn.m in Sources */,
+				521B3925223F88C900408211 /* FKPenetrateTouchTableView.m in Sources */,
+				521B3926223F88C900408211 /* FKNestedSuperVC.m in Sources */,
 				01F055A61BF0934300740F6D /* UIColor+FK.m in Sources */,
+				521042C62238E61100F25D0B /* FKCollectionCell.m in Sources */,
 				52724F3221D32D6C00E0A9B0 /* FKWeakTimer.m in Sources */,
 				52724F1D21D32C9A00E0A9B0 /* FKArrowCell.m in Sources */,
 				01F055A91BF0934300740F6D /* UIView+FK.m in Sources */,
 				52724F7621D3517000E0A9B0 /* FKNavVC.m in Sources */,
+				521B3924223F88C900408211 /* FKNestedChildTableVC.m in Sources */,
 				01F055C21BF0BADB00740F6D /* FKFilterImageCell.m in Sources */,
 				01025E591BF2EAA500A0E0C8 /* UIImageView+FK.m in Sources */,
 				01F055921BF0932A00740F6D /* NSArray+FK.m in Sources */,
