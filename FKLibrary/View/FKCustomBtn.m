@@ -8,6 +8,12 @@
 
 #import "FKCustomBtn.h"
 
+@interface FKCustomBtn ()
+
+@property(nonatomic, weak) UILabel *badgeLabel;
+
+@end
+
 @implementation FKCustomBtn
 
 
@@ -16,8 +22,31 @@
 {
     if (self=[super initWithFrame:frame]) {
         self.space = 5;
+        
+        //        CGFloat badgeWH = 15;
+        UILabel *badgeLabel = [UILabel fk_labelWithFrame:CGRectZero font:[UIFont systemFontOfSize:10] textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter];
+        [self addSubview:badgeLabel];
+        self.badgeLabel = badgeLabel;
+        badgeLabel.backgroundColor = [UIColor redColor];
+        badgeLabel.layer.cornerRadius = 15/2;
+        badgeLabel.layer.masksToBounds = YES;
+        badgeLabel.hidden = true;
+        [badgeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.imageView.mas_right);
+            make.centerY.equalTo(self.imageView.mas_top);
+            make.height.mas_equalTo(15);
+            make.width.mas_greaterThanOrEqualTo(15);
+        }];
     }
     return self;
+}
+
+- (void)setNumber:(NSString *)number
+{
+    _number = number;
+    
+    self.badgeLabel.text = number;
+    self.badgeLabel.hidden = [number isEqualToString:@"0"];
 }
 
 - (void)awakeFromNib

@@ -139,6 +139,7 @@
                 self.backgroundColor = normalColor;
                 [self setTitle:title forState:UIControlStateNormal];
                 self.userInteractionEnabled = YES;
+                self.enabled = true;
             });
         } else {
             int seconds = timeOut % 60;
@@ -148,6 +149,7 @@
                 self.backgroundColor = countdownColor;
                 [self setTitle:[NSString stringWithFormat:@"%@%@",timeStr,subTitle] forState:UIControlStateNormal];
                 self.userInteractionEnabled = NO;
+                self.enabled = false;
             });
             timeOut--;
         }

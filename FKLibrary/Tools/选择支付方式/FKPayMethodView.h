@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //@property (nonatomic, copy) void(^selectePayMethodBlock)(NSString *payMethodName);
 @property (nonatomic, copy) void(^selectePayMethodBlock)(NSString *payType);
+@property (nonatomic, copy) void(^closeBlock) (void);
 - (void)show;
 
 @end

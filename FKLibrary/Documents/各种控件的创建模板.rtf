@@ -1,11 +1,12 @@
 {\rtf1\ansi\ansicpg936\cocoartf1671\cocoasubrtf200
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
 {\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red92\green38\blue153;
 \red46\green13\blue110;\red100\green56\blue32;\red28\green0\blue207;\red38\green71\blue75;\red170\green13\blue145;
-\red63\green110\blue116;}
+\red63\green110\blue116;\red0\green116\blue0;\red196\green26\blue22;}
 {\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;
 \csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c66500\c5200\c56900;
-\csgenericrgb\c24700\c43100\c45600;}
+\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c77000\c10200\c8600;}
 \paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
@@ -63,4 +64,91 @@
 \f1\fs26 \cf3         make.\cf4 edges\cf3 .\cf5 offset\cf3 (\cf7 0\cf3 );
 \f0\fs24 \cf0 \
 
-\f1\fs26 \cf3     \}];}
+\f1\fs26 \cf3     \}];\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab626\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb2 \
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf3 \cb2     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \cf4 UITableView\cf3  *tableView = [[\cf4 UITableView\cf3  \cf5 alloc\cf3 ] \cf5 initWithFrame\cf3 :\cf4 CGRectZero\cf3  \cf5 style\cf3 :\cf5 UITableViewStyleGrouped\cf3 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     [\cf9 self\cf3 .\cf4 view\cf3  \cf5 addSubview\cf3 :tableView];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \cf9 self\cf3 .\cf10 tableView\cf3  = tableView;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     tableView.\cf4 dataSource\cf3  = \cf9 self\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     tableView.\cf4 delegate\cf3  = \cf9 self\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     tableView.\cf4 separatorStyle\cf3  = \cf5 UITableViewCellStyleDefault\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \cf9 if\cf3  (\cf9 @available\cf3 (iOS \cf7 11.0\cf3 , *)) \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3         tableView.\cf4 contentInsetAdjustmentBehavior\cf3  = \cf5 UIScrollViewContentInsetAdjustmentNever\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \} \cf9 else\cf3  \{
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3         \cf9 self\cf3 .\cf4 automaticallyAdjustsScrollViewInsets\cf3  = \cf9 NO\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab626\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb2 \
+\pard\tx626\pardeftab626\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf3 \cb2     
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     \cf4 UIView\cf3  *separator = [[\cf4 UIView\cf3  \cf5 alloc\cf3 ] \cf5 init\cf3 ];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     [\cf9 self\cf3 .\cf4 contentView\cf3  \cf5 addSubview\cf3 :separator];
+\f0\fs24 \cf0 \
+
+\f1\fs26 \cf3     separator.\cf4 backgroundColor\cf3  = [\cf4 UIColor\cf3  \cf5 groupTableViewBackgroundColor\cf3 ];\
+\
+\
+\
+    \
+#pragma 
+\f2 \'be\'b2\'cc\'ac
+\f1 cell
+\f2 \'b5\'c4\'b4\'b4\'bd\'a8\'b7\'bd\'ca\'bd\'a3\'ac\'bf\'d8\'d6\'c6\'c6\'f7\'d6\'d0\'d3\'c3strong\'ca\'f4\'d0\'d4\'c0\'b4\'bd\'d3\'ca\'d5
+\f1 \
+    \cf11 \cb2 // 
+\f2 \'cd\'cb\'bf\'ee\'d4\'ad\'d2\'f2
+\f1 \cf3 \cb2 \
+    \cf4 UITableViewCell\cf3  *reasonCell = [[\cf4 UITableViewCell\cf3  \cf5 alloc\cf3 ] \cf5 initWithFrame\cf3 :\cf5 CGRectMake\cf3 (\cf7 0\cf3 , \cf7 0\cf3 , \cf6 fkScreenW\cf3 , \cf8 fk_adjustW\cf3 (\cf7 45\cf3 ))];\
+    \cf9 self\cf3 .\cf10 reasonCell\cf3  = reasonCell;\
+    reasonCell.\cf4 selectionStyle\cf3  = \cf5 UITableViewCellSelectionStyleNone\cf3 ;\
+    reasonCell.\cf4 accessoryType\cf3  = \cf5 UITableViewCellAccessoryDisclosureIndicator\cf3 ;\
+    \
+    \cf4 UILabel\cf3  *reasonTitle = [\cf4 UILabel\cf3  \cf8 fk_labelWithFont\cf3 :\cf8 fk_adjustFont\cf3 (\cf7 14\cf3 ) \cf8 textColor\cf3 :\cf6 fkColor333333\cf3  \cf8 text\cf3 :\cf12 \cb2 @"
+\f2 \'cd\'cb\'bf\'ee\'d4\'ad\'d2\'f2
+\f1 "\cf3 \cb2 ];\
+    [reasonCell.\cf4 contentView\cf3  \cf5 addSubview\cf3 :reasonTitle];\
+    \
+    \cf4 UITextField\cf3  *reasonField = [[\cf4 UITextField\cf3  \cf5 alloc\cf3 ] \cf5 init\cf3 ];\
+    [reasonCell.\cf4 contentView\cf3  \cf5 addSubview\cf3 :reasonField];\
+    \cf9 self\cf3 .\cf10 reasonField\cf3  = reasonField;\
+    reasonField.\cf4 font\cf3  = \cf8 fk_adjustFont\cf3 (\cf7 14\cf3 );\
+    reasonField.\cf4 placeholder\cf3  = \cf12 \cb2 @"
+\f2 \'c7\'eb\'d1\'a1\'d4\'f1
+\f1 "\cf3 \cb2 ;\
+    reasonField.\cf4 textAlignment\cf3  = \cf5 NSTextAlignmentRight\cf3 ;\
+    reasonField.\cf4 userInteractionEnabled\cf3  = \cf9 false\cf3 ;}

@@ -27,7 +27,7 @@
 {
     if (!_datas) {
         _datas = @[
-                   //                   @{@"title" : @"余额支付", @"icon" : @"flowers_pay_balance"},
+                   //                   @{@"title" : @"余额支付", @"icon" : @"fk_payment_balance"},
                    @{@"title" : @"微信支付", @"icon" : @"fk_payment_wechat", @"type" : @"1"},
                    @{@"title" : @"支付宝支付", @"icon" : @"fk_payment_alipay", @"type" : @"2"}];
     }
@@ -128,6 +128,7 @@
 
 - (void)closeBtnClicked
 {
+    if (self.closeBlock) self.closeBlock();
     [self dismiss];
 }
 

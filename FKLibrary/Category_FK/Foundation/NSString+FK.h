@@ -163,4 +163,7 @@
 /** html反转义 */
 - (NSString *)fk_htmlToString;
 
+/** 获取URL中的所有参数键值对 */
+- (NSMutableDictionary *)fk_parseURLParameters;
+
 @end

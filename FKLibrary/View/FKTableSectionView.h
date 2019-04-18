@@ -10,8 +10,8 @@
 
 @interface FKTableSectionView : UITableViewHeaderFooterView
 
+@property (nonatomic, strong) id data;
 + (instancetype)sectionView:(UITableView *)tableView;
-
 - (void)setupSubviews;
 
 @end

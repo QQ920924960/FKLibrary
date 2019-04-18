@@ -60,6 +60,9 @@
 		521B3925223F88C900408211 /* FKPenetrateTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3921223F88C900408211 /* FKPenetrateTouchTableView.m */; };
 		521B3926223F88C900408211 /* FKNestedSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3922223F88C900408211 /* FKNestedSuperVC.m */; };
 		521B3927223F88C900408211 /* FKNestedChildCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3923223F88C900408211 /* FKNestedChildCollectionVC.m */; };
+		521B392B223F898E00408211 /* FKGradientNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B392A223F898E00408211 /* FKGradientNav.m */; };
+		521B3967223F903900408211 /* FKCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 521B3964223F903900408211 /* FKCityPicker.m */; };
+		521B3968223F903900408211 /* province_city_area.json in Resources */ = {isa = PBXBuildFile; fileRef = 521B3966223F903900408211 /* province_city_area.json */; };
 		5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */; };
 		52724EEE21D32AF100E0A9B0 /* FKPayMethodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */; };
 		52724EEF21D32AF100E0A9B0 /* FKPayMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724EEB21D32AF100E0A9B0 /* FKPayMethodCell.m */; };
@@ -104,6 +107,7 @@
 		52724F6F21D34B2C00E0A9B0 /* FKResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52724F6E21D34B2C00E0A9B0 /* FKResources.xcassets */; };
 		52724F7521D3517000E0A9B0 /* FKTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724F7121D3517000E0A9B0 /* FKTabBarVC.m */; };
 		52724F7621D3517000E0A9B0 /* FKNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 52724F7421D3517000E0A9B0 /* FKNavVC.m */; };
+		527D2C1B224C71BD004B707A /* FKPayResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 527D2C1A224C71BD004B707A /* FKPayResultVC.m */; };
 		528D846921E0521400BFA897 /* FKAlignmentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 528D846721E0521400BFA897 /* FKAlignmentLayout.m */; };
 		52A3966721DC8AE100F1E361 /* FKDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3966621DC8AE100F1E361 /* FKDatePicker.m */; };
 		52A396AC21DD9F3600F1E361 /* FKCustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A396AB21DD9F3600F1E361 /* FKCustomBtn.m */; };
@@ -234,6 +238,11 @@
 		521B3921223F88C900408211 /* FKPenetrateTouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPenetrateTouchTableView.m; sourceTree = "<group>"; };
 		521B3922223F88C900408211 /* FKNestedSuperVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNestedSuperVC.m; sourceTree = "<group>"; };
 		521B3923223F88C900408211 /* FKNestedChildCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNestedChildCollectionVC.m; sourceTree = "<group>"; };
+		521B3929223F898E00408211 /* FKGradientNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKGradientNav.h; sourceTree = "<group>"; };
+		521B392A223F898E00408211 /* FKGradientNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKGradientNav.m; sourceTree = "<group>"; };
+		521B3964223F903900408211 /* FKCityPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKCityPicker.m; sourceTree = "<group>"; };
+		521B3965223F903900408211 /* FKCityPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCityPicker.h; sourceTree = "<group>"; };
+		521B3966223F903900408211 /* province_city_area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_city_area.json; sourceTree = "<group>"; };
 		5246CDD221F9B50700A806F5 /* UICollectionView+FK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FK.m"; sourceTree = "<group>"; };
 		5246CDD321F9B50700A806F5 /* UICollectionView+FK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FK.h"; sourceTree = "<group>"; };
 		52724EEA21D32AF100E0A9B0 /* FKPayMethodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayMethodView.m; sourceTree = "<group>"; };
@@ -321,6 +330,8 @@
 		52724F7321D3517000E0A9B0 /* FKNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKNavVC.h; sourceTree = "<group>"; };
 		52724F7421D3517000E0A9B0 /* FKNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKNavVC.m; sourceTree = "<group>"; };
 		52724F7721D3532F00E0A9B0 /* FKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSingleton.h; sourceTree = "<group>"; };
+		527D2C19224C71BD004B707A /* FKPayResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPayResultVC.h; sourceTree = "<group>"; };
+		527D2C1A224C71BD004B707A /* FKPayResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPayResultVC.m; sourceTree = "<group>"; };
 		528D846721E0521400BFA897 /* FKAlignmentLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAlignmentLayout.m; sourceTree = "<group>"; };
 		528D846821E0521400BFA897 /* FKAlignmentLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAlignmentLayout.h; sourceTree = "<group>"; };
 		52A3966521DC8AE100F1E361 /* FKDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDatePicker.h; sourceTree = "<group>"; };
@@ -381,6 +392,7 @@
 		0149BFCB1BECCBA90099B055 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				521B3963223F903900408211 /* 省市区三级选择弹窗 */,
 				52724EE921D32AF100E0A9B0 /* 选择支付方式 */,
 				52724F4221D32E4800E0A9B0 /* 支付方式【弹出控制器方式】 */,
 				528D846621E0521400BFA897 /* 左对齐或右对齐布局 */,
@@ -645,6 +657,25 @@
 			path = "嵌套滚动封装";
 			sourceTree = "<group>";
 		};
+		521B3928223F898E00408211 /* 自定义渐变导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				521B3929223F898E00408211 /* FKGradientNav.h */,
+				521B392A223F898E00408211 /* FKGradientNav.m */,
+			);
+			path = "自定义渐变导航栏";
+			sourceTree = "<group>";
+		};
+		521B3963223F903900408211 /* 省市区三级选择弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				521B3964223F903900408211 /* FKCityPicker.m */,
+				521B3965223F903900408211 /* FKCityPicker.h */,
+				521B3966223F903900408211 /* province_city_area.json */,
+			);
+			path = "省市区三级选择弹窗";
+			sourceTree = "<group>";
+		};
 		52724EE921D32AF100E0A9B0 /* 选择支付方式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,6 +690,7 @@
 		52724EF021D32B9300E0A9B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				527D2C18224C71BD004B707A /* 支付结果 */,
 				521B391B223F88C900408211 /* 嵌套滚动封装 */,
 				52724F7321D3517000E0A9B0 /* FKNavVC.h */,
 				52724F7421D3517000E0A9B0 /* FKNavVC.m */,
@@ -679,6 +711,7 @@
 		52724EF121D32C3600E0A9B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				521B3928223F898E00408211 /* 自定义渐变导航栏 */,
 				52724F6421D34AFB00E0A9B0 /* 图片选择器 */,
 				52724EFB21D32C6800E0A9B0 /* 单张图片点击放大 */,
 				52724EFE21D32C6800E0A9B0 /* 支付密码输入弹窗 */,
@@ -826,6 +859,15 @@
 			path = "图片选择器";
 			sourceTree = "<group>";
 		};
+		527D2C18224C71BD004B707A /* 支付结果 */ = {
+			isa = PBXGroup;
+			children = (
+				527D2C19224C71BD004B707A /* FKPayResultVC.h */,
+				527D2C1A224C71BD004B707A /* FKPayResultVC.m */,
+			);
+			path = "支付结果";
+			sourceTree = "<group>";
+		};
 		528D846621E0521400BFA897 /* 左对齐或右对齐布局 */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,6 +988,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -968,6 +1011,7 @@
 			files = (
 				52724F3421D32D6C00E0A9B0 /* FKWeakTimer使用说明.md in Resources */,
 				5210414D22321D7B00F25D0B /* 分页数据写法.rtf in Resources */,
+				521B3968223F903900408211 /* province_city_area.json in Resources */,
 				52F3E0E9223CC2E400695422 /* 各种控件的创建模板.rtf in Resources */,
 				0195FDB21BE6ECE600D47216 /* LaunchScreen.storyboard in Resources */,
 				521042D32238FD5500F25D0B /* cell创建子控件模板.rtf in Resources */,
@@ -1112,6 +1156,7 @@
 				5246CDD421F9B50800A806F5 /* UICollectionView+FK.m in Sources */,
 				52724F6021D3349500E0A9B0 /* FKWhiteVC.m in Sources */,
 				52724F2E21D32D6C00E0A9B0 /* FKLocationTool.m in Sources */,
+				527D2C1B224C71BD004B707A /* FKPayResultVC.m in Sources */,
 				52724F6D21D34AFB00E0A9B0 /* FKSelectPhotoCell.m in Sources */,
 				52724F3F21D32E0100E0A9B0 /* FKHttpTool.m in Sources */,
 				52724F1721D32C9A00E0A9B0 /* FKFormSectionView.m in Sources */,
@@ -1132,7 +1177,9 @@
 				018DA5451BF18FF9009270F1 /* NSKeyedUnarchiver+FK.m in Sources */,
 				52724F4B21D3336D00E0A9B0 /* FKWebViewVC.m in Sources */,
 				52724F5721D3340000E0A9B0 /* UIViewController+FK.m in Sources */,
+				521B3967223F903900408211 /* FKCityPicker.m in Sources */,
 				1B87DF1D1BEFA089008C8347 /* NSObject+FK.m in Sources */,
+				521B392B223F898E00408211 /* FKGradientNav.m in Sources */,
 				016996FF1BEDF37700ED079D /* FKTransition.m in Sources */,
 				0195FDA41BE6ECE500D47216 /* main.m in Sources */,
 				0149BFC11BEC77590099B055 /* FKConst.m in Sources */,

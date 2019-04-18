@@ -11,6 +11,7 @@
 @interface FKTableCell : UITableViewCell
 
 @property (nonatomic, strong) id data;
+@property (nonatomic, weak) id delegate;
 
 + (instancetype)cellWith:(UITableView *)tableView;
 + (instancetype)cellWith:(UITableView *)tableView className:(NSString *)className;

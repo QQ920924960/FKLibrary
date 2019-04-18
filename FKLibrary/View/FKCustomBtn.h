@@ -21,5 +21,7 @@ typedef NS_ENUM(NSInteger,FKImagePosition){
 
 /** 图片与文字的间距，默认为5 */
 @property (nonatomic, assign) CGFloat space;
+/** badge显示的数字 */
+@property(nonatomic, copy) NSString *number;
 
 @end

@@ -15,6 +15,7 @@
 #import "NSData+FK.h"
 #import "NSDate+FK.h"
 #import "NSString+FK.h"
+#import "UIApplication+FK.h"
 #import "UIBarButtonItem+FK.h"
 #import "UILabel+FK.h"
 #import "UIButton+FK.h"
