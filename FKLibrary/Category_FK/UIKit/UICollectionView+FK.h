@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface UICollectionView (FK)
 
+- (void)fk_checkEmptyDataWithDataCount:(NSUInteger)dataCount;
+- (void)fk_checkEmptyDataWithDataCount:(NSUInteger)dataCount emptyView:(UIView *)emptyView;
+
 @end
 
-NS_ASSUME_NONNULL_END
