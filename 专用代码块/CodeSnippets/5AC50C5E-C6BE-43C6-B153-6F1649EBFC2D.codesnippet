@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fk_btn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIButton *refundBtn = [UIButton fk_btnWithTarget:self action:@selector(buyBtnClicked) font:fk_adjustFont(15) normalTitle:@"立即推广" normalTitleColor:fkPriceRed selectedTitle:nil selectedTitleColor:nil normalImg:nil selectedImg:nil bgImg:nil selectedBgImg:nil];
+    [self.contentView addSubview:refundBtn];
+    self.refundBtn = refundBtn;
+    [refundBtn fk_viewCornerRadius:fk_adjustW(10) borderWidth:0 borderColor:nil];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5AC50C5E-C6BE-43C6-B153-6F1649EBFC2D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>fk_btn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Frank</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
